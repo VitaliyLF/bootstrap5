@@ -1,102 +1,340 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <title>bootstrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/css/tabler.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tabler</title>
   </head>
   <body>
-    <div class="site-container">
-      <header class="header">
-        <div class="header__top py-4">
+    <div class="page">
+      <aside class="navbar navbar-vertical navbar-expand-sm navbar-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <h1 class="navbar-brand navbar-brand-autodark justify-content-start ps-3">
+            <a class="d-inline-flex flex-column align-items-center" href="#">
+              <svg width="68" height="28" viewBox="0 0 68 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0.400024 5.86097C0.400024 4.30654 1.04761 2.81578 2.20031 1.71664C3.35301 0.617493 4.91642 0 6.54658 0L13.2207 0C13.3371 0 13.4488 0.0441067 13.5311 0.122617C13.6134 0.201127 13.6597 0.30761 13.6597 0.418641V11.5553C13.6597 12.0295 13.9397 12.4631 14.3855 12.6767L14.4235 12.6959C14.6634 12.811 14.9344 12.8534 15.2002 12.8175C15.466 12.7817 15.714 12.6692 15.9109 12.4951L27.4111 2.33136C28.986 0.939599 31.0542 0.166421 33.2015 0.166602H39.0815C39.2092 0.166602 39.3317 0.214984 39.422 0.301105C39.5123 0.387226 39.5631 0.504032 39.5631 0.625825V11.4186C39.563 11.6186 39.623 11.8144 39.7359 11.983C39.8488 12.1515 40.0099 12.2857 40.2003 12.3697C40.3906 12.4537 40.6021 12.484 40.8099 12.457C41.0178 12.43 41.2131 12.3469 41.373 12.2175L53.7243 2.21709C55.3591 0.89342 57.4339 0.166697 59.5786 0.166602H66.8944C67.0519 0.166602 67.2028 0.226236 67.3142 0.332385C67.4255 0.438534 67.488 0.582504 67.488 0.732621V13.0718C67.488 13.4414 67.1744 13.7415 66.7858 13.7415H63.8312C62.265 13.7416 60.7501 14.2739 59.5584 15.243L45.6256 26.5709C45.1174 26.9843 44.4714 27.2115 43.8034 27.2117H39.74C39.181 27.2117 38.6449 26.9999 38.2496 26.623C37.8543 26.246 37.6322 25.7348 37.6322 25.2017V14.8874C37.6322 14.2541 37.0946 13.7415 36.4304 13.7415C34.8624 13.7415 33.3527 14.3128 32.2114 15.3391L19.8275 26.4812C19.306 26.9504 18.616 27.2117 17.8989 27.2117H13.6608C13.1018 27.2117 12.5657 26.9999 12.1704 26.623C11.7751 26.246 11.553 25.7348 11.553 25.2017V17.9183C11.553 17.2241 10.9639 16.6623 10.2359 16.6623H0.971225C0.819733 16.6623 0.674446 16.6049 0.567325 16.5028C0.460205 16.4007 0.400024 16.2621 0.400024 16.1177V5.86204V5.86097Z"
+                  fill="#FC7303" />
+              </svg>
+              Вебмониторэкс
+            </a>
+          </h1>
+          <div class="collapse navbar-collapse" id="sidebar-menu">
+            <ul class="navbar-nav pt-lg-3">
+              <li class="nav-item">
+                <a class="nav-link" href="./">
+                  <span class="nav-link-title">Дашборды</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-3 border-start-wide border-danger rounded-0" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.4375 7.667V5.229C12.4375 2.782 10.4475 0.791504 8 0.791504C5.5525 0.791504 3.5625 2.7815 3.5625 5.229V7.667H2.521V15.2085H13.479V7.667H12.4375ZM5.3125 5.229C5.3125 3.747 6.5175 2.5415 8 2.5415C9.4825 2.5415 10.6875 3.7465 10.6875 5.229V7.667H5.3125V5.229ZM9.136 13.478H6.8635L7.4745 11.6445C7.27625 11.5471 7.10917 11.3963 6.99211 11.209C6.87505 11.0217 6.81266 10.8054 6.812 10.5845C6.812 10.2696 6.93711 9.96751 7.15981 9.74481C7.38251 9.52212 7.68455 9.39701 7.9995 9.39701C8.31444 9.39701 8.61649 9.52212 8.83919 9.74481C9.06189 9.96751 9.187 10.2696 9.187 10.5845C9.187 11.0505 8.916 11.4495 8.525 11.6445L9.136 13.478Z"
+                      fill="#FC7303" />
+                  </svg>
+                  <span class="nav-link-title ms-2">Тестирование API</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+      <div class="page-wrapper">
+        <div class="py-3 border-bottom"></div>
+        <div class="page-header page-header-border py-4">
           <div class="container-fluid">
-            <div class="row">
-              <div class="col-6 col-sm-4 d-flex align-items-center">
-                <div class="header__phone">
-                  <a class="header__phone-link" href="tel:0000000000">+123-456-789</a>
-                  <i class="fa-solid fa-phone ms-2"></i>
-                </div>
-              </div>
-              <div class="col-sm-4 d-none d-sm-block">
-                <ul class="socia-icons d-flex align-items-center justify-content-center gap-3">
-                  <li class="social-icons__item">
-                    <a class="social-icons__link" href="#" target="_blank">
-                      <i class="fa-brands fa-youtube"></i>
+            <div class="page-title-wrapper d-flex ms-3">
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_603_5371)">
+                  <circle opacity="0.16" cx="28" cy="28" r="28" fill="#FC7303" />
+                  <path
+                    d="M38.0107 27.2609V21.8495C38.0107 16.4181 33.5937 12 28.1612 12C22.7287 12 18.3117 16.417 18.3117 21.8495V27.2609H16V44H40.3224V27.2609H38.0107ZM22.196 21.8495C22.196 18.56 24.8706 15.8843 28.1612 15.8843C31.4518 15.8843 34.1264 18.5589 34.1264 21.8495V27.2609H22.196V21.8495ZM30.6827 40.159H25.6386L26.9948 36.0893C26.5548 35.8732 26.1839 35.5383 25.9241 35.1226C25.6643 34.7069 25.5258 34.2268 25.5243 33.7366C25.5243 33.0375 25.802 32.3671 26.2963 31.8728C26.7906 31.3785 27.461 31.1008 28.1601 31.1008C28.8591 31.1008 29.5296 31.3785 30.0239 31.8728C30.5182 32.3671 30.7959 33.0375 30.7959 33.7366C30.7959 34.7709 30.1944 35.6565 29.3265 36.0893L30.6827 40.159Z"
+                    fill="#FC7303" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_603_5371">
+                    <rect width="56" height="56" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <h2 class="page-title h1 fs-2rem lh-sm fw-bolder text-black ms-3">
+                Тестирование API
+                <button
+                  type="button"
+                  class="btn ms-1 p-1 btn-pill btn-secondary"
+                  data-bs-trigger="hover"
+                  data-bs-toggle="popover"
+                  title="Popover title"
+                  data-bs-content="Popover content">
+                  <svg
+                    class="m-0 w-3 h-3"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1_1514)">
+                      <path
+                        d="M7.99998 14.6666C11.6819 14.6666 14.6666 11.6819 14.6666 7.99998C14.6666 4.31808 11.6819 1.33331 7.99998 1.33331C4.31808 1.33331 1.33331 4.31808 1.33331 7.99998C1.33331 11.6819 4.31808 14.6666 7.99998 14.6666Z"
+                        stroke="#959DAC"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path
+                        d="M6.06 6.00001C6.21673 5.55446 6.5261 5.17875 6.9333 4.93944C7.3405 4.70012 7.81926 4.61264 8.28478 4.69249C8.7503 4.77234 9.17254 5.01436 9.47672 5.3757C9.78089 5.73703 9.94737 6.19436 9.94666 6.66668C9.94666 8.00001 7.94666 8.66668 7.94666 8.66668V9.33335"
+                        stroke="#959DAC"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path
+                        d="M8 11.3333H8.00667"
+                        stroke="#959DAC"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_1_1514">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="page-body my-0">
+          <div class="container-fluid">
+            <div class="row pt-3">
+              <div class="col-sm-6 col-lg-6">
+                <div class="dropdown">
+                  <a
+                    href="#"
+                    class="btn d-inline-flex text-black fw-normal lh-base fs-4 gap-2 dropdown-toggle"
+                    data-bs-toggle="dropdown">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M5.33333 1.33331V5.33331M10.6667 1.33331V5.33331M2 7.99998H14M3.33333 3.33331H12.6667C13.403 3.33331 14 3.86394 14 4.5185V12.8148C14 13.4694 13.403 14 12.6667 14H3.33333C2.59695 14 2 13.4694 2 12.8148V4.5185C2 3.86394 2.59695 3.33331 3.33333 3.33331Z"
+                        stroke="#959DAC"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                    Все спецификации
+                  </a>
+                  <div class="dropdown-menu py-2">
+                    <form class="d-flex position-relative mx-2">
+                      <input
+                        class="form-control ps-4 border-primary shadow-none text-primary fw-normal lh-base fs-4"
+                        type="search"
+                        placeholder="Найти приложение"
+                        aria-label="Search" />
+                      <button
+                        class="btn border-0 p-0 position-absolute top-50 start-0 translate-middle-y ms-2 shadow-none"
+                        type="submit">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M14 14L11.1 11.1M12.6667 7.33333C12.6667 10.2789 10.2789 12.6667 7.33333 12.6667C4.38781 12.6667 2 10.2789 2 7.33333C2 4.38781 4.38781 2 7.33333 2C10.2789 2 12.6667 4.38781 12.6667 7.33333Z"
+                            stroke="#959DAC"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                    </form>
+                    <a class="dropdown-item active text-black fw-normal lh-base fs-4 gap-4 p-2 mt-2" href="#">
+                      Все спецификации
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.8001 2.57001C14.913 2.69029 14.9739 2.85094 14.9696 3.01662C14.9652 3.18231 14.8959 3.33946 14.7769 3.45351L5.37431 12.4535C5.31503 12.5103 5.24519 12.5547 5.16884 12.5841C5.09248 12.6135 5.01111 12.6273 4.92944 12.6248C4.84777 12.6222 4.76741 12.6033 4.693 12.5692C4.61859 12.5351 4.5516 12.4864 4.49592 12.426L1.15553 8.80101C1.04371 8.67967 0.984171 8.51842 0.990017 8.35273C0.992912 8.27069 1.01177 8.19003 1.04552 8.11535C1.07927 8.04068 1.12724 7.97345 1.18671 7.91751C1.24617 7.86156 1.31596 7.818 1.39208 7.78931C1.46821 7.76061 1.54918 7.74735 1.63038 7.75028C1.79437 7.75618 1.94932 7.82767 2.06115 7.94901L4.97594 11.1125L13.9257 2.54651C14.0447 2.43248 14.2037 2.37089 14.3677 2.3753C14.5317 2.3797 14.6873 2.44974 14.8001 2.57001Z"
+                          fill="#FC7303" />
+                      </svg>
                     </a>
-                  </li>
-                  <li class="social-icons__item">
-                    <a class="social-icons__link" href="#" target="_blank">
-                      <i class="fa-brands fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li class="social-icons__item">
-                    <a class="social-icons__link" href="#" target="_blank">
-                      <i class="fa-brands fa-instagram"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-6 col-sm-4 d-flex align-items-center justify-content-end">
-                <div class="btn-group">
-                  <div class="dropdown">
-                    <button
-                      class="btn bg-light text-dark btn-sm btn-secondary dropdown-toggle me-2"
-                      type="button"
-                      id="dropdownMenuButton1"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                      Account
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">Sign in</a></li>
-                      <li><a class="dropdown-item" href="#">Sign up</a></li>
-                    </ul>
+                    <a class="dropdown-item text-black fw-normal lh-base fs-4 p-2" href="#">APP-1</a>
+                    <a class="dropdown-item text-black fw-normal lh-base fs-4 p-2" href="#">APP-2</a>
+                    <a class="dropdown-item text-black fw-normal lh-base fs-4 p-2" href="#">Загруженная спецификация</a>
                   </div>
                 </div>
-                <div class="btn-group">
-                  <div class="dropdown">
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="d-flex gap-1 justify-content-end">
+                  <button
+                    class="btn btn-primary fw-normal lh-base fs-4 d-flex gap-1 me-2"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight"
+                    aria-controls="offcanvasRight">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M13.25 7C13.25 7.19891 13.171 7.38968 13.0303 7.53033C12.8897 7.67098 12.6989 7.75 12.5 7.75H7.75V12.5C7.75 12.6989 7.67098 12.8897 7.53033 13.0303C7.38968 13.171 7.19891 13.25 7 13.25C6.80109 13.25 6.61032 13.171 6.46967 13.0303C6.32902 12.8897 6.25 12.6989 6.25 12.5V7.75H1.5C1.30109 7.75 1.11032 7.67098 0.96967 7.53033C0.829018 7.38968 0.75 7.19891 0.75 7C0.75 6.80109 0.829018 6.61032 0.96967 6.46967C1.11032 6.32902 1.30109 6.25 1.5 6.25H6.25V1.5C6.25 1.30109 6.32902 1.11032 6.46967 0.96967C6.61032 0.829018 6.80109 0.75 7 0.75C7.19891 0.75 7.38968 0.829018 7.53033 0.96967C7.67098 1.11032 7.75 1.30109 7.75 1.5V6.25H12.5C12.6989 6.25 12.8897 6.32902 13.0303 6.46967C13.171 6.61032 13.25 6.80109 13.25 7Z"
+                        fill="#FC7303" />
+                    </svg>
+                    Создать тест
+                  </button>
+                  <a class="btn btn-primary fw-normal lh-base fs-4 d-flex gap-1" href="#">
+                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M5.16668 14C4.24445 14 3.45845 13.6749 2.80868 13.0246C2.1589 12.3744 1.83379 11.5884 1.83334 10.6666C1.83334 10.0444 1.98334 9.48065 2.28334 8.97531C2.58334 8.46998 2.98334 8.07265 3.48334 7.78331C3.71668 7.64998 3.94445 7.65287 4.16668 7.79198C4.3889 7.93109 4.50001 8.12265 4.50001 8.36665C4.50001 8.48887 4.47512 8.59998 4.42534 8.69998C4.37557 8.79998 4.30601 8.8722 4.21668 8.91665C3.90557 9.08331 3.6529 9.3222 3.45868 9.63331C3.26445 9.94442 3.16712 10.2889 3.16668 10.6666C3.16668 11.2222 3.36112 11.6944 3.75001 12.0833C4.1389 12.4722 4.61112 12.6666 5.16668 12.6666C5.72223 12.6666 6.19445 12.4722 6.58334 12.0833C6.97223 11.6944 7.16668 11.2222 7.16668 10.6666C7.16668 10.4778 7.21957 10.3195 7.32534 10.192C7.43112 10.0644 7.57823 10.0004 7.76668 9.99998H11.0833C11.1722 9.89998 11.2807 9.81931 11.4087 9.75798C11.5367 9.69665 11.6782 9.6662 11.8333 9.66665C12.1111 9.66665 12.3473 9.76398 12.542 9.95865C12.7367 10.1533 12.8338 10.3893 12.8333 10.6666C12.8329 10.944 12.7358 11.1802 12.542 11.3753C12.3482 11.5704 12.112 11.6675 11.8333 11.6666C11.6778 11.6666 11.536 11.6362 11.408 11.5753C11.28 11.5144 11.172 11.4338 11.084 11.3333H8.43334C8.27779 12.1 7.89712 12.7362 7.29134 13.242C6.68557 13.7478 5.97734 14.0004 5.16668 14ZM5.16668 11.6666C4.8889 11.6666 4.6529 11.5695 4.45868 11.3753C4.26445 11.1811 4.16712 10.9449 4.16668 10.6666C4.16668 10.4222 4.24445 10.2111 4.40001 10.0333C4.55557 9.85554 4.74445 9.73887 4.96668 9.68331L6.53334 7.08331C6.21112 6.78331 5.95823 6.42509 5.77468 6.00865C5.59112 5.5922 5.49957 5.14487 5.50001 4.66665C5.50001 3.74442 5.82512 2.95842 6.47534 2.30865C7.12557 1.65887 7.91157 1.33376 8.83334 1.33331C9.61112 1.33331 10.2973 1.56954 10.892 2.04198C11.4867 2.51442 11.8782 3.11154 12.0667 3.83331C12.1222 4.04442 12.0833 4.2362 11.95 4.40865C11.8167 4.58109 11.6389 4.66709 11.4167 4.66665C11.2722 4.66665 11.1362 4.61376 11.0087 4.50798C10.8811 4.4022 10.7949 4.27176 10.75 4.11665C10.6278 3.69442 10.3945 3.34731 10.05 3.07531C9.70556 2.80331 9.30001 2.66709 8.83334 2.66665C8.27779 2.66665 7.80557 2.86109 7.41668 3.24998C7.02779 3.63887 6.83334 4.11109 6.83334 4.66665C6.83334 5.03331 6.92512 5.36953 7.10868 5.67531C7.29223 5.98109 7.52801 6.22265 7.81601 6.39998C7.97157 6.48887 8.0689 6.59998 8.10801 6.73331C8.14712 6.86665 8.12757 6.99998 8.04934 7.13331L6.11601 10.3666C6.13823 10.4222 6.15223 10.4722 6.15801 10.5166C6.16379 10.5611 6.16668 10.6111 6.16668 10.6666C6.16668 10.9444 6.06957 11.1806 5.87534 11.3753C5.68112 11.57 5.4449 11.6671 5.16668 11.6666ZM11.8333 14C11.5445 14 11.2638 13.964 10.9913 13.892C10.7189 13.82 10.4662 13.7226 10.2333 13.6C9.93334 13.4333 9.81401 13.1806 9.87534 12.842C9.93668 12.5033 10.1616 12.3338 10.55 12.3333C10.6056 12.3333 10.6667 12.3444 10.7333 12.3666C10.8 12.3889 10.8611 12.4166 10.9167 12.45C11.0611 12.5278 11.2085 12.5833 11.3587 12.6166C11.5089 12.65 11.6671 12.6666 11.8333 12.6666C12.3889 12.6666 12.8611 12.4722 13.25 12.0833C13.6389 11.6944 13.8333 11.2222 13.8333 10.6666C13.8333 10.1111 13.6389 9.63887 13.25 9.24998C12.8611 8.86109 12.3889 8.66665 11.8333 8.66665C11.7222 8.66665 11.6167 8.67509 11.5167 8.69198C11.4167 8.70887 11.3167 8.73376 11.2167 8.76665C11.0389 8.8222 10.8722 8.82509 10.7167 8.77531C10.5611 8.72554 10.4445 8.63931 10.3667 8.51665L8.65001 5.64998C8.41668 5.60554 8.22223 5.49442 8.06668 5.31665C7.91112 5.13887 7.83334 4.9222 7.83334 4.66665C7.83334 4.38887 7.93068 4.15287 8.12534 3.95865C8.32001 3.76442 8.55601 3.66709 8.83334 3.66665C9.11068 3.6662 9.3469 3.76354 9.54201 3.95865C9.73712 4.15376 9.83423 4.38976 9.83334 4.66665V4.80865C9.83334 4.84731 9.82223 4.89442 9.80001 4.94998L11.25 7.38331C11.3389 7.36109 11.4333 7.34731 11.5333 7.34198C11.6333 7.33665 11.7333 7.33376 11.8333 7.33331C12.7556 7.33331 13.5418 7.65842 14.192 8.30865C14.8422 8.95887 15.1671 9.74487 15.1667 10.6666C15.1662 11.5884 14.8411 12.3746 14.1913 13.0253C13.5416 13.676 12.7556 14.0009 11.8333 14Z"
+                        fill="#FC7303" />
+                    </svg>
+                    Политики
+                  </a>
+                </div>
+                <div
+                  class="offcanvas offcanvas-end"
+                  tabindex="-1"
+                  id="offcanvasRight"
+                  aria-labelledby="offcanvasRightLabel">
+                  <div class="offcanvas-header p-3">
                     <button
-                      class="btn bg-light text-dark btn-sm btn-secondary dropdown-toggle"
                       type="button"
-                      id="dropdownMenuButton2"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                      EN
+                      class="btn p-0 border-0 shadow-none"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10 6L4 12L10 18M4.5 12H20"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                      <li><a class="dropdown-item" href="#">DE</a></li>
-                      <li><a class="dropdown-item" href="#">PL</a></li>
-                    </ul>
+                    <h5 class="lh-base fs-3 fw-bolder text-black m-0" id="offcanvasRightLabel">Создать тест</h5>
+                    <button
+                      type="button"
+                      class="btn p-0 btn-pill bg-transparent border-0"
+                      data-bs-placement="left"
+                      data-bs-trigger="hover"
+                      data-bs-toggle="popover"
+                      title="Popover title"
+                      data-bs-content="Popover content">
+                      <svg
+                        class="m-0 w-3 h-3"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1_1514)">
+                          <path
+                            d="M7.99998 14.6666C11.6819 14.6666 14.6666 11.6819 14.6666 7.99998C14.6666 4.31808 11.6819 1.33331 7.99998 1.33331C4.31808 1.33331 1.33331 4.31808 1.33331 7.99998C1.33331 11.6819 4.31808 14.6666 7.99998 14.6666Z"
+                            stroke="#959DAC"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M6.06 6.00001C6.21673 5.55446 6.5261 5.17875 6.9333 4.93944C7.3405 4.70012 7.81926 4.61264 8.28478 4.69249C8.7503 4.77234 9.17254 5.01436 9.47672 5.3757C9.78089 5.73703 9.94737 6.19436 9.94666 6.66668C9.94666 8.00001 7.94666 8.66668 7.94666 8.66668V9.33335"
+                            stroke="#959DAC"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M8 11.3333H8.00667"
+                            stroke="#959DAC"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_1_1512">
+                            <rect width="16" height="16" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="offcanvas-body py-3 px-4">
+                    <div class="container p-0">
+                      <div class="mb-4">
+                        <label class="form-label h2 text-black lh-base fw-bolder mb-4">Базовые данные теста</label>
+                        <input
+                          type="text"
+                          class="form-control p-2 mb-4 shadow-none fw-normal lh-base fs-4"
+                          name="name-text-input"
+                          placeholder="Имя теста" />
+                        <textarea
+                          class="form-control h-5 p-2 shadow-none fw-normal lh-base fs-4"
+                          name="description-text-textarea"
+                          placeholder="Описание теста"></textarea>
+                      </div>
+                      <div class="mb-4">
+                        <h2 class="h2 text-black lh-base fw-bolder mb-4">Источник данных</h2>
+                        <div class="card">
+                          <div class="card-header">
+                            <ul class="nav nav-tabs card-header-tabs p-0 justify-content-between" data-bs-toggle="tabs">
+                              <li class="nav-item flex-grow-1">
+                                <a
+                                  href="#tabs-api"
+                                  class="nav-link active justify-content-center border-0"
+                                  data-bs-toggle="tab">
+                                  API Discovery
+                                </a>
+                              </li>
+                              <li class="nav-item flex-grow-1">
+                                <a
+                                  href="#tabs-url"
+                                  class="nav-link justify-content-center border-0"
+                                  data-bs-toggle="tab">
+                                  Загрузить с URL-адреса
+                                </a>
+                              </li>
+                              <li class="nav-item flex-grow-1">
+                                <a
+                                  href="#tabs-file"
+                                  class="nav-link justify-content-center border-0"
+                                  data-bs-toggle="tab">
+                                  Файл
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="card-body">
+                            <div class="tab-content">
+                              <div class="tab-pane active show" id="tabs-api">
+                                <h4>Home tab</h4>
+                                <div>
+                                  Cursus turpis vestibulum, dui in pharetra vulputate id sed non turpis ultricies
+                                  fringilla at sed facilisis lacus pellentesque purus nibh
+                                </div>
+                              </div>
+                              <div class="tab-pane" id="tabs-url">
+                                <h4>Profile tab</h4>
+                                <div>
+                                  Fringilla egestas nunc quis tellus diam rhoncus ultricies tristique enim at diam, sem
+                                  nunc amet, pellentesque id egestas velit sed
+                                </div>
+                              </div>
+                              <div class="tab-pane" id="tabs-file">
+                                <h4>Profile tab21321</h4>
+                                <div>
+                                  Fringilla egestas nunc quis tellus diam rhoncus ultricies tristique enim at diam, sem
+                                  nunc amet, pellentesque id egestas velit sed
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="header__middle bg-light py-3">text</div>
-      </header>
-      <main class="main">
-        <section class="hero"></section>
-      </main>
-      <footer class="footer"></footer>
-    </div>
+      </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"></script>
-    <script src="assets/js/main.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/js/tabler.min.js"></script>
+    </div>
   </body>
 </html>
