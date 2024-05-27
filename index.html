@@ -4,11 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/css/tabler.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/libs/dropzone/dist/dropzone.css"
+      rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <title>Tabler</title>
   </head>
   <body>
     <div class="page">
+      <!-- aside -->
       <aside class="navbar navbar-vertical navbar-expand-lg navbar-light">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button">
@@ -48,9 +52,11 @@
         </div>
       </aside>
       <div class="page-wrapper">
+        <!-- nav -->
         <div class="py-3 border-bottom"></div>
         <div class="page-header page-header-border py-lg-4">
           <div class="container-fluid">
+            <!-- title-wrapper -->
             <div class="page-title-wrapper d-flex ms-lg-3">
               <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_603_5371)">
@@ -65,8 +71,10 @@
                   </clipPath>
                 </defs>
               </svg>
+              <!-- title -->
               <h2 class="page-title h1 fs-2rem fs-1 lh-sm fw-bolder text-black ms-3">
                 Тестирование API
+                <!-- popover -->
                 <button
                   type="button"
                   class="btn ms-1 p-1 btn-pill btn-secondary"
@@ -116,6 +124,7 @@
           <div class="container-fluid">
             <div class="row pt-3 gap-3 gap-sm-0">
               <div class="col-12 col-sm-6">
+                <!-- dropdown -->
                 <div class="dropdown">
                   <a
                     href="#"
@@ -165,8 +174,10 @@
                   </div>
                 </div>
               </div>
+              <!-- btns -->
               <div class="col-12 col-sm-6">
                 <div class="d-flex gap-1 justify-content-sm-end">
+                  <!-- offcanvas -->
                   <button
                     class="btn btn-primary fw-normal lh-base fs-4 d-flex gap-1 me-2"
                     type="button"
@@ -189,6 +200,7 @@
                     Политики
                   </a>
                 </div>
+                <!-- offcanvas-header -->
                 <div
                   class="offcanvas offcanvas-end"
                   tabindex="-1"
@@ -197,7 +209,7 @@
                   <div class="offcanvas-header p-3">
                     <button
                       type="button"
-                      class="btn p-0 border-0 shadow-none"
+                      class="btn p-0 border-0 shadow-none bg-transparent"
                       data-bs-dismiss="offcanvas"
                       aria-label="Close">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -253,15 +265,18 @@
                       </svg>
                     </button>
                   </div>
+                  <!-- offcanvas-body -->
                   <div class="offcanvas-body py-3 px-4">
                     <div class="container p-0">
                       <div class="mb-4">
-                        <h2 class="form-label h2 text-black lh-base fw-bolder mb-4">Базовые данные теста</h2>
+                        <h2 class="form-label h2 text-black lh-base fw-bolder mb-4 ms-2">Базовые данные теста</h2>
+                        <!-- input-text -->
                         <input
                           type="text"
                           class="form-control p-2 mb-4 shadow-none fw-normal lh-base fs-4 text-black"
                           name="name-text-input"
                           placeholder="Имя теста" />
+                        <!-- textarea -->
                         <textarea
                           class="form-control h-5 p-2 shadow-none fw-normal lh-base fs-4 text-black"
                           data-bs-toggle="autosize"
@@ -270,14 +285,15 @@
                       </div>
 
                       <div class="mb-4">
-                        <h2 class="h2 text-black lh-base fw-bolder mb-4">Источник данных</h2>
-                        <div class="card">
-                          <div class="card-header">
+                        <h2 class="h2 text-black lh-base fw-bolder mb-4 ms-2">Источник данных</h2>
+                        <!-- tabs -->
+                        <div class="card border-0">
+                          <div class="card-header border">
                             <ul class="nav nav-tabs card-header-tabs p-0 justify-content-between" data-bs-toggle="tabs">
                               <li class="nav-item flex-grow-1">
                                 <a
                                   href="#tabs-api"
-                                  class="nav-link active fw-normal lh-base fs-4 text-black justify-content-center"
+                                  class="nav-link active fw-normal lh-base fs-4 justify-content-center"
                                   data-bs-toggle="tab">
                                   API Discovery
                                 </a>
@@ -285,7 +301,7 @@
                               <li class="nav-item flex-grow-1">
                                 <a
                                   href="#tabs-url"
-                                  class="nav-link fw-normal lh-base fs-4 text-black justify-content-center"
+                                  class="nav-link fw-normal lh-base fs-4 justify-content-center"
                                   data-bs-toggle="tab">
                                   Загрузить с URL-адреса
                                 </a>
@@ -293,35 +309,54 @@
                               <li class="nav-item flex-grow-1">
                                 <a
                                   href="#tabs-file"
-                                  class="nav-link fw-normal lh-base fs-4 text-black justify-content-center"
+                                  class="nav-link fw-normal lh-base fs-4 justify-content-center"
                                   data-bs-toggle="tab">
                                   Файл
                                 </a>
                               </li>
                             </ul>
                           </div>
-                          <div class="card-body">
+                          <div class="card-body p-0 mt-4">
                             <div class="tab-content">
-                              <div class="tab-pane active show" id="tabs-api">
-                                <h4>Home tab</h4>
-                                <div>
-                                  Cursus turpis vestibulum, dui in pharetra vulputate id sed non turpis ultricies
-                                  fringilla at sed facilisis lacus pellentesque purus nibh
-                                </div>
-                              </div>
+                              <div class="tab-pane active show" id="tabs-api">1</div>
                               <div class="tab-pane" id="tabs-url">
-                                <h4>Profile tab</h4>
-                                <div>
-                                  Fringilla egestas nunc quis tellus diam rhoncus ultricies tristique enim at diam, sem
-                                  nunc amet, pellentesque id egestas velit sed
+                                <input
+                                  type="text"
+                                  class="form-control p-2 mb-4 shadow-none fw-normal lh-base fs-4 text-black mb-4"
+                                  name="name-text-input"
+                                  placeholder="https://" />
+
+                                <div class="form-check form-switch m-0">
+                                  <input
+                                    class="form-check-input shadow-none"
+                                    type="checkbox"
+                                    role="switch"
+                                    id="flexSwitchCheckChecked"
+                                    checked />
+                                  <label
+                                    class="form-check-label fw-normal lh-base fs-4 text-black"
+                                    for="flexSwitchCheckChecked">
+                                    Регулярно подгружать спецификацию OAS перед тестом
+                                  </label>
                                 </div>
                               </div>
                               <div class="tab-pane" id="tabs-file">
-                                <h4>Profile tab21321</h4>
-                                <div>
-                                  Fringilla egestas nunc quis tellus diam rhoncus ultricies tristique enim at diam, sem
-                                  nunc amet, pellentesque id egestas velit sed
-                                </div>
+                                <form
+                                  class="dropzone p-2 border-secondary"
+                                  id="dropzone-custom"
+                                  action="."
+                                  autocomplete="off"
+                                  novalidate>
+                                  <div class="fallback">
+                                    <input name="file" type="file" />
+                                  </div>
+                                  <div class="dz-message m-0">
+                                    <h3
+                                      class="dropzone-msg-title m-0 fw-normal lh-base fs-4 text-black opacity-50 text-start">
+                                      Загрузть файл...
+                                    </h3>
+                                  </div>
+                                </form>
                               </div>
                             </div>
                           </div>
@@ -329,35 +364,119 @@
                       </div>
 
                       <div class="mb-4">
-                        <h2 class="form-label h2 text-black lh-base fw-bolder mb-4">Выбор политики проверки</h2>
-                        <select class="form-select">
-                          <option selected>Выберите политику...</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
+                        <h2 class="form-label h2 text-black lh-base fw-bolder mb-4 ms-2">Выбор политики проверки</h2>
+                        <div class="p-3 bg-secondary">
+                          <!-- select -->
+                          <select class="form-select shadow-none fw-normal lh-base fs-4 text-black">
+                            <option selected>Выберите политику...</option>
+                            <option value="1">Глубокий скан безопасности API</option>
+                            <option value="2">Систематический анализа безопасности API</option>
+                          </select>
+                        </div>
                       </div>
 
                       <div class="mb-4">
-                        <h2 class="form-label h2 text-black lh-base fw-bolder mb-4">Режим загрузки</h2>
-                        <div class="form-check form-check-inline">
+                        <h2 class="form-label h2 text-black lh-base fw-bolder mb-4 ms-2">Режим загрузки</h2>
+                        <div class="form-check d-inline-flex align-items-center gap-2 me-2">
+                          <!-- radio -->
                           <input
                             class="form-check-input shadow-none"
                             type="radio"
                             name="flexRadioDefault"
                             id="flexRadioDefault1" />
-                          <label class="form-check-label" for="flexRadioDefault1">Разовая проверка</label>
+                          <label class="form-check-label fw-normal lh-base fs-4 text-black" for="flexRadioDefault1">
+                            Разовая проверка
+                          </label>
                         </div>
-                        <div class="form-check form-check-inline">
+                        <div class="form-check d-inline-flex align-items-center gap-2">
+                          <!-- radio -->
                           <input
                             class="form-check-input shadow-none"
                             type="radio"
                             name="flexRadioDefault"
                             id="flexRadioDefault2"
                             checked />
-                          <label class="form-check-label" for="flexRadioDefault2">Периодическая проверка</label>
+                          <label class="form-check-label fw-normal lh-base fs-4 text-black" for="flexRadioDefault2">
+                            Периодическая проверка
+                          </label>
                         </div>
                       </div>
+
+                      <div class="mb-4">
+                        <h2 class="form-label h2 text-black lh-base fw-bolder mb-4 ms-2">Исключения</h2>
+                        <!-- input-search -->
+                        <form class="d-flex position-relative mb-4">
+                          <input
+                            class="form-control py-2 pe-5 shadow-none text-black fw-normal lh-base fs-4"
+                            type="search"
+                            placeholder="Поиск по эндпоинтам "
+                            aria-label="Search" />
+                          <div class="position-absolute top-50 end-0 translate-middle-y me-1">
+                            <svg
+                              class="me-2"
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect x="0.5" y="0.5" width="19" height="19" rx="3.5" stroke="#DBE0E7" />
+                              <path d="M8 14.5L12 5.5" stroke="#959DAC" />
+                            </svg>
+                            <button class="btn border-0 p-2 bg-primary shadow-none" type="submit">
+                              <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M14 14L11.1 11.1M12.6667 7.33333C12.6667 10.2789 10.2789 12.6667 7.33333 12.6667C4.38781 12.6667 2 10.2789 2 7.33333C2 4.38781 4.38781 2 7.33333 2C10.2789 2 12.6667 4.38781 12.6667 7.33333Z"
+                                  stroke="white"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round" />
+                              </svg>
+                            </button>
+                          </div>
+                        </form>
+                        <!-- badge and checkbox -->
+                        <div class="mb-4">
+                          <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center gap-2">
+                              <span class="badge bg-blue px-3 py-1 fw-bolder fz-1 lh-base">GET</span>
+                              <span class="fw-bolder lh-base fs-4 text-black">/api/v1/admin/logs</span>
+                            </div>
+                            <label class="form-colorinput">
+                              <input class="form-colorinput-input" name="color-get" type="checkbox" />
+                              <span class="form-colorinput-color shadow-none"></span>
+                            </label>
+                          </div>
+
+                          <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                              <span class="badge bg-lime px-3 py-1 fw-bolder fz-1 lh-base">POST</span>
+                              <span class="fw-bolder lh-base fs-4 text-black">/api/v1/admin/logs</span>
+                            </div>
+                            <label class="form-colorinput">
+                              <input class="form-colorinput-input" name="color-post" type="checkbox" />
+                              <span class="form-colorinput-color shadow-none"></span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- offcanvas-footer -->
+                  <div class="offcanvas-footer border-top p-3">
+                    <div class="d-flex justify-content-between">
+                      <button
+                        class="btn border-0 fw-normal lh-base fs-4 d-flex text-black"
+                        type="button"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close">
+                        Отмена
+                      </button>
+                      <button class="btn btn-primary fw-normal lh-base fs-4 d-flex" type="button">Создать тест</button>
                     </div>
                   </div>
                 </div>
@@ -368,6 +487,12 @@
       </div>
 
       <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/js/tabler.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/libs/dropzone/dist/dropzone-min.js"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          new Dropzone('#dropzone-custom')
+        })
+      </script>
     </div>
   </body>
 </html>
