@@ -7,8 +7,9 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/libs/dropzone/dist/dropzone.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tom-select@latest/dist/css/tom-select.bootstrap4.min.css"
+      rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <title>Tabler</title>
   </head>
@@ -35,16 +36,31 @@
           <div class="collapse navbar-collapse" id="sidebar-menu">
             <ul class="navbar-nav pt-lg-3">
               <li class="nav-item">
-                <a class="nav-link" href="./">
-                  <span class="nav-link-title">Дашборды</span>
+                <a class="nav-link px-3" href="./">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_61_4579)">
+                      <path
+                        d="M14.6667 6.66667H12.8085C12.3369 6.66667 11.9295 6.99607 11.8307 7.45714L10.9029 11.7867C10.6809 12.8225 9.21188 12.8474 8.95496 11.8197L7.04513 4.18034C6.7882 3.15263 5.31914 3.17752 5.09718 4.21335L4.16943 8.54286C4.07063 9.00394 3.66316 9.33333 3.19162 9.33333H1.33337"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_61_4579">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <span class="nav-link-title ms-2">Дашборды</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link ps-3 border-start-wide border-danger rounded-0" href="#">
+                <a class="nav-link active px-3" href="#">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M12.4375 7.667V5.229C12.4375 2.782 10.4475 0.791504 8 0.791504C5.5525 0.791504 3.5625 2.7815 3.5625 5.229V7.667H2.521V15.2085H13.479V7.667H12.4375ZM5.3125 5.229C5.3125 3.747 6.5175 2.5415 8 2.5415C9.4825 2.5415 10.6875 3.7465 10.6875 5.229V7.667H5.3125V5.229ZM9.136 13.478H6.8635L7.4745 11.6445C7.27625 11.5471 7.10917 11.3963 6.99211 11.209C6.87505 11.0217 6.81266 10.8054 6.812 10.5845C6.812 10.2696 6.93711 9.96751 7.15981 9.74481C7.38251 9.52212 7.68455 9.39701 7.9995 9.39701C8.31444 9.39701 8.61649 9.52212 8.83919 9.74481C9.06189 9.96751 9.187 10.2696 9.187 10.5845C9.187 11.0505 8.916 11.4495 8.525 11.6445L9.136 13.478Z"
-                      fill="#FC7303" />
+                      fill="#000000" />
                   </svg>
                   <span class="nav-link-title ms-2">Тестирование API</span>
                 </a>
@@ -320,7 +336,23 @@
                           </div>
                           <div class="card-body p-0 mt-4">
                             <div class="tab-content">
-                              <div class="tab-pane active show" id="tabs-api">1</div>
+                              <div class="tab-pane active show" id="tabs-api">
+                                <select
+                                  class="mb-4 fw-normal lh-base fs-4 text-black available-search-select"
+                                  autocomplete="off">
+                                  <option value="1">Выберите приложение...</option>
+                                  <option value="2">APP-1</option>
+                                  <option value="3">APP-2</option>
+                                  <option value="4">APP-3</option>
+                                  <option value="5">APP-4</option>
+                                  <option value="6">Глубокий скан безопасности API</option>
+                                  <option value="7">Систематический анализа безопасности API</option>
+                                </select>
+                                <div class="fw-normal lh-base fs-4 text-black">
+                                  Endpoints:
+                                  <span>150</span>
+                                </div>
+                              </div>
                               <div class="tab-pane" id="tabs-url">
                                 <input
                                   type="text"
@@ -366,19 +398,17 @@
                       </div>
 
                       <div class="mb-4">
-                        <h2 class="form-label h2 text-black lh-base fw-bolder mb-4 ms-2">Выбор политики проверки</h2>
-                        <div class="p-3 bg-secondary">
-                          <!-- select -->
-                          <select
-                            class="form-select fw-normal lh-base fs-4 text-black"
-                            id="disabled-search-select"
-                            autocomplete="off"
-                            placeholder="Выберите политику...">
-                            <option value=""></option>
-                            <option value="2">Глубокий скан безопасности API</option>
-                            <option value="3">Систематический анализа безопасности API</option>
-                          </select>
-                        </div>
+                        <h2 class="h2 text-black lh-base fw-bolder mb-4 ms-2">Выбор политики проверки</h2>
+                        <!-- select -->
+                        <select class="fw-normal lh-base fs-4 text-black disabled-search-select" autocomplete="off">
+                          <option value="1">Выберите политику...</option>
+                          <option value="2">Глубокий скан безопасности API</option>
+                          <option value="3">Систематический анализа безопасности API</option>
+                          <option value="4">Систематический анализа безопасности API</option>
+                          <option value="5">Систематический анализа безопасности API</option>
+                          <option value="6">Глубокий скан безопасности API</option>
+                          <option value="7">Глубокий скан безопасности API</option>
+                        </select>
                       </div>
 
                       <div class="mb-4">
@@ -499,47 +529,55 @@
       <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/js/tabler.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/libs/dropzone/dist/dropzone-min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
       <script>
         document.addEventListener('DOMContentLoaded', function () {
-          new Dropzone('#dropzone-custom')
+          const disabledSearchSelects = document.querySelectorAll('.disabled-search-select')
+          const availableSearchSelects = document.querySelectorAll('.available-search-select')
+          // const dropdownSvgIcon = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          // <path d="M14 14L11.1 11.1M12.6667 7.33333C12.6667 10.2789 10.2789 12.6667 7.33333 12.6667C4.38781 12.6667 2 10.2789 2 7.33333C2 4.38781 4.38781 2 7.33333 2C10.2789 2 12.6667 4.38781 12.6667 7.33333Z" stroke="#959DAC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          // </svg>`
+          // const controlSvgIcon = `<svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          // <path d="M4.33333 1.33333V5.33333M9.66667 1.33333V5.33333M1 8H13M2.33333 3.33333H11.6667C12.403 3.33333 13 3.86395 13 4.51851V12.8148C13 13.4694 12.403 14 11.6667 14H2.33333C1.59695 14 1 13.4694 1 12.8148V4.51851C1 3.86395 1.59695 3.33333 2.33333 3.33333Z" stroke="#959DAC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          // </svg>`
 
-          new TomSelect('#disabled-search-select', {
-            create: false,
-            maxItems: 1,
-            maxOptions: null
-
-            // searchField: []
-            // controlInput: null
+          disabledSearchSelects.forEach((select) => {
+            new TomSelect(select, {
+              create: false,
+              maxItems: 1,
+              maxOptions: null,
+              controlInput: null
+            })
           })
 
-          // new TomSelect('#select-code-language', {
-          //   sortField: 'text',
-          //   hideSelected: false,
-          //   plugins: {
-          //     dropdown_header: {
-          //       html: function (data) {
-          //         return `
-          // 		    <div>
-          // 			    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          // 				    <path d="M14 14L11.1 11.1M12.6667 7.33333C12.6667 10.2789 10.2789 12.6667 7.33333 12.6667C4.38781 12.6667 2 10.2789 2 7.33333C2 4.38781 4.38781 2 7.33333 2C10.2789 2 12.6667 4.38781 12.6667 7.33333Z" stroke="#959DAC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          // 			    </svg>
-          // 		    </div>`
-          //       }
-          //     }
-          //   }
-          // })
+          availableSearchSelects.forEach((select) => {
+            new TomSelect(select, {
+              plugins: ['dropdown_input'],
+              placeholder: 'Найти приложение',
+              create: false,
+              sortField: {
+                field: 'text',
+                direction: 'asc'
+              },
+              render: {
+                no_results: function () {
+                  return '<div class="no-results">Результаты не найдены</div>'
+                }
+              }
+              // onInitialize: function () {
+              //   const dropdownInputWrap = this.dropdown.querySelector('.dropdown-input-wrap')
+              //   if (dropdownInputWrap) {
+              //     dropdownInputWrap.insertAdjacentHTML('afterbegin', dropdownSvgIcon)
+              //   }
 
-          // new TomSelect('#ex-dropdown-input', {
-          //   plugins: ['dropdown_input']
-          // })
+              //   const controlElement = this.wrapper.querySelector('.ts-control')
+              //   if (controlElement) {
+              //     controlElement.insertAdjacentHTML('afterbegin', controlSvgIcon)
+              //   }
+              // }
+            })
+          })
 
-          // const disabledSearchSelect = new Choices('#disabled-search-select', {
-          //   searchEnabled: false,
-          //   shouldSort: false,
-          //   position: 'bottom',
-          //   itemSelectText: ''
-          // })
+          new Dropzone('#dropzone-custom')
         })
       </script>
     </div>

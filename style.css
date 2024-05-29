@@ -21,11 +21,11 @@
 
 .btn-primary {
   --tblr-btn-bg: #fff4eb;
-  --tblr-btn-color: #fc7303;
+  --tblr-btn-color: var(--tblr-primary);
   --tblr-btn-box-shadow: none;
   --tblr-btn-hover-bg: #febc86;
-  --tblr-btn-hover-color: #fc7303;
-  --tblr-btn-active-color: #fc7303;
+  --tblr-btn-hover-color: var(--tblr-primary);
+  --tblr-btn-active-color: var(--tblr-primary);
   --tblr-btn-active-bg: #febc86;
   --tblr-btn-border-color: transparent;
 }
@@ -52,6 +52,28 @@
   --tblr-btn-active-bg: #ffffff;
   --tblr-btn-box-shadow: none;
 }
+
+/* .navbar {
+  --tblr-body-color: red;
+} */
+
+.navbar .navbar-nav .active > .nav-link,
+.navbar .navbar-nav .nav-link.active {
+  color: #fc7303;
+  border-left: 2px solid #fc7303;
+  border-radius: 0;
+}
+
+.navbar .navbar-nav .active > .nav-link,
+.navbar .navbar-nav .nav-link.active svg path {
+  fill: #fc7303;
+}
+
+/* .navbar .navbar-nav .active > .nav-link,
+.navbar .navbar-nav .nav-link.disabled {
+  color: #959dac;
+  border-left: none;
+} */
 
 .dropdown-menu {
   --tblr-dropdown-border-color: #dbe0e7;
@@ -175,6 +197,137 @@
 .form-switch .form-check-input:active {
   filter: none;
 }
+
+/* start disabled search select */
+.ts-wrapper {
+  padding: 12px;
+  background-color: #f3f4f6;
+  border-radius: 6px;
+}
+
+.ts-wrapper.single .ts-control:after {
+  width: 6px;
+  height: 6px;
+  border-width: 0;
+  border-right: 2px solid #000000;
+  border-top: 2px solid #000000;
+  transform: rotate(135deg);
+  transition: transform 0.3s ease;
+}
+
+.ts-wrapper.single.dropdown-active .ts-control:after {
+  border-width: 0;
+  border-right: 2px solid #000000;
+  border-top: 2px solid #000000;
+  transform: rotate(-45deg);
+  margin-top: 0;
+}
+
+.focus .ts-control {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.ts-control {
+  border: none;
+  padding: 8px 12px;
+}
+
+.ts-control .item[data-value='1'] {
+  opacity: 0.5;
+}
+
+.ts-dropdown {
+  font-size: inherit;
+  color: inherit;
+  padding: 8px 12px 12px 12px;
+  background-color: #f3f4f6;
+  border: none;
+  box-shadow: none;
+  top: calc(100% - 12px);
+  margin: 0;
+}
+
+.ts-dropdown [data-selectable].option:first-child {
+  display: none;
+}
+
+.ts-dropdown .option {
+  padding: 8px 32px;
+}
+
+.ts-dropdown .active {
+  background-color: #f3f4f6;
+  color: #000000;
+}
+
+.ts-dropdown-content {
+  padding: 12px 0;
+  border: 1px solid #dbe0e7;
+  border-radius: 4px;
+  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+}
+/* end disabled search select */
+
+/* start available search select */
+.ts-wrapper.available-search-select {
+  padding: 0;
+  background-color: transparent;
+}
+
+.ts-wrapper.available-search-select .ts-control {
+  border: 1px solid #dbe0e7;
+}
+
+.ts-wrapper.available-search-select .ts-dropdown {
+  top: 100%;
+  padding: 0;
+  margin-top: 8px;
+  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.ts-wrapper.available-search-select .ts-dropdown [data-selectable].option:first-child {
+  display: block;
+}
+
+.ts-wrapper.available-search-select .dropdown-input-wrap {
+  background-color: #ffffff;
+  padding: 12px 8px 8px 8px;
+  border: 1px solid #dbe0e7;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom: none;
+}
+
+.plugin-dropdown_input.focus .ts-dropdown .dropdown-input {
+  border: 1px solid #fc7303;
+  background-color: #ffffff;
+  box-shadow: none;
+  padding: 6px 32px;
+  border-radius: 4px;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 14L11.1 11.1M12.6667 7.33333C12.6667 10.2789 10.2789 12.6667 7.33333 12.6667C4.38781 12.6667 2 10.2789 2 7.33333C2 4.38781 4.38781 2 7.33333 2C10.2789 2 12.6667 4.38781 12.6667 7.33333Z' stroke='%23959DAC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center left 10px;
+}
+
+.plugin-dropdown_input.focus .ts-dropdown .dropdown-input::placeholder {
+  opacity: 0.5;
+}
+
+.ts-wrapper.available-search-select .ts-dropdown-content {
+  padding: 0;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  box-shadow: none;
+}
+
+.ts-wrapper.available-search-select .ts-dropdown .option {
+  padding: 8px 32px;
+}
+
+/* end available search select */
 
 @media (min-width: 768px) {
   .fs-2rem {
