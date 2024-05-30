@@ -60,7 +60,7 @@
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M12.4375 7.667V5.229C12.4375 2.782 10.4475 0.791504 8 0.791504C5.5525 0.791504 3.5625 2.7815 3.5625 5.229V7.667H2.521V15.2085H13.479V7.667H12.4375ZM5.3125 5.229C5.3125 3.747 6.5175 2.5415 8 2.5415C9.4825 2.5415 10.6875 3.7465 10.6875 5.229V7.667H5.3125V5.229ZM9.136 13.478H6.8635L7.4745 11.6445C7.27625 11.5471 7.10917 11.3963 6.99211 11.209C6.87505 11.0217 6.81266 10.8054 6.812 10.5845C6.812 10.2696 6.93711 9.96751 7.15981 9.74481C7.38251 9.52212 7.68455 9.39701 7.9995 9.39701C8.31444 9.39701 8.61649 9.52212 8.83919 9.74481C9.06189 9.96751 9.187 10.2696 9.187 10.5845C9.187 11.0505 8.916 11.4495 8.525 11.6445L9.136 13.478Z"
-                      fill="#000000" />
+                      fill="currentColor" />
                   </svg>
                   <span class="nav-link-title ms-2">Тестирование API</span>
                 </a>
@@ -89,12 +89,12 @@
                 </defs>
               </svg>
               <!-- title -->
-              <h2 class="page-title h1 fs-2rem fs-1 lh-sm fw-bolder text-black ms-3">
+              <h2 class="page-title h1 fs-1 lh-sm fw-bolder text-black ms-3">
                 Тестирование API
                 <!-- popover -->
                 <button
                   type="button"
-                  class="btn ms-1 p-1 btn-pill btn-secondary"
+                  class="btn btn-secondary ms-1 p-1 btn-pill"
                   data-bs-trigger="hover"
                   data-bs-toggle="popover"
                   title="Popover title"
@@ -296,7 +296,7 @@
                           placeholder="Имя теста" />
                         <!-- textarea -->
                         <textarea
-                          class="form-control h-5 p-2 shadow-none fw-normal lh-base fs-4 text-black"
+                          class="form-control shadow-none fw-normal lh-base fs-4 text-black"
                           data-bs-toggle="autosize"
                           name="description-text-textarea"
                           placeholder="Описание теста"></textarea>
@@ -533,12 +533,7 @@
         document.addEventListener('DOMContentLoaded', function () {
           const disabledSearchSelects = document.querySelectorAll('.disabled-search-select')
           const availableSearchSelects = document.querySelectorAll('.available-search-select')
-          // const dropdownSvgIcon = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          // <path d="M14 14L11.1 11.1M12.6667 7.33333C12.6667 10.2789 10.2789 12.6667 7.33333 12.6667C4.38781 12.6667 2 10.2789 2 7.33333C2 4.38781 4.38781 2 7.33333 2C10.2789 2 12.6667 4.38781 12.6667 7.33333Z" stroke="#959DAC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          // </svg>`
-          // const controlSvgIcon = `<svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-          // <path d="M4.33333 1.33333V5.33333M9.66667 1.33333V5.33333M1 8H13M2.33333 3.33333H11.6667C12.403 3.33333 13 3.86395 13 4.51851V12.8148C13 13.4694 12.403 14 11.6667 14H2.33333C1.59695 14 1 13.4694 1 12.8148V4.51851C1 3.86395 1.59695 3.33333 2.33333 3.33333Z" stroke="#959DAC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          // </svg>`
+          const dropzoneCustom = document.querySelector('#dropzone-custom')
 
           disabledSearchSelects.forEach((select) => {
             new TomSelect(select, {
@@ -563,21 +558,12 @@
                   return '<div class="no-results">Результаты не найдены</div>'
                 }
               }
-              // onInitialize: function () {
-              //   const dropdownInputWrap = this.dropdown.querySelector('.dropdown-input-wrap')
-              //   if (dropdownInputWrap) {
-              //     dropdownInputWrap.insertAdjacentHTML('afterbegin', dropdownSvgIcon)
-              //   }
-
-              //   const controlElement = this.wrapper.querySelector('.ts-control')
-              //   if (controlElement) {
-              //     controlElement.insertAdjacentHTML('afterbegin', controlSvgIcon)
-              //   }
-              // }
             })
           })
 
-          new Dropzone('#dropzone-custom')
+          if (dropzoneCustom) {
+            new Dropzone(dropzoneCustom)
+          }
         })
       </script>
     </div>
