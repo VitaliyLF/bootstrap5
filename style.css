@@ -2,6 +2,8 @@
 
 :root {
   --tblr-body-bg: #ffffff;
+  --tblr-body-color: #000000;
+  --tblr-link-color-rgb: 0, 0, 0;
   --tblr-font-sans-serif: 'Inter', sans-serif;
   --tblr-body-font-weight: 400;
   --tblr-font-size-h1: 2rem;
@@ -12,6 +14,7 @@
   --tblr-link-hover-color: none;
   --tblr-border-color: #dbe0e7;
   --tblr-secondary-rgb: 243, 244, 246;
+  --tblr-disabled-color: #959dac;
 }
 
 .btn.show {
@@ -19,7 +22,7 @@
   --tblr-btn-active-border-color: #b3b7bd;
 }
 
-.btn:disabled {
+.btn.disabled {
   --tblr-btn-disabled-color: #959dac;
   --tblr-btn-disabled-bg: #eceff4;
   border-color: transparent;
@@ -49,10 +52,16 @@
 }
 
 .btn-secondary {
-  --tblr-btn-color: ;
+  --tblr-btn-color: var(--tblr-body-color);
   --tblr-btn-bg: #eceff4;
   --tblr-btn-hover-border-color: transparent;
   --tblr-btn-box-shadow: none;
+  --tblr-btn-hover-color: var(--tblr-body-color);
+}
+
+.disabled {
+  color: var(--tblr-disabled-color);
+  pointer-events: none;
 }
 
 .navbar .navbar-nav .nav-link.active {
@@ -62,21 +71,16 @@
 }
 
 .navbar .navbar-nav .nav-link.disabled {
-  --tblr-disabled-color: #959dac;
-  pointer-events: all;
-  cursor: pointer;
+  pointer-events: all; /* ??? */
+  cursor: pointer; /* ??? */
 }
 
-.form-control:hover:not(:disabled) {
+.form-control:hover {
   border-color: #b8c0cd;
 }
 
 .form-control:focus {
   border-color: var(--tblr-primary);
-}
-
-.form-control:disabled {
-  opacity: 0.5;
 }
 
 textarea.form-control {
@@ -91,9 +95,24 @@ textarea.form-control {
   min-height: 80px;
 }
 
+.card-header {
+  border: 1px solid #dbe0e7;
+  border-bottom: none;
+}
+
 .card-header-tabs .nav-link.active {
   --tblr-card-bg: #fff4eb;
-  border-bottom-color: var(--tblr-border-color);
+  border-bottom: 1px solid #dbe0e7;
+  border-right: none;
+}
+
+.card-header-tabs.disabled .nav-link.active {
+  --tblr-card-bg: #f3f4f6;
+  --tblr-nav-tabs-link-active-color: var(--tblr-disabled-color);
+}
+
+.card-header-tabs.disabled .nav-link {
+  --tblr-nav-link-color: var(--tblr-disabled-color);
 }
 
 .nav {
@@ -103,24 +122,23 @@ textarea.form-control {
 
 .nav-tabs {
   --tblr-nav-tabs-link-active-color: var(--tblr-primary);
-  --tblr-nav-tabs-link-hover-border-color: transparent;
   --tblr-nav-tabs-border-radius: 0;
-  --tblr-nav-tabs-link-active-border-color: transparent;
 }
 
 .nav-tabs .nav-link {
-  border-right-color: var(--tblr-border-color);
-  border-bottom-color: var(--tblr-border-color);
   background-color: #ffffff;
-}
-
-.nav-tabs .nav-link:hover:not(.active) {
-  border-right-color: var(--tblr-border-color);
-  border-bottom-color: var(--tblr-border-color);
+  margin: 0;
+  border: none;
+  border-right: 1px solid #dbe0e7;
+  border-bottom: 1px solid #dbe0e7;
 }
 
 .nav-tabs .nav-item:last-child .nav-link {
-  border-right-color: transparent;
+  border-right: none;
+}
+
+.nav-tabs .nav-link:hover {
+  border-color: #dbe0e7;
 }
 
 .dropzone {
@@ -183,6 +201,7 @@ textarea.form-control {
 }
 
 /* start disabled search select */
+
 .ts-wrapper {
   padding: 12px;
   background-color: #f3f4f6;
@@ -221,6 +240,11 @@ textarea.form-control {
   opacity: 0.5;
 }
 
+.disabled .ts-control {
+  background-color: #ffffff;
+  opacity: 1;
+}
+
 .ts-dropdown {
   font-size: inherit;
   color: inherit;
@@ -255,9 +279,37 @@ textarea.form-control {
 /* end disabled search select */
 
 /* start available search select */
+
 .ts-wrapper.available-search-select {
   padding: 0;
   background-color: transparent;
+}
+
+.ts-wrapper.available-search-select .ts-dropdown-content .option[data-value='1'] {
+  display: none;
+}
+
+.ts-wrapper.available-search-select-with-first-value .ts-dropdown-content .option[data-value='1'] {
+  display: block;
+  background-image: url("data:image/svg+xml,%3Csvg width='15' height='11' viewBox='0 0 15 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.8001 0.56999C14.913 0.690272 14.9739 0.850922 14.9696 1.01661C14.9652 1.18229 14.8959 1.33944 14.7769 1.45349L5.37431 10.4535C5.31503 10.5103 5.24519 10.5547 5.16884 10.5841C5.09248 10.6135 5.01111 10.6273 4.92944 10.6247C4.84777 10.6222 4.76741 10.6033 4.693 10.5692C4.61859 10.5351 4.5516 10.4864 4.49592 10.426L1.15553 6.80099C1.04371 6.67965 0.984171 6.5184 0.990017 6.35272C0.992912 6.27068 1.01177 6.19001 1.04552 6.11534C1.07927 6.04066 1.12724 5.97343 1.18671 5.91749C1.24617 5.86155 1.31596 5.81799 1.39208 5.78929C1.46821 5.7606 1.54918 5.74734 1.63038 5.75026C1.79437 5.75617 1.94932 5.82765 2.06115 5.94899L4.97594 9.11249L13.9257 0.54649C14.0447 0.43246 14.2037 0.370875 14.3677 0.375282C14.5317 0.379689 14.6873 0.449727 14.8001 0.56999Z' fill='%23FC7303' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center right 16px;
+}
+
+.ts-wrapper.available-search-select-with-first-value .ts-control .item[data-value='1'] {
+  opacity: 1;
+}
+
+.ts-wrapper.available-search-select.available-search-select-with-first-value
+  .ts-dropdown-content
+  .option[data-value='2'] {
+  background-image: none;
+}
+
+.ts-wrapper.available-search-select .ts-dropdown-content .option[data-value='2'] {
+  background-image: url("data:image/svg+xml,%3Csvg width='15' height='11' viewBox='0 0 15 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.8001 0.56999C14.913 0.690272 14.9739 0.850922 14.9696 1.01661C14.9652 1.18229 14.8959 1.33944 14.7769 1.45349L5.37431 10.4535C5.31503 10.5103 5.24519 10.5547 5.16884 10.5841C5.09248 10.6135 5.01111 10.6273 4.92944 10.6247C4.84777 10.6222 4.76741 10.6033 4.693 10.5692C4.61859 10.5351 4.5516 10.4864 4.49592 10.426L1.15553 6.80099C1.04371 6.67965 0.984171 6.5184 0.990017 6.35272C0.992912 6.27068 1.01177 6.19001 1.04552 6.11534C1.07927 6.04066 1.12724 5.97343 1.18671 5.91749C1.24617 5.86155 1.31596 5.81799 1.39208 5.78929C1.46821 5.7606 1.54918 5.74734 1.63038 5.75026C1.79437 5.75617 1.94932 5.82765 2.06115 5.94899L4.97594 9.11249L13.9257 0.54649C14.0447 0.43246 14.2037 0.370875 14.3677 0.375282C14.5317 0.379689 14.6873 0.449727 14.8001 0.56999Z' fill='%23FC7303' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center right 16px;
 }
 
 .ts-wrapper.available-search-select .ts-control {
@@ -271,8 +323,8 @@ textarea.form-control {
   box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
-.ts-wrapper.available-search-select .ts-dropdown [data-selectable].option:first-child {
-  display: block;
+.ts-wrapper.available-search-select .ts-dropdown [data-selectable] .highlight {
+  background-color: #febc86;
 }
 
 .ts-wrapper.available-search-select .dropdown-input-wrap {
