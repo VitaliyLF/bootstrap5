@@ -379,35 +379,37 @@
 
                       <div class="mb-4">
                         <h2 class="form-label h2 lh-base fw-bolder mb-4 ms-2">Режим загрузки</h2>
-                        <div class="form-check d-inline-flex align-items-center gap-2 me-2">
-                          <!-- radio -->
+                        <!-- radio -->
+                        <label
+                          class="form-check-label d-inline-flex flex-row-reverse align-items-center gap-2 me-2 fw-normal lh-base fs-4 cursor-pointer"
+                          for="flexRadioDefault1">
+                          Разовая проверка
                           <input
                             class="form-check-input shadow-none cursor-pointer"
                             type="radio"
                             name="flexRadioDefault"
                             id="flexRadioDefault1" />
-                          <label class="form-check-label fw-normal lh-base fs-4 cursor-pointer" for="flexRadioDefault1">
-                            Разовая проверка
-                          </label>
-                        </div>
-                        <div class="form-check d-inline-flex align-items-center gap-2">
-                          <!-- radio -->
+                        </label>
+                        <!-- radio -->
+                        <label
+                          class="form-check-label d-inline-flex flex-row-reverse align-items-center gap-2 me-2 fw-normal lh-base fs-4 cursor-pointer"
+                          for="flexRadioDefault2">
+                          <!-- disabled -->
+                          Периодическая проверка
                           <input
                             class="form-check-input shadow-none cursor-pointer"
                             type="radio"
                             name="flexRadioDefault"
                             id="flexRadioDefault2"
                             checked />
-                          <label class="form-check-label fw-normal lh-base fs-4 cursor-pointer" for="flexRadioDefault2">
-                            Периодическая проверка
-                          </label>
-                        </div>
+                        </label>
                       </div>
 
                       <div class="mb-4">
                         <h2 class="form-label h2 lh-base fw-bolder mb-4 ms-2">Исключения</h2>
                         <!-- input-search -->
                         <form class="d-flex position-relative mb-4">
+                          <!-- disabled -->
                           <input
                             class="form-control py-2 pe-5 shadow-none fw-normal lh-base fs-4"
                             type="search"
@@ -424,7 +426,8 @@
                               <rect x="0.5" y="0.5" width="19" height="19" rx="3.5" stroke="#DBE0E7" />
                               <path d="M8 14.5L12 5.5" stroke="#959DAC" />
                             </svg>
-                            <button class="btn border-0 p-2 bg-primary shadow-none" type="submit">
+                            <button class="btn border-0 p-2 shadow-none" type="submit">
+                              <!-- disabled -->
                               <svg
                                 width="16"
                                 height="16"
@@ -445,18 +448,26 @@
                         <div class="mb-4">
                           <div class="d-flex align-items-center justify-content-between mb-3">
                             <div class="d-flex align-items-center gap-2">
+                              <!-- disabled -->
                               <span class="badge bg-blue px-3 py-1 fw-bolder fz-1 lh-base">GET</span>
+                              <!-- disabled -->
                               <span class="fw-bolder lh-base fs-4">/api/v1/admin/logs</span>
                             </div>
-                            <label class="form-colorinput">
-                              <input class="form-colorinput-input" name="color-get" type="checkbox" />
-                              <span class="form-colorinput-color shadow-none"></span>
+                            <label
+                              class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
+                              <!-- disabled -->
+                              <div class="form-colorinput">
+                                <input class="form-colorinput-input" name="color-get" type="checkbox" />
+                                <span class="form-colorinput-color shadow-none"></span>
+                              </div>
                             </label>
                           </div>
 
                           <div class="d-flex align-items-center justify-content-between">
                             <div class="d-flex align-items-center gap-2">
                               <span class="badge bg-lime px-3 py-1 fw-bolder fz-1 lh-base">POST</span>
+                              <!-- disabled bg-lime || bg-secondary -->
+                              <!-- <span class="badge bg-secondary px-3 py-1 fw-bolder fz-1 lh-base">POST</span> -->
                               <span class="fw-bolder lh-base fs-4">/api/v1/admin/logs</span>
                             </div>
                             <label class="form-colorinput">
@@ -472,7 +483,7 @@
                   <div class="offcanvas-footer border-top p-3">
                     <div class="d-flex justify-content-between">
                       <button
-                        class="btn border-0 fw-normal lh-base fs-4 d-flex"
+                        class="btn btn-secondary fw-normal lh-base fs-4 d-flex"
                         type="button"
                         data-bs-dismiss="offcanvas"
                         aria-label="Close">

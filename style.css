@@ -17,15 +17,19 @@
   --tblr-disabled-color: #959dac;
 }
 
-.btn.show {
-  --tblr-btn-active-bg: #ffffff;
-  --tblr-btn-active-border-color: #b3b7bd;
+.btn {
+  --tblr-btn-bg: var(--tblr-primary);
 }
 
 .btn.disabled {
   --tblr-btn-disabled-color: #959dac;
-  --tblr-btn-disabled-bg: #eceff4;
+  --tblr-btn-disabled-bg: #959dac;
   border-color: transparent;
+}
+
+.btn.show {
+  --tblr-btn-active-bg: #ffffff;
+  --tblr-btn-active-border-color: #b3b7bd;
 }
 
 .btn-primary {
@@ -86,6 +90,11 @@
 textarea.form-control {
   min-height: 168px;
 }
+
+/* .badge.disabled {
+  color: #ffffff !important;
+  background-color: #959dac !important;
+} */
 
 .offcanvas {
   --tblr-offcanvas-width: 880px;
@@ -151,6 +160,11 @@ textarea.form-control {
 
 .form-select:focus {
   border-color: #b8c0cd;
+}
+
+.form-check-label.disabled .form-check-input:checked[type='radio'] {
+  --tblr-primary: #f3f4f6;
+  --tblr-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3ccircle r='3' fill='%23959DAC' cx='8' cy='8' /%3e%3c/svg%3e");
 }
 
 .form-check-input {
@@ -256,10 +270,6 @@ textarea.form-control {
   margin: 0;
 }
 
-.ts-dropdown [data-selectable].option:first-child {
-  display: none;
-}
-
 .ts-dropdown .option {
   padding: 8px 32px;
 }
@@ -285,9 +295,9 @@ textarea.form-control {
   background-color: transparent;
 }
 
-.ts-wrapper.available-search-select .ts-dropdown-content .option[data-value='1'] {
+/* .ts-wrapper.available-search-select .ts-dropdown-content .option[data-value='1'] {
   display: none;
-}
+} */
 
 .ts-wrapper.available-search-select-with-first-value .ts-dropdown-content .option[data-value='1'] {
   display: block;
@@ -297,7 +307,11 @@ textarea.form-control {
 }
 
 .ts-wrapper.available-search-select-with-first-value .ts-control .item[data-value='1'] {
+  padding-left: 24px;
   opacity: 1;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.33333 1.33333V5.33333M10.6667 1.33333V5.33333M2 8H14M3.33333 3.33333H12.6667C13.403 3.33333 14 3.86395 14 4.51851V12.8148C14 13.4694 13.403 14 12.6667 14H3.33333C2.59695 14 2 13.4694 2 12.8148V4.51851C2 3.86395 2.59695 3.33333 3.33333 3.33333Z' stroke='%23959DAC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center left;
 }
 
 .ts-wrapper.available-search-select.available-search-select-with-first-value
@@ -311,6 +325,10 @@ textarea.form-control {
   background-repeat: no-repeat;
   background-position: center right 16px;
 }
+
+/* .ts-wrapper.available-search-select .ts-dropdown-content .option:first-child {
+  display: none;
+} */
 
 .ts-wrapper.available-search-select .ts-control {
   border: 1px solid var(--tblr-border-color);
