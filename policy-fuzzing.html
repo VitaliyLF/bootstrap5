@@ -152,16 +152,21 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-12 col-lg-6 ms-lg-4 mt-4">
-                <h2 class="h2 disabled lh-base fw-bolder mb-3">Фаззинг</h2>
-                <div class="col">
-                  <label class="form-colorinput d-flex align-items-center gap-4 py-2 fw-normal lh-base fs-4 disabled">
-                    Fuzzing
-                    <div class="form-colorinput">
-                      <input class="form-colorinput-input" name="color-get" type="checkbox" />
-                      <span class="form-colorinput-color shadow-none"></span>
-                    </div>
-                  </label>
-                </div>
+                <fieldset disabled>
+                  <!-- nedd add fieldset attribute disabled -->
+                  <h2 class="h2 disabled lh-base fw-bolder mb-3">Фаззинг</h2>
+                  <!-- nedd add class disabled -->
+                  <div class="col">
+                    <label class="form-colorinput disabled d-flex align-items-center gap-4 py-2 fw-normal lh-base fs-4">
+                      <!-- nedd add class disabled -->
+                      Fuzzing
+                      <div class="form-colorinput">
+                        <input class="form-colorinput-input" name="color-get" type="checkbox" />
+                        <span class="form-colorinput-color shadow-none"></span>
+                      </div>
+                    </label>
+                  </div>
+                </fieldset>
               </div>
             </div>
           </div>
@@ -169,13 +174,17 @@
 
         <div class="page-footer mt-auto border-top px-4 py-3">
           <div class="d-flex justify-content-between">
-            <a class="btn disabled btn-secondary fw-normal lh-base fs-4" href="#">Выйти</a>
+            <a class="btn btn-secondary disabled fw-normal lh-base fs-4" href="#">
+              <!-- nedd add class disabled -->
+              Выйти
+            </a>
 
             <button
               type="button"
-              class="btn disabled btn-primary fw-normal lh-base fs-4"
+              class="btn btn-primary disabled fw-normal lh-base fs-4"
               data-bs-toggle="modal"
               data-bs-target="#modal-fuzzing">
+              <!-- nedd add class disabled -->
               Добавить
             </button>
 

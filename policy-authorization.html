@@ -152,43 +152,49 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-12 col-xl-8 col-xxl-4 my-3 my-lg-4 ms-lg-4">
-                <h2 class="h3 lh-base fw-bolder mb-3">Добавить/ изменить Заголовок</h2>
-                <div class="d-flex gap-2 mb-3 flex-wrap flex-md-nowrap">
-                  <!-- input-text -->
-                  <input
-                    type="text"
-                    class="form-control p-2 shadow-none fw-normal lh-base fs-4"
-                    name="title-text-input"
-                    placeholder="Заголовок" />
-                  <!-- input-text -->
-                  <input
-                    type="text"
-                    class="form-control p-2 shadow-none fw-normal lh-base fs-4"
-                    name="value-text-input"
-                    placeholder="Значение" />
-                </div>
-                <div class="col mb-4">
-                  <button class="btn btn-primary btn-pill py-2 px-3 fw-normal lh-base fs-4 d-flex gap-1" type="button">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M13.25 7C13.25 7.19891 13.171 7.38968 13.0303 7.53033C12.8897 7.67098 12.6989 7.75 12.5 7.75H7.75V12.5C7.75 12.6989 7.67098 12.8897 7.53033 13.0303C7.38968 13.171 7.19891 13.25 7 13.25C6.80109 13.25 6.61032 13.171 6.46967 13.0303C6.32902 12.8897 6.25 12.6989 6.25 12.5V7.75H1.5C1.30109 7.75 1.11032 7.67098 0.96967 7.53033C0.829018 7.38968 0.75 7.19891 0.75 7C0.75 6.80109 0.829018 6.61032 0.96967 6.46967C1.11032 6.32902 1.30109 6.25 1.5 6.25H6.25V1.5C6.25 1.30109 6.32902 1.11032 6.46967 0.96967C6.61032 0.829018 6.80109 0.75 7 0.75C7.19891 0.75 7.38968 0.829018 7.53033 0.96967C7.67098 1.11032 7.75 1.30109 7.75 1.5V6.25H12.5C12.6989 6.25 12.8897 6.32902 13.0303 6.46967C13.171 6.61032 13.25 6.80109 13.25 7Z"
-                        fill="#FC7303" />
-                    </svg>
-                    Добавить Заголовок
-                  </button>
-                </div>
-                <div class="col">
-                  <div class="d-flex align-items-center gap-4">
-                    <label
-                      class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
-                      Cookie follow:
-                      <div class="form-colorinput">
-                        <input class="form-colorinput-input" name="color-get" type="checkbox" />
-                        <span class="form-colorinput-color shadow-none"></span>
-                      </div>
-                    </label>
+                <fieldset>
+                  <!-- nedd add fieldset attribute disabled -->
+                  <h2 class="h3 lh-base fw-bolder mb-3">Добавить/ изменить Заголовок</h2>
+                  <div class="d-flex gap-2 mb-3 flex-wrap flex-md-nowrap">
+                    <!-- input-text -->
+                    <input
+                      type="text"
+                      class="form-control p-2 shadow-none fw-normal lh-base fs-4"
+                      name="title-text-input"
+                      placeholder="Заголовок" />
+                    <!-- input-text -->
+                    <input
+                      type="text"
+                      class="form-control p-2 shadow-none fw-normal lh-base fs-4"
+                      name="value-text-input"
+                      placeholder="Значение" />
                   </div>
-                </div>
+                  <div class="col mb-4">
+                    <button
+                      class="btn btn-primary btn-pill py-2 px-3 fw-normal lh-base fs-4 d-flex gap-1"
+                      type="button">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M13.25 7C13.25 7.19891 13.171 7.38968 13.0303 7.53033C12.8897 7.67098 12.6989 7.75 12.5 7.75H7.75V12.5C7.75 12.6989 7.67098 12.8897 7.53033 13.0303C7.38968 13.171 7.19891 13.25 7 13.25C6.80109 13.25 6.61032 13.171 6.46967 13.0303C6.32902 12.8897 6.25 12.6989 6.25 12.5V7.75H1.5C1.30109 7.75 1.11032 7.67098 0.96967 7.53033C0.829018 7.38968 0.75 7.19891 0.75 7C0.75 6.80109 0.829018 6.61032 0.96967 6.46967C1.11032 6.32902 1.30109 6.25 1.5 6.25H6.25V1.5C6.25 1.30109 6.32902 1.11032 6.46967 0.96967C6.61032 0.829018 6.80109 0.75 7 0.75C7.19891 0.75 7.38968 0.829018 7.53033 0.96967C7.67098 1.11032 7.75 1.30109 7.75 1.5V6.25H12.5C12.6989 6.25 12.8897 6.32902 13.0303 6.46967C13.171 6.61032 13.25 6.80109 13.25 7Z"
+                          fill="#FC7303" />
+                      </svg>
+                      Добавить Заголовок
+                    </button>
+                  </div>
+                  <div class="col">
+                    <div class="d-flex align-items-center gap-4">
+                      <label
+                        class="d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
+                        <!-- need add disabled class label -->
+                        Cookie follow:
+                        <div class="form-colorinput">
+                          <input class="form-colorinput-input" name="color-get" type="checkbox" />
+                          <span class="form-colorinput-color shadow-none"></span>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
               </div>
             </div>
           </div>
