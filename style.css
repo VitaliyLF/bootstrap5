@@ -17,6 +17,7 @@
   --tblr-disabled-color: #959dac;
   --tblr-disabled-bg: #ffffff;
   --tblr-primary-rgb: 252, 115, 3;
+  --tblr-content-padding: 2rem;
 }
 
 .btn {
@@ -98,10 +99,6 @@
   border-color: var(--tblr-primary);
 }
 
-textarea.form-control {
-  min-height: 168px;
-}
-
 .offcanvas {
   --tblr-offcanvas-width: 100%;
   max-width: 880px;
@@ -111,11 +108,7 @@ textarea.form-control {
   max-width: 1200px;
 }
 
-.offcanvas textarea.form-control {
-  min-height: 80px;
-}
-
-.collapsing {
+.offcanvas .collapsing {
   transition: none;
 }
 
@@ -208,13 +201,14 @@ textarea.form-control {
 }
 
 .form-switch .form-check-input {
+  --tblr-form-check-bg: #eceff4;
   --tblr-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffffff'/%3e%3c/svg%3e");
-  background-color: var(--tblr-primary);
   background-position: left 4px center;
   background-size: 12px 12px;
 }
 
 .form-switch .form-check-input:checked[type='checkbox'] {
+  --tblr-form-check-bg: var(--tblr-primary);
   background-position: right 4px center;
 }
 
@@ -317,6 +311,7 @@ textarea.form-control {
 
 .ts-wrapper.available-search-select-with-first-value .ts-control .item[data-value='1'] {
   padding-left: 24px;
+  padding-right: 48px;
   opacity: 1;
   background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.33333 1.33333V5.33333M10.6667 1.33333V5.33333M2 8H14M3.33333 3.33333H12.6667C13.403 3.33333 14 3.86395 14 4.51851V12.8148C14 13.4694 13.403 14 12.6667 14H3.33333C2.59695 14 2 13.4694 2 12.8148V4.51851C2 3.86395 2.59695 3.33333 3.33333 3.33333Z' stroke='%23959DAC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -379,4 +374,18 @@ textarea.form-control {
 .modal-sm {
   --tblr-modal-width: 400px;
   --tblr-modal-border-color: none;
+}
+
+.accordion-button:after {
+  display: none;
+}
+
+.grid-table-row {
+  display: grid;
+  grid-template-columns: minmax(400px, 1fr) minmax(0, 150px) minmax(0, 150px) minmax(0, 200px) minmax(0, 150px);
+  gap: calc(var(--tblr-gutter-x) * 0.5);
+}
+
+.grid-table-row > * {
+  padding: 12px 16px;
 }
