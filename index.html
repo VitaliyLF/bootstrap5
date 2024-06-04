@@ -97,8 +97,7 @@
                   class="btn btn-secondary ms-1 p-1 btn-pill"
                   data-bs-trigger="hover"
                   data-bs-toggle="popover"
-                  title="Popover title"
-                  data-bs-content="Popover content">
+                  title="Popover title">
                   <svg
                     class="m-0 w-3 h-3"
                     width="16"
@@ -138,129 +137,775 @@
           </div>
         </div>
         <div class="page-body my-0">
-          <div class="container-fluid">
-            <div class="row pt-3 gap-3 gap-sm-0">
-              <div class="col-12 col-sm-2">
-                <select
-                  class="mb-4 fw-normal lh-base fs-4 available-search-select available-search-select-with-first-value"
-                  autocomplete="off">
-                  <option value="1">Все спецификации</option>
-                  <option value="2">APP-1</option>
-                  <option value="3">APP-2</option>
-                  <option value="4">Загруженная спецификация</option>
-                </select>
-              </div>
-
-              <!-- btns -->
-              <div class="col-12 col-sm-10">
-                <div class="d-flex gap-1 justify-content-sm-end">
-                  <!-- offcanvas -->
-                  <button
-                    class="btn btn-primary fw-normal lh-base fs-4 d-flex gap-1 me-2"
-                    type="button"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasRightMain"
-                    aria-controls="offcanvasRight">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M13.25 7C13.25 7.19891 13.171 7.38968 13.0303 7.53033C12.8897 7.67098 12.6989 7.75 12.5 7.75H7.75V12.5C7.75 12.6989 7.67098 12.8897 7.53033 13.0303C7.38968 13.171 7.19891 13.25 7 13.25C6.80109 13.25 6.61032 13.171 6.46967 13.0303C6.32902 12.8897 6.25 12.6989 6.25 12.5V7.75H1.5C1.30109 7.75 1.11032 7.67098 0.96967 7.53033C0.829018 7.38968 0.75 7.19891 0.75 7C0.75 6.80109 0.829018 6.61032 0.96967 6.46967C1.11032 6.32902 1.30109 6.25 1.5 6.25H6.25V1.5C6.25 1.30109 6.32902 1.11032 6.46967 0.96967C6.61032 0.829018 6.80109 0.75 7 0.75C7.19891 0.75 7.38968 0.829018 7.53033 0.96967C7.67098 1.11032 7.75 1.30109 7.75 1.5V6.25H12.5C12.6989 6.25 12.8897 6.32902 13.0303 6.46967C13.171 6.61032 13.25 6.80109 13.25 7Z"
-                        fill="#FC7303" />
-                    </svg>
-                    Создать тест
-                  </button>
-                  <a class="btn btn-primary fw-normal lh-base fs-4 d-flex gap-1" href="policy-main.html">
-                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M5.16668 14C4.24445 14 3.45845 13.6749 2.80868 13.0246C2.1589 12.3744 1.83379 11.5884 1.83334 10.6666C1.83334 10.0444 1.98334 9.48065 2.28334 8.97531C2.58334 8.46998 2.98334 8.07265 3.48334 7.78331C3.71668 7.64998 3.94445 7.65287 4.16668 7.79198C4.3889 7.93109 4.50001 8.12265 4.50001 8.36665C4.50001 8.48887 4.47512 8.59998 4.42534 8.69998C4.37557 8.79998 4.30601 8.8722 4.21668 8.91665C3.90557 9.08331 3.6529 9.3222 3.45868 9.63331C3.26445 9.94442 3.16712 10.2889 3.16668 10.6666C3.16668 11.2222 3.36112 11.6944 3.75001 12.0833C4.1389 12.4722 4.61112 12.6666 5.16668 12.6666C5.72223 12.6666 6.19445 12.4722 6.58334 12.0833C6.97223 11.6944 7.16668 11.2222 7.16668 10.6666C7.16668 10.4778 7.21957 10.3195 7.32534 10.192C7.43112 10.0644 7.57823 10.0004 7.76668 9.99998H11.0833C11.1722 9.89998 11.2807 9.81931 11.4087 9.75798C11.5367 9.69665 11.6782 9.6662 11.8333 9.66665C12.1111 9.66665 12.3473 9.76398 12.542 9.95865C12.7367 10.1533 12.8338 10.3893 12.8333 10.6666C12.8329 10.944 12.7358 11.1802 12.542 11.3753C12.3482 11.5704 12.112 11.6675 11.8333 11.6666C11.6778 11.6666 11.536 11.6362 11.408 11.5753C11.28 11.5144 11.172 11.4338 11.084 11.3333H8.43334C8.27779 12.1 7.89712 12.7362 7.29134 13.242C6.68557 13.7478 5.97734 14.0004 5.16668 14ZM5.16668 11.6666C4.8889 11.6666 4.6529 11.5695 4.45868 11.3753C4.26445 11.1811 4.16712 10.9449 4.16668 10.6666C4.16668 10.4222 4.24445 10.2111 4.40001 10.0333C4.55557 9.85554 4.74445 9.73887 4.96668 9.68331L6.53334 7.08331C6.21112 6.78331 5.95823 6.42509 5.77468 6.00865C5.59112 5.5922 5.49957 5.14487 5.50001 4.66665C5.50001 3.74442 5.82512 2.95842 6.47534 2.30865C7.12557 1.65887 7.91157 1.33376 8.83334 1.33331C9.61112 1.33331 10.2973 1.56954 10.892 2.04198C11.4867 2.51442 11.8782 3.11154 12.0667 3.83331C12.1222 4.04442 12.0833 4.2362 11.95 4.40865C11.8167 4.58109 11.6389 4.66709 11.4167 4.66665C11.2722 4.66665 11.1362 4.61376 11.0087 4.50798C10.8811 4.4022 10.7949 4.27176 10.75 4.11665C10.6278 3.69442 10.3945 3.34731 10.05 3.07531C9.70556 2.80331 9.30001 2.66709 8.83334 2.66665C8.27779 2.66665 7.80557 2.86109 7.41668 3.24998C7.02779 3.63887 6.83334 4.11109 6.83334 4.66665C6.83334 5.03331 6.92512 5.36953 7.10868 5.67531C7.29223 5.98109 7.52801 6.22265 7.81601 6.39998C7.97157 6.48887 8.0689 6.59998 8.10801 6.73331C8.14712 6.86665 8.12757 6.99998 8.04934 7.13331L6.11601 10.3666C6.13823 10.4222 6.15223 10.4722 6.15801 10.5166C6.16379 10.5611 6.16668 10.6111 6.16668 10.6666C6.16668 10.9444 6.06957 11.1806 5.87534 11.3753C5.68112 11.57 5.4449 11.6671 5.16668 11.6666ZM11.8333 14C11.5445 14 11.2638 13.964 10.9913 13.892C10.7189 13.82 10.4662 13.7226 10.2333 13.6C9.93334 13.4333 9.81401 13.1806 9.87534 12.842C9.93668 12.5033 10.1616 12.3338 10.55 12.3333C10.6056 12.3333 10.6667 12.3444 10.7333 12.3666C10.8 12.3889 10.8611 12.4166 10.9167 12.45C11.0611 12.5278 11.2085 12.5833 11.3587 12.6166C11.5089 12.65 11.6671 12.6666 11.8333 12.6666C12.3889 12.6666 12.8611 12.4722 13.25 12.0833C13.6389 11.6944 13.8333 11.2222 13.8333 10.6666C13.8333 10.1111 13.6389 9.63887 13.25 9.24998C12.8611 8.86109 12.3889 8.66665 11.8333 8.66665C11.7222 8.66665 11.6167 8.67509 11.5167 8.69198C11.4167 8.70887 11.3167 8.73376 11.2167 8.76665C11.0389 8.8222 10.8722 8.82509 10.7167 8.77531C10.5611 8.72554 10.4445 8.63931 10.3667 8.51665L8.65001 5.64998C8.41668 5.60554 8.22223 5.49442 8.06668 5.31665C7.91112 5.13887 7.83334 4.9222 7.83334 4.66665C7.83334 4.38887 7.93068 4.15287 8.12534 3.95865C8.32001 3.76442 8.55601 3.66709 8.83334 3.66665C9.11068 3.6662 9.3469 3.76354 9.54201 3.95865C9.73712 4.15376 9.83423 4.38976 9.83334 4.66665V4.80865C9.83334 4.84731 9.82223 4.89442 9.80001 4.94998L11.25 7.38331C11.3389 7.36109 11.4333 7.34731 11.5333 7.34198C11.6333 7.33665 11.7333 7.33376 11.8333 7.33331C12.7556 7.33331 13.5418 7.65842 14.192 8.30865C14.8422 8.95887 15.1671 9.74487 15.1667 10.6666C15.1662 11.5884 14.8411 12.3746 14.1913 13.0253C13.5416 13.676 12.7556 14.0009 11.8333 14Z"
-                        fill="#FC7303" />
-                    </svg>
-                    Политики
-                  </a>
+          <!-- page-body-nav -->
+          <div class="border-bottom pb-3">
+            <div class="container-fluid">
+              <div class="row pt-3 mb-3 row-gap-3 justify-content-between">
+                <div class="w-auto flex-lg-grow-0 flex-grow-1">
+                  <select
+                    class="fw-normal lh-base fs-4 available-search-select available-search-select-with-first-value"
+                    autocomplete="off">
+                    <option value="1">Все спецификации</option>
+                    <option value="2">APP-1</option>
+                    <option value="3">APP-2</option>
+                    <option value="4">Загруженная спецификация</option>
+                  </select>
                 </div>
-                <!-- offcanvas-header -->
-                <div
-                  class="offcanvas offcanvas-end"
-                  tabindex="-1"
-                  id="offcanvasRightMain"
-                  aria-labelledby="offcanvasRightMainLabel">
-                  <div class="offcanvas-header p-3">
+                <!-- btns -->
+                <div class="w-auto flex-sm-grow-0 flex-grow-1">
+                  <div class="d-flex gap-1 justify-content-lg-end justify-content-between">
+                    <!-- offcanvas -->
                     <button
+                      class="btn btn-primary fw-normal lh-base fs-4 d-flex gap-1 me-2"
                       type="button"
-                      class="btn p-0 border-0 shadow-none bg-transparent"
-                      data-bs-dismiss="offcanvas"
-                      aria-label="Close">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#offcanvasRightMain"
+                      aria-controls="offcanvasRight">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
-                          d="M10 6L4 12L10 18M4.5 12H20"
-                          stroke="black"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round" />
+                          d="M13.25 7C13.25 7.19891 13.171 7.38968 13.0303 7.53033C12.8897 7.67098 12.6989 7.75 12.5 7.75H7.75V12.5C7.75 12.6989 7.67098 12.8897 7.53033 13.0303C7.38968 13.171 7.19891 13.25 7 13.25C6.80109 13.25 6.61032 13.171 6.46967 13.0303C6.32902 12.8897 6.25 12.6989 6.25 12.5V7.75H1.5C1.30109 7.75 1.11032 7.67098 0.96967 7.53033C0.829018 7.38968 0.75 7.19891 0.75 7C0.75 6.80109 0.829018 6.61032 0.96967 6.46967C1.11032 6.32902 1.30109 6.25 1.5 6.25H6.25V1.5C6.25 1.30109 6.32902 1.11032 6.46967 0.96967C6.61032 0.829018 6.80109 0.75 7 0.75C7.19891 0.75 7.38968 0.829018 7.53033 0.96967C7.67098 1.11032 7.75 1.30109 7.75 1.5V6.25H12.5C12.6989 6.25 12.8897 6.32902 13.0303 6.46967C13.171 6.61032 13.25 6.80109 13.25 7Z"
+                          fill="#FC7303" />
                       </svg>
+                      Создать тест
                     </button>
-                    <h5 class="lh-base fs-3 fw-bolder m-0" id="offcanvasRightMainLabel">Создать тест</h5>
-                    <button
-                      type="button"
-                      class="btn p-0 btn-pill bg-transparent border-0"
-                      data-bs-placement="left"
-                      data-bs-trigger="hover"
-                      data-bs-toggle="popover"
-                      title="Popover title"
-                      data-bs-content="Popover content">
-                      <svg
-                        class="m-0 w-3 h-3"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_1_1514)">
-                          <path
-                            d="M7.99998 14.6666C11.6819 14.6666 14.6666 11.6819 14.6666 7.99998C14.6666 4.31808 11.6819 1.33331 7.99998 1.33331C4.31808 1.33331 1.33331 4.31808 1.33331 7.99998C1.33331 11.6819 4.31808 14.6666 7.99998 14.6666Z"
-                            stroke="#959DAC"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round" />
-                          <path
-                            d="M6.06 6.00001C6.21673 5.55446 6.5261 5.17875 6.9333 4.93944C7.3405 4.70012 7.81926 4.61264 8.28478 4.69249C8.7503 4.77234 9.17254 5.01436 9.47672 5.3757C9.78089 5.73703 9.94737 6.19436 9.94666 6.66668C9.94666 8.00001 7.94666 8.66668 7.94666 8.66668V9.33335"
-                            stroke="#959DAC"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round" />
-                          <path
-                            d="M8 11.3333H8.00667"
-                            stroke="#959DAC"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_1_1512">
-                            <rect width="16" height="16" fill="white" />
-                          </clipPath>
-                        </defs>
+                    <a class="btn btn-primary fw-normal lh-base fs-4 d-flex gap-1" href="policy-main.html">
+                      <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M5.16668 14C4.24445 14 3.45845 13.6749 2.80868 13.0246C2.1589 12.3744 1.83379 11.5884 1.83334 10.6666C1.83334 10.0444 1.98334 9.48065 2.28334 8.97531C2.58334 8.46998 2.98334 8.07265 3.48334 7.78331C3.71668 7.64998 3.94445 7.65287 4.16668 7.79198C4.3889 7.93109 4.50001 8.12265 4.50001 8.36665C4.50001 8.48887 4.47512 8.59998 4.42534 8.69998C4.37557 8.79998 4.30601 8.8722 4.21668 8.91665C3.90557 9.08331 3.6529 9.3222 3.45868 9.63331C3.26445 9.94442 3.16712 10.2889 3.16668 10.6666C3.16668 11.2222 3.36112 11.6944 3.75001 12.0833C4.1389 12.4722 4.61112 12.6666 5.16668 12.6666C5.72223 12.6666 6.19445 12.4722 6.58334 12.0833C6.97223 11.6944 7.16668 11.2222 7.16668 10.6666C7.16668 10.4778 7.21957 10.3195 7.32534 10.192C7.43112 10.0644 7.57823 10.0004 7.76668 9.99998H11.0833C11.1722 9.89998 11.2807 9.81931 11.4087 9.75798C11.5367 9.69665 11.6782 9.6662 11.8333 9.66665C12.1111 9.66665 12.3473 9.76398 12.542 9.95865C12.7367 10.1533 12.8338 10.3893 12.8333 10.6666C12.8329 10.944 12.7358 11.1802 12.542 11.3753C12.3482 11.5704 12.112 11.6675 11.8333 11.6666C11.6778 11.6666 11.536 11.6362 11.408 11.5753C11.28 11.5144 11.172 11.4338 11.084 11.3333H8.43334C8.27779 12.1 7.89712 12.7362 7.29134 13.242C6.68557 13.7478 5.97734 14.0004 5.16668 14ZM5.16668 11.6666C4.8889 11.6666 4.6529 11.5695 4.45868 11.3753C4.26445 11.1811 4.16712 10.9449 4.16668 10.6666C4.16668 10.4222 4.24445 10.2111 4.40001 10.0333C4.55557 9.85554 4.74445 9.73887 4.96668 9.68331L6.53334 7.08331C6.21112 6.78331 5.95823 6.42509 5.77468 6.00865C5.59112 5.5922 5.49957 5.14487 5.50001 4.66665C5.50001 3.74442 5.82512 2.95842 6.47534 2.30865C7.12557 1.65887 7.91157 1.33376 8.83334 1.33331C9.61112 1.33331 10.2973 1.56954 10.892 2.04198C11.4867 2.51442 11.8782 3.11154 12.0667 3.83331C12.1222 4.04442 12.0833 4.2362 11.95 4.40865C11.8167 4.58109 11.6389 4.66709 11.4167 4.66665C11.2722 4.66665 11.1362 4.61376 11.0087 4.50798C10.8811 4.4022 10.7949 4.27176 10.75 4.11665C10.6278 3.69442 10.3945 3.34731 10.05 3.07531C9.70556 2.80331 9.30001 2.66709 8.83334 2.66665C8.27779 2.66665 7.80557 2.86109 7.41668 3.24998C7.02779 3.63887 6.83334 4.11109 6.83334 4.66665C6.83334 5.03331 6.92512 5.36953 7.10868 5.67531C7.29223 5.98109 7.52801 6.22265 7.81601 6.39998C7.97157 6.48887 8.0689 6.59998 8.10801 6.73331C8.14712 6.86665 8.12757 6.99998 8.04934 7.13331L6.11601 10.3666C6.13823 10.4222 6.15223 10.4722 6.15801 10.5166C6.16379 10.5611 6.16668 10.6111 6.16668 10.6666C6.16668 10.9444 6.06957 11.1806 5.87534 11.3753C5.68112 11.57 5.4449 11.6671 5.16668 11.6666ZM11.8333 14C11.5445 14 11.2638 13.964 10.9913 13.892C10.7189 13.82 10.4662 13.7226 10.2333 13.6C9.93334 13.4333 9.81401 13.1806 9.87534 12.842C9.93668 12.5033 10.1616 12.3338 10.55 12.3333C10.6056 12.3333 10.6667 12.3444 10.7333 12.3666C10.8 12.3889 10.8611 12.4166 10.9167 12.45C11.0611 12.5278 11.2085 12.5833 11.3587 12.6166C11.5089 12.65 11.6671 12.6666 11.8333 12.6666C12.3889 12.6666 12.8611 12.4722 13.25 12.0833C13.6389 11.6944 13.8333 11.2222 13.8333 10.6666C13.8333 10.1111 13.6389 9.63887 13.25 9.24998C12.8611 8.86109 12.3889 8.66665 11.8333 8.66665C11.7222 8.66665 11.6167 8.67509 11.5167 8.69198C11.4167 8.70887 11.3167 8.73376 11.2167 8.76665C11.0389 8.8222 10.8722 8.82509 10.7167 8.77531C10.5611 8.72554 10.4445 8.63931 10.3667 8.51665L8.65001 5.64998C8.41668 5.60554 8.22223 5.49442 8.06668 5.31665C7.91112 5.13887 7.83334 4.9222 7.83334 4.66665C7.83334 4.38887 7.93068 4.15287 8.12534 3.95865C8.32001 3.76442 8.55601 3.66709 8.83334 3.66665C9.11068 3.6662 9.3469 3.76354 9.54201 3.95865C9.73712 4.15376 9.83423 4.38976 9.83334 4.66665V4.80865C9.83334 4.84731 9.82223 4.89442 9.80001 4.94998L11.25 7.38331C11.3389 7.36109 11.4333 7.34731 11.5333 7.34198C11.6333 7.33665 11.7333 7.33376 11.8333 7.33331C12.7556 7.33331 13.5418 7.65842 14.192 8.30865C14.8422 8.95887 15.1671 9.74487 15.1667 10.6666C15.1662 11.5884 14.8411 12.3746 14.1913 13.0253C13.5416 13.676 12.7556 14.0009 11.8333 14Z"
+                          fill="#FC7303" />
                       </svg>
-                    </button>
+                      Политики
+                    </a>
                   </div>
-                  <!-- offcanvas-body -->
-                  <div class="offcanvas-body py-3 px-4">
-                    <div class="container p-0">
+                  <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="offcanvasRightMain"
+                    aria-labelledby="offcanvasRightMainLabel">
+                    <div class="offcanvas-header p-3">
+                      <!-- offcanvas-header -->
+                      <button
+                        type="button"
+                        class="btn p-0 border-0 shadow-none bg-transparent"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10 6L4 12L10 18M4.5 12H20"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                      <h3 class="lh-base fs-3 fw-bolder m-0" id="offcanvasRightMainLabel">Создать тест</h3>
+                      <button
+                        type="button"
+                        class="btn p-0 btn-pill bg-transparent border-0"
+                        type="button"
+                        title="Режим загрузки"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseInfo"
+                        aria-expanded="false"
+                        aria-controls="collapseInfo">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                            stroke="#959DAC"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M9.08984 9C9.32495 8.33167 9.789 7.76811 10.3998 7.40913C11.0106 7.05016 11.7287 6.91894 12.427 7.03871C13.1253 7.15849 13.7587 7.52152 14.2149 8.06353C14.6712 8.60553 14.9209 9.29152 14.9198 10C14.9198 12 11.9198 13 11.9198 13V14"
+                            stroke="#959DAC"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M12 17H12.01"
+                            stroke="#959DAC"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                    </div>
+                    <!-- offcanvas-body -->
+                    <div class="offcanvas-body p-0 d-flex flex-column flex-lg-row-reverse position-relative">
+                      <div class="collapse border-bottom position-sticky top-0 bg-white z-3" id="collapseInfo">
+                        <div class="px-3 py-3 px-lg-3 py-lg-4">
+                          <div class="mb-2 d-flex justify-content-between align-items-center">
+                            <h3 class="fw-bolder lh-base fs-4 m-0">Режим загрузки</h3>
+                            <button
+                              type="button"
+                              class="btn p-0 bg-transparent shadow-none text-primary border-0"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseInfo"
+                              aria-expanded="false"
+                              aria-controls="collapseInfo">
+                              Скрыть
+                            </button>
+                          </div>
+                          <ul class="m-0">
+                            <li>
+                              <span class="fw-bolder lh-base fs-4">Разовая проверка -</span>
+                              <br />
+                              однократное проведение теста.
+                            </li>
+                            <li>
+                              <span class="fw-bolder lh-base fs-4">Периодическая проверка -</span>
+                              <br />
+                              регулярное проведение теста, выполняемое через установленный интервал времени.
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="container-lg p-0">
+                        <fieldset class="pt-3 pb-3 px-3 pt-lg-3 pb-lg-4 px-lg-4 border-end">
+                          <!-- nedd add fieldset attribute disabled -->
+                          <div class="mb-4">
+                            <h2 class="form-label h2 lh-base fw-bolder mb-4 ms-2">Базовые данные теста</h2>
+                            <!-- input-text -->
+                            <input
+                              type="text"
+                              class="form-control p-2 mb-4 shadow-none fw-normal lh-base fs-4"
+                              name="name-text-input"
+                              placeholder="Имя теста" />
+                            <!-- textarea -->
+                            <textarea
+                              class="form-control shadow-none fw-normal lh-base fs-4"
+                              data-bs-toggle="autosize"
+                              name="description-text-textarea"
+                              placeholder="Описание теста"
+                              rows="3"></textarea>
+                          </div>
+
+                          <div class="mb-4">
+                            <h2 class="h2 lh-base fw-bolder mb-4 ms-2">Источник данных</h2>
+                            <!-- tabs -->
+                            <div class="card border-0">
+                              <div class="card-header">
+                                <ul
+                                  class="nav nav-tabs card-header-tabs p-0 justify-content-between"
+                                  data-bs-toggle="tabs">
+                                  <!-- need add ul class disabled -->
+                                  <li class="nav-item flex-grow-1">
+                                    <a
+                                      href="#tabs-api"
+                                      class="nav-link active fw-normal lh-base fs-4 justify-content-center"
+                                      data-bs-toggle="tab">
+                                      API Discovery
+                                    </a>
+                                  </li>
+                                  <li class="nav-item flex-grow-1">
+                                    <a
+                                      href="#tabs-url"
+                                      class="nav-link fw-normal lh-base fs-4 justify-content-center"
+                                      data-bs-toggle="tab">
+                                      Загрузить с URL-адреса
+                                    </a>
+                                  </li>
+                                  <li class="nav-item flex-grow-1">
+                                    <a
+                                      href="#tabs-file"
+                                      class="nav-link fw-normal lh-base fs-4 justify-content-center"
+                                      data-bs-toggle="tab">
+                                      Файл
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="card-body p-0 mt-4">
+                                <div class="tab-content">
+                                  <div class="tab-pane active show" id="tabs-api">
+                                    <!-- need add tap-pane class disabled -->
+                                    <select
+                                      class="mb-4 fw-normal lh-base fs-4 available-search-select"
+                                      autocomplete="off"
+                                      placeholder="Выберите приложение...">
+                                      <option value="1">Выберите приложение...</option>
+                                      <option value="2">APP-1</option>
+                                      <option value="3">APP-2</option>
+                                      <option value="4">APP-3</option>
+                                      <option value="5">APP-4</option>
+                                      <option value="6">Глубокий скан безопасности API</option>
+                                      <option value="7">Систематический анализа безопасности API</option>
+                                    </select>
+                                    <div class="fw-normal lh-base fs-4">
+                                      Endpoints:
+                                      <span>150</span>
+                                    </div>
+                                  </div>
+                                  <div class="tab-pane" id="tabs-url">
+                                    <input
+                                      type="text"
+                                      class="form-control p-2 mb-4 shadow-none fw-normal lh-base fs-4 mb-4"
+                                      name="name-text-input"
+                                      placeholder="https://" />
+                                    <!-- switcher -->
+                                    <div class="form-check form-switch m-0">
+                                      <input
+                                        class="form-check-input border-0 shadow-none cursor-pointer"
+                                        type="checkbox"
+                                        role="switch"
+                                        id="flexSwitchCheckChecked" />
+                                      <label
+                                        class="form-check-label fw-normal lh-base fs-4 cursor-pointer"
+                                        for="flexSwitchCheckChecked">
+                                        Регулярно подгружать спецификацию OAS перед тестом
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="tab-pane" id="tabs-file">
+                                    <form
+                                      class="dropzone p-2 border-secondary"
+                                      id="dropzone-custom"
+                                      action="."
+                                      autocomplete="off"
+                                      novalidate>
+                                      <div class="fallback">
+                                        <input name="file" type="file" />
+                                      </div>
+                                      <div class="dz-message m-0">
+                                        <h3 class="dropzone-msg-title m-0 fw-normal lh-base fs-4 opacity-50 text-start">
+                                          Загрузть файл...
+                                        </h3>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="mb-4">
+                            <h2 class="h2 lh-base fw-bolder mb-4 ms-2">Выбор политики проверки</h2>
+                            <div class="fw-normal lh-base fs-4">
+                              <!-- need add disabled class parent div -->
+                              <!-- select -->
+                              <select class="disabled-search-select" autocomplete="off">
+                                <option value="1">Выберите политику...</option>
+                                <option value="2">Глубокий скан безопасности API</option>
+                                <option value="3">Систематический анализа безопасности API</option>
+                                <option value="4">Систематический анализа безопасности API</option>
+                                <option value="5">Систематический анализа безопасности API</option>
+                                <option value="6">Глубокий скан безопасности API</option>
+                                <option value="7">Глубокий скан безопасности API</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="mb-4">
+                            <h2 class="form-label h2 lh-base fw-bolder mb-4 ms-2">Режим загрузки</h2>
+                            <!-- radio -->
+                            <label
+                              class="form-check-label d-inline-flex flex-row-reverse align-items-center gap-2 me-2 fw-normal lh-base fs-4 cursor-pointer"
+                              for="flexRadioDefault1">
+                              Разовая проверка
+                              <input
+                                class="form-check-input shadow-none cursor-pointer"
+                                type="radio"
+                                name="flexRadioDefault"
+                                id="flexRadioDefault1" />
+                            </label>
+                            <!-- radio -->
+                            <label
+                              class="form-check-label d-inline-flex flex-row-reverse align-items-center gap-2 me-2 fw-normal lh-base fs-4 cursor-pointer"
+                              for="flexRadioDefault2">
+                              Периодическая проверка
+                              <input
+                                class="form-check-input shadow-none cursor-pointer"
+                                type="radio"
+                                name="flexRadioDefault"
+                                id="flexRadioDefault2"
+                                checked />
+                            </label>
+                          </div>
+
+                          <h2 class="form-label h2 lh-base fw-bolder mb-4 ms-2">Исключения</h2>
+                          <!-- input-search -->
+                          <form class="d-flex position-relative mb-4">
+                            <input
+                              class="form-control py-2 pe-5 shadow-none fw-normal lh-base fs-4"
+                              type="search"
+                              placeholder="Поиск по эндпоинтам"
+                              aria-label="Search" />
+                            <div class="position-absolute top-50 end-0 translate-middle-y me-1">
+                              <svg
+                                class="me-2"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="19" height="19" rx="3.5" stroke="#DBE0E7" />
+                                <path d="M8 14.5L12 5.5" stroke="#959DAC" />
+                              </svg>
+                              <button class="btn border-0 p-2 shadow-none" type="submit">
+                                <svg
+                                  width="16"
+                                  height="16"
+                                  viewBox="0 0 16 16"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M14 14L11.1 11.1M12.6667 7.33333C12.6667 10.2789 10.2789 12.6667 7.33333 12.6667C4.38781 12.6667 2 10.2789 2 7.33333C2 4.38781 4.38781 2 7.33333 2C10.2789 2 12.6667 4.38781 12.6667 7.33333Z"
+                                    stroke="white"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                </svg>
+                              </button>
+                            </div>
+                          </form>
+
+                          <div class="d-flex align-items-center justify-content-between mb-3">
+                            <!-- badge  -->
+                            <div class="d-flex align-items-center flex-lg-row col-xl-5 col-xxl-4 gap-2">
+                              <span class="badge bg-blue px-3 py-1 fw-bolder fz-1 lh-base">GET</span>
+                              <!-- disabled bg-blue || bg-secondary -->
+                              <!-- <span class="badge bg-secondary px-3 py-1 fw-bolder fz-1 lh-base flex-grow-1">GET</span> -->
+                              <span class="fw-bolder lh-base fs-4">/api/v1/admin/logs</span>
+                            </div>
+
+                            <label
+                              class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
+                              <!-- checkbox -->
+                              <div class="form-colorinput">
+                                <input class="form-colorinput-input" name="color-get" type="checkbox" />
+                                <span class="form-colorinput-color shadow-none"></span>
+                              </div>
+                            </label>
+                          </div>
+
+                          <div class="d-flex align-items-center justify-content-between">
+                            <!-- badge  -->
+                            <div class="d-flex align-items-center flex-lg-row col-xl-5 col-xxl-4 gap-2">
+                              <span class="badge bg-lime px-3 py-1 fw-bolder fz-1 lh-base">POST</span>
+                              <!-- disabled bg-lime || bg-secondary -->
+                              <!-- <span class="badge bg-secondary px-3 py-1 fw-bolder fz-1 lh-base">POST</span> -->
+                              <span class="fw-bolder lh-base fs-4">/api/v1/admin/logs</span>
+                            </div>
+
+                            <label class="form-colorinput">
+                              <!-- checkbox -->
+                              <input class="form-colorinput-input" name="color-post" type="checkbox" />
+                              <span class="form-colorinput-color shadow-none"></span>
+                            </label>
+                          </div>
+                        </fieldset>
+                      </div>
+                    </div>
+                    <!-- offcanvas-footer -->
+                    <div class="offcanvas-footer border-top p-3">
+                      <div class="d-flex justify-content-between">
+                        <button
+                          class="btn btn-secondary fw-normal lh-base fs-4 d-flex"
+                          type="button"
+                          data-bs-dismiss="offcanvas"
+                          aria-label="Close">
+                          Отмена
+                        </button>
+                        <button class="btn btn-primary fw-normal lh-base fs-4 d-flex" type="button">
+                          Создать тест
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <!-- radio check  -->
+                  <fieldset class="d-flex border rounded-2">
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="options-base"
+                      id="check-all"
+                      autocomplete="off"
+                      checked />
+                    <label class="btn border-0 rounded-0 flex-grow-1" for="check-all">
+                      Все:
+                      <span>6</span>
+                    </label>
+
+                    <input type="radio" class="btn-check" name="options-base" id="check-active" autocomplete="off" />
+                    <label class="btn border-0 rounded-0 flex-grow-1" for="check-active">
+                      Активные:
+                      <span>4</span>
+                    </label>
+
+                    <input type="radio" class="btn-check" name="options-base" id="check-disabled" autocomplete="off" />
+                    <label class="btn border-0 rounded-0 flex-grow-1" for="check-disabled">
+                      Отключенные:
+                      <span>2</span>
+                    </label>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <!-- start page-body-table -->
+            <div class="table-responsive table-responsive-lg">
+              <!-- start table-header -->
+              <table class="table">
+                <thead class="fs-3 fw-bold">
+                  <tr>
+                    <th style="min-width: 400px">
+                      <span class="d-inline-block ms-2">Тесты</span>
+                    </th>
+                    <th class="text-center" style="width: 1%">
+                      <span class="d-inline-block" style="width: 130px">Статус</span>
+                    </th>
+                    <th class="text-center" style="width: 1%">
+                      <span class="d-inline-block" style="width: 130px">Спецификация</span>
+                    </th>
+                    <th class="text-center" style="width: 1%">
+                      <span class="d-inline-block" style="width: 215px">Количество тестируемых&nbsp;эндпоинтов</span>
+                    </th>
+                    <th style="width: 1%">
+                      <span class="d-inline-block" style="width: 215px"></span>
+                    </th>
+                  </tr>
+                </thead>
+                <!-- end table-header -->
+                <tbody>
+                  <!-- start status-in-work component -->
+                  <tr
+                    class="accordion border rounded-3 cursor-pointer status-in-work tr-card"
+                    id="accordionExample"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne">
+                    <td class="">
+                      <strong>Быстрая проверка целостности API</strong>
+                      <br />
+                      Проверка конечных точек API на целостность данных и согласованность ответов.
+                    </td>
+                    <td class="text-center text-success fw-bold">В работе</td>
+                    <td class="text-center">APP-1</td>
+                    <td class="text-center">132/150</td>
+                    <td class="text-end">
+                      <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M2.74607 1.10938H22.8839C24.1238 1.10938 25.13 2.11567 25.13 3.35596V23.4976C25.13 24.7378 24.1238 25.7441 22.8839 25.7441H2.74607C1.50624 25.7441 0.5 24.7378 0.5 23.4976V3.35596C0.5 2.11567 1.50624 1.10938 2.74607 1.10938Z"
+                          stroke="black" />
+                      </svg>
+                      <!-- start offcanvas first component button -->
+                      <button
+                        class="btn-link ms-4"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#firstComponentOffcanvas"
+                        aria-controls="offcanvasRight">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M7.45885 1.369C7.72445 0.992558 8.28271 0.992559 8.54831 1.369L9.67459 2.96533C9.82296 3.17562 10.0791 3.28173 10.3327 3.23794L12.2579 2.90557C12.7119 2.82719 13.1067 3.22194 13.0283 3.67594L12.6959 5.6011C12.6521 5.85472 12.7582 6.11088 12.9685 6.25926L14.5648 7.38553C14.9413 7.65113 14.9413 8.2094 14.5648 8.47499L12.9685 9.60127C12.7582 9.74964 12.6521 10.0058 12.6959 10.2594L13.0283 12.1846C13.1067 12.6386 12.7119 13.0333 12.2579 12.955L10.3327 12.6226C10.0791 12.5788 9.82296 12.6849 9.67459 12.8952L8.54831 14.4915C8.28271 14.868 7.72445 14.868 7.45885 14.4915L6.33257 12.8952C6.1842 12.6849 5.92804 12.5788 5.67442 12.6226L3.74925 12.955C3.29526 13.0333 2.90051 12.6386 2.97889 12.1846L3.31126 10.2594C3.35505 10.0058 3.24894 9.74964 3.03865 9.60127L1.44232 8.47499C1.06588 8.20939 1.06588 7.65113 1.44232 7.38553L3.03865 6.25926C3.24894 6.11088 3.35505 5.85472 3.31126 5.6011L2.97889 3.67594C2.90051 3.22194 3.29526 2.82719 3.74926 2.90557L5.67442 3.23794C5.92804 3.28173 6.1842 3.17562 6.33257 2.96533L7.45885 1.369Z"
+                            stroke="black"
+                            stroke-width="1.2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M10.0036 7.93026C10.0036 9.03483 9.10815 9.93026 8.00358 9.93026C6.89901 9.93026 6.00358 9.03483 6.00358 7.93026C6.00358 6.82569 6.89901 5.93026 8.00358 5.93026C9.10815 5.93026 10.0036 6.82569 10.0036 7.93026Z"
+                            stroke="black"
+                            stroke-width="1.2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                      <!-- start offcanvas first component button -->
+                    </td>
+                  </tr>
+                  <tr id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <td class="border-0 p-0 ps-4" colspan="5">
+                      <table class="table table-responsive">
+                        <thead>
+                          <tr>
+                            <th class="ps-4">
+                              <span class="d-inline-block" style="min-width: 400px">Дата теста</span>
+                            </th>
+                            <th class="text-center" style="width: 1%">
+                              <span class="d-inline-block" style="width: 130px">Состояние</span>
+                            </th>
+                            <th class="text-center" style="width: 1%">
+                              <span class="d-inline-block" style="width: 130px">Уязвимости</span>
+                            </th>
+                            <th class="text-center" style="width: 1%">
+                              <span class="d-inline-block" style="width: 215px">Отчёт</span>
+                            </th>
+                            <th class="text-center" style="width: 1%">
+                              <span class="d-inline-block" style="width: 215px"></span>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- start Status Running -->
+                          <tr class="tr-card tr-card--pattern" style="--table-row-color: rgba(84, 125, 204, 0.1)">
+                            <td>
+                              <strong>25.03.24</strong>
+                              <br />
+                              <span>16:03:43</span>
+                            </td>
+                            <td class="text-center">Выполняется</td>
+                            <td class="text-center fw-bold">n/a</td>
+                            <td class="text-center">
+                              <button
+                                type="button"
+                                class="btn-link"
+                                data-bs-trigger="hover"
+                                data-bs-toggle="popover"
+                                title="Выгрузить отчёт"
+                                data-bs-placement="top">
+                                <svg
+                                  width="19"
+                                  height="25"
+                                  viewBox="0 0 19 25"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                                    fill="black" />
+                                </svg>
+                              </button>
+                            </td>
+                            <td class="text-center">
+                              <a class="d-block btn-link text-decoration-underline fst-italic" href="">Подробнее</a>
+                            </td>
+                          </tr>
+                          <!-- end Status Running -->
+                          <!-- Distance between  -->
+                          <tr>
+                            <td class="border-0 py-1" colspan="5"></td>
+                          </tr>
+                          <!-- Distance between  -->
+                          <!-- start Status passed -->
+                          <tr class="tr-card" style="--table-row-color: rgba(84, 222, 204, 0.1)">
+                            <td>
+                              <strong>01.04.24</strong>
+                              <br />
+                              <span>23:23:40</span>
+                            </td>
+                            <td class="text-center">Пройден</td>
+                            <td class="text-center fw-bold">0/ 0/ 0</td>
+                            <td class="text-center">
+                              <button
+                                type="button"
+                                class="btn-link"
+                                data-bs-trigger="hover"
+                                data-bs-toggle="popover"
+                                title="Выгрузить отчёт"
+                                data-bs-placement="top">
+                                <svg
+                                  width="19"
+                                  height="25"
+                                  viewBox="0 0 19 25"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                                    fill="black" />
+                                </svg>
+                              </button>
+                            </td>
+                            <td class="text-center">
+                              <a class="d-block btn-link text-decoration-underline fst-italic" href="">Подробнее</a>
+                            </td>
+                          </tr>
+                          <!-- start Status passed -->
+                          <!-- Distance between  -->
+                          <tr>
+                            <td class="border-0 py-1" colspan="5"></td>
+                          </tr>
+                          <!-- Distance between  -->
+                          <!-- start Status unpassed -->
+                          <tr class="bg-red-lt">
+                            <td>
+                              <strong>15.03.24</strong>
+                              <br />
+                              <span>12:03:19</span>
+                            </td>
+                            <td class="text-center">Не пройден</td>
+                            <td class="text-center fw-bold">20/ 10/ 10</td>
+                            <td class="text-center">
+                              <button
+                                type="button"
+                                class="btn-link"
+                                data-bs-trigger="hover"
+                                data-bs-toggle="popover"
+                                title="Выгрузить отчёт"
+                                data-bs-placement="top">
+                                <svg
+                                  width="19"
+                                  height="25"
+                                  viewBox="0 0 19 25"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                                    fill="black" />
+                                </svg>
+                              </button>
+                            </td>
+                            <td class="text-center">
+                              <a class="d-block btn-link text-decoration-underline fst-italic" href="">Подробнее</a>
+                            </td>
+                          </tr>
+                          <!-- end Status unpassed -->
+                          <!-- Distance between  -->
+                          <tr>
+                            <td class="border-0 py-1" colspan="5"></td>
+                          </tr>
+                          <!-- Distance between  -->
+                          <!-- start Status error -->
+                          <tr class="bg-orange-lt">
+                            <td>
+                              <strong>11.03.24</strong>
+                              <br />
+                              <span>10:03:10</span>
+                            </td>
+                            <td class="text-center">Ошибка</td>
+                            <td class="text-center fw-bold">n/a</td>
+                            <td class="text-center">
+                              <button
+                                type="button"
+                                class="btn-link"
+                                data-bs-trigger="hover"
+                                data-bs-toggle="popover"
+                                title="Выгрузить отчёт"
+                                data-bs-placement="top">
+                                <svg
+                                  width="19"
+                                  height="25"
+                                  viewBox="0 0 19 25"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                                    fill="black" />
+                                </svg>
+                              </button>
+                            </td>
+                            <td class="text-center">
+                              <a class="d-block btn-link text-decoration-underline fst-italic" href="">Подробнее</a>
+                            </td>
+                          </tr>
+                          <!-- start Status error -->
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- END Single Element component -->
+                </tbody>
+
+                <tfoot></tfoot>
+              </table>
+              <!-- start offcanvas content first component  -->
+              <div
+                class="offcanvas offcanvas-end"
+                tabindex="-1"
+                id="firstComponentOffcanvas"
+                aria-labelledby="firstComponentOffcanvas">
+                <div class="offcanvas-header p-3">
+                  <!-- offcanvas-header -->
+                  <button
+                    type="button"
+                    class="btn p-0 border-0 shadow-none bg-transparent"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M10 6L4 12L10 18M4.5 12H20"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <h3 class="lh-base fs-3 fw-bolder m-0">Редактировать тест</h3>
+                  <button
+                    type="button"
+                    class="btn p-0 btn-pill bg-transparent border-0"
+                    type="button"
+                    title="Режим загрузки"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseInfo"
+                    aria-expanded="false"
+                    aria-controls="collapseInfo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                        stroke="#959DAC"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path
+                        d="M9.08984 9C9.32495 8.33167 9.789 7.76811 10.3998 7.40913C11.0106 7.05016 11.7287 6.91894 12.427 7.03871C13.1253 7.15849 13.7587 7.52152 14.2149 8.06353C14.6712 8.60553 14.9209 9.29152 14.9198 10C14.9198 12 11.9198 13 11.9198 13V14"
+                        stroke="#959DAC"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path
+                        d="M12 17H12.01"
+                        stroke="#959DAC"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+                <!-- offcanvas-body -->
+                <div class="offcanvas-body p-0 d-flex flex-column flex-lg-row-reverse position-relative">
+                  <div class="collapse border-bottom position-sticky top-0 bg-white z-3" id="collapseInfo">
+                    <div class="px-3 py-3 px-lg-3 py-lg-4">
+                      <div class="mb-2 d-flex justify-content-between align-items-center">
+                        <h3 class="fw-bolder lh-base fs-4 m-0">Режим загрузки</h3>
+                        <button
+                          type="button"
+                          class="btn p-0 bg-transparent shadow-none text-primary border-0"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseInfo"
+                          aria-expanded="false"
+                          aria-controls="collapseInfo">
+                          Скрыть
+                        </button>
+                      </div>
+                      <ul class="m-0">
+                        <li>
+                          <span class="fw-bolder lh-base fs-4">Разовая проверка -</span>
+                          <br />
+                          однократное проведение теста.
+                        </li>
+                        <li>
+                          <span class="fw-bolder lh-base fs-4">Периодическая проверка -</span>
+                          <br />
+                          регулярное проведение теста, выполняемое через установленный интервал времени.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="container-lg p-0">
+                    <fieldset class="pt-3 pb-3 px-3 pt-lg-3 pb-lg-4 px-lg-4 border-end">
+                      <!-- nedd add fieldset attribute disabled -->
                       <div class="mb-4">
                         <h2 class="form-label h2 lh-base fw-bolder mb-4 ms-2">Базовые данные теста</h2>
                         <!-- input-text -->
-                        <!-- disabled -->
                         <input
                           type="text"
                           class="form-control p-2 mb-4 shadow-none fw-normal lh-base fs-4"
                           name="name-text-input"
                           placeholder="Имя теста" />
                         <!-- textarea -->
-                        <!-- disabled -->
                         <textarea
                           class="form-control shadow-none fw-normal lh-base fs-4"
                           data-bs-toggle="autosize"
                           name="description-text-textarea"
-                          placeholder="Описание теста"></textarea>
+                          placeholder="Описание теста"
+                          rows="3"></textarea>
                       </div>
 
                       <div class="mb-4">
@@ -269,7 +914,7 @@
                         <div class="card border-0">
                           <div class="card-header">
                             <ul class="nav nav-tabs card-header-tabs p-0 justify-content-between" data-bs-toggle="tabs">
-                              <!-- disabled -->
+                              <!-- need add ul class disabled -->
                               <li class="nav-item flex-grow-1">
                                 <a
                                   href="#tabs-api"
@@ -299,7 +944,7 @@
                           <div class="card-body p-0 mt-4">
                             <div class="tab-content">
                               <div class="tab-pane active show" id="tabs-api">
-                                <!-- disabled -->
+                                <!-- need add tap-pane class disabled -->
                                 <select
                                   class="mb-4 fw-normal lh-base fs-4 available-search-select"
                                   autocomplete="off"
@@ -313,7 +958,6 @@
                                   <option value="7">Систематический анализа безопасности API</option>
                                 </select>
                                 <div class="fw-normal lh-base fs-4">
-                                  <!-- disabled -->
                                   Endpoints:
                                   <span>150</span>
                                 </div>
@@ -324,14 +968,13 @@
                                   class="form-control p-2 mb-4 shadow-none fw-normal lh-base fs-4 mb-4"
                                   name="name-text-input"
                                   placeholder="https://" />
-
+                                <!-- switcher -->
                                 <div class="form-check form-switch m-0">
                                   <input
-                                    class="form-check-input shadow-none cursor-pointer"
+                                    class="form-check-input border-0 shadow-none cursor-pointer"
                                     type="checkbox"
                                     role="switch"
-                                    id="flexSwitchCheckChecked"
-                                    checked />
+                                    id="flexSwitchCheckChecked" />
                                   <label
                                     class="form-check-label fw-normal lh-base fs-4 cursor-pointer"
                                     for="flexSwitchCheckChecked">
@@ -363,9 +1006,9 @@
 
                       <div class="mb-4">
                         <h2 class="h2 lh-base fw-bolder mb-4 ms-2">Выбор политики проверки</h2>
-                        <!-- select -->
                         <div class="fw-normal lh-base fs-4">
-                          <!-- disabled -->
+                          <!-- need add disabled class parent div -->
+                          <!-- select -->
                           <select class="disabled-search-select" autocomplete="off">
                             <option value="1">Выберите политику...</option>
                             <option value="2">Глубокий скан безопасности API</option>
@@ -380,111 +1023,122 @@
 
                       <div class="mb-4">
                         <h2 class="form-label h2 lh-base fw-bolder mb-4 ms-2">Режим загрузки</h2>
-                        <div class="form-check d-inline-flex align-items-center gap-2 me-2">
-                          <!-- radio -->
+                        <!-- radio -->
+                        <label
+                          class="form-check-label d-inline-flex flex-row-reverse align-items-center gap-2 me-2 fw-normal lh-base fs-4 cursor-pointer"
+                          for="flexRadioDefault1">
+                          Разовая проверка
                           <input
                             class="form-check-input shadow-none cursor-pointer"
                             type="radio"
                             name="flexRadioDefault"
                             id="flexRadioDefault1" />
-                          <label class="form-check-label fw-normal lh-base fs-4 cursor-pointer" for="flexRadioDefault1">
-                            Разовая проверка
-                          </label>
-                        </div>
-                        <div class="form-check d-inline-flex align-items-center gap-2">
-                          <!-- radio -->
+                        </label>
+                        <!-- radio -->
+                        <label
+                          class="form-check-label d-inline-flex flex-row-reverse align-items-center gap-2 me-2 fw-normal lh-base fs-4 cursor-pointer"
+                          for="flexRadioDefault2">
+                          Периодическая проверка
                           <input
                             class="form-check-input shadow-none cursor-pointer"
                             type="radio"
                             name="flexRadioDefault"
                             id="flexRadioDefault2"
                             checked />
-                          <label class="form-check-label fw-normal lh-base fs-4 cursor-pointer" for="flexRadioDefault2">
-                            Периодическая проверка
-                          </label>
-                        </div>
+                        </label>
                       </div>
 
-                      <div class="mb-4">
-                        <h2 class="form-label h2 lh-base fw-bolder mb-4 ms-2">Исключения</h2>
-                        <!-- input-search -->
-                        <form class="d-flex position-relative mb-4">
-                          <input
-                            class="form-control py-2 pe-5 shadow-none fw-normal lh-base fs-4"
-                            type="search"
-                            placeholder="Поиск по эндпоинтам"
-                            aria-label="Search" />
-                          <div class="position-absolute top-50 end-0 translate-middle-y me-1">
+                      <h2 class="form-label h2 lh-base fw-bolder mb-4 ms-2">Исключения</h2>
+                      <!-- input-search -->
+                      <form class="d-flex position-relative mb-4">
+                        <input
+                          class="form-control py-2 pe-5 shadow-none fw-normal lh-base fs-4"
+                          type="search"
+                          placeholder="Поиск по эндпоинтам"
+                          aria-label="Search" />
+                        <div class="position-absolute top-50 end-0 translate-middle-y me-1">
+                          <svg
+                            class="me-2"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="19" height="19" rx="3.5" stroke="#DBE0E7" />
+                            <path d="M8 14.5L12 5.5" stroke="#959DAC" />
+                          </svg>
+                          <button class="btn border-0 p-2 shadow-none" type="submit">
                             <svg
-                              class="me-2"
-                              width="20"
-                              height="20"
-                              viewBox="0 0 20 20"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 16 16"
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg">
-                              <rect x="0.5" y="0.5" width="19" height="19" rx="3.5" stroke="#DBE0E7" />
-                              <path d="M8 14.5L12 5.5" stroke="#959DAC" />
+                              <path
+                                d="M14 14L11.1 11.1M12.6667 7.33333C12.6667 10.2789 10.2789 12.6667 7.33333 12.6667C4.38781 12.6667 2 10.2789 2 7.33333C2 4.38781 4.38781 2 7.33333 2C10.2789 2 12.6667 4.38781 12.6667 7.33333Z"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round" />
                             </svg>
-                            <button class="btn border-0 p-2 bg-primary shadow-none" type="submit">
-                              <svg
-                                width="16"
-                                height="16"
-                                viewBox="0 0 16 16"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                  d="M14 14L11.1 11.1M12.6667 7.33333C12.6667 10.2789 10.2789 12.6667 7.33333 12.6667C4.38781 12.6667 2 10.2789 2 7.33333C2 4.38781 4.38781 2 7.33333 2C10.2789 2 12.6667 4.38781 12.6667 7.33333Z"
-                                  stroke="white"
-                                  stroke-width="1.5"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round" />
-                              </svg>
-                            </button>
-                          </div>
-                        </form>
-                        <!-- badge and checkbox -->
-                        <div class="mb-4">
-                          <div class="d-flex align-items-center justify-content-between mb-3">
-                            <div class="d-flex align-items-center gap-2">
-                              <span class="badge bg-blue px-3 py-1 fw-bolder fz-1 lh-base">GET</span>
-                              <span class="fw-bolder lh-base fs-4">/api/v1/admin/logs</span>
-                            </div>
-                            <label class="form-colorinput">
-                              <input class="form-colorinput-input" name="color-get" type="checkbox" />
-                              <span class="form-colorinput-color shadow-none"></span>
-                            </label>
-                          </div>
-
-                          <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center gap-2">
-                              <span class="badge bg-lime px-3 py-1 fw-bolder fz-1 lh-base">POST</span>
-                              <span class="fw-bolder lh-base fs-4">/api/v1/admin/logs</span>
-                            </div>
-                            <label class="form-colorinput">
-                              <input class="form-colorinput-input" name="color-post" type="checkbox" />
-                              <span class="form-colorinput-color shadow-none"></span>
-                            </label>
-                          </div>
+                          </button>
                         </div>
+                      </form>
+
+                      <div class="d-flex align-items-center justify-content-between mb-3">
+                        <!-- badge  -->
+                        <div class="d-flex align-items-center flex-lg-row col-xl-5 col-xxl-4 gap-2">
+                          <span class="badge bg-blue px-3 py-1 fw-bolder fz-1 lh-base">GET</span>
+                          <!-- disabled bg-blue || bg-secondary -->
+                          <!-- <span class="badge bg-secondary px-3 py-1 fw-bolder fz-1 lh-base flex-grow-1">GET</span> -->
+                          <span class="fw-bolder lh-base fs-4">/api/v1/admin/logs</span>
+                        </div>
+
+                        <label
+                          class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
+                          <!-- checkbox -->
+                          <div class="form-colorinput">
+                            <input class="form-colorinput-input" name="color-get" type="checkbox" />
+                            <span class="form-colorinput-color shadow-none"></span>
+                          </div>
+                        </label>
                       </div>
-                    </div>
+
+                      <div class="d-flex align-items-center justify-content-between">
+                        <!-- badge  -->
+                        <div class="d-flex align-items-center flex-lg-row col-xl-5 col-xxl-4 gap-2">
+                          <span class="badge bg-lime px-3 py-1 fw-bolder fz-1 lh-base">POST</span>
+                          <!-- disabled bg-lime || bg-secondary -->
+                          <!-- <span class="badge bg-secondary px-3 py-1 fw-bolder fz-1 lh-base">POST</span> -->
+                          <span class="fw-bolder lh-base fs-4">/api/v1/admin/logs</span>
+                        </div>
+
+                        <label class="form-colorinput">
+                          <!-- checkbox -->
+                          <input class="form-colorinput-input" name="color-post" type="checkbox" />
+                          <span class="form-colorinput-color shadow-none"></span>
+                        </label>
+                      </div>
+                    </fieldset>
                   </div>
-                  <!-- offcanvas-footer -->
-                  <div class="offcanvas-footer border-top p-3">
-                    <div class="d-flex justify-content-between">
-                      <button
-                        class="btn border-0 fw-normal lh-base fs-4 d-flex"
-                        type="button"
-                        data-bs-dismiss="offcanvas"
-                        aria-label="Close">
-                        Отмена
-                      </button>
-                      <button class="btn btn-primary fw-normal lh-base fs-4 d-flex" type="button">Создать тест</button>
-                    </div>
+                </div>
+                <!-- offcanvas-footer -->
+                <div class="offcanvas-footer border-top p-3">
+                  <div class="d-flex justify-content-between">
+                    <button
+                      class="btn btn-secondary fw-normal lh-base fs-4 d-flex"
+                      type="button"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close">
+                      Отмена
+                    </button>
+                    <button class="btn btn-primary fw-normal lh-base fs-4 d-flex" type="button">Создать тест</button>
                   </div>
                 </div>
               </div>
+              <!-- end offcanvas content first component -->
             </div>
+            <!-- end page-body-table -->
           </div>
         </div>
       </div>

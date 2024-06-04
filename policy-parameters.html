@@ -151,104 +151,108 @@
         <div class="page-body my-0">
           <div class="container-fluid">
             <div class="row">
-              <div class="col-12 col-lg-6 mx-lg-4 my-3 my-lg-4">
-                <h2 class="h3 lh-base fw-bolder mb-3">Лимиты на запросы</h2>
-                <div class="mb-4">
-                  <!-- tabs -->
-                  <div class="card border-0">
-                    <div class="card-header">
-                      <ul class="nav nav-tabs card-header-tabs p-0 justify-content-between" data-bs-toggle="tabs">
-                        <li class="nav-item flex-grow-1">
-                          <a
-                            href="#tabs-unlimited"
-                            class="nav-link active fw-normal lh-base fs-4 justify-content-center"
-                            data-bs-toggle="tab">
-                            Без ограничений
-                          </a>
-                        </li>
-                        <li class="nav-item flex-grow-1">
-                          <a
-                            href="#tabs-customizable"
-                            class="nav-link fw-normal lh-base fs-4 justify-content-center"
-                            data-bs-toggle="tab">
-                            Настраиваемые
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="card-body p-0 mt-4">
-                      <div class="tab-content">
-                        <div class="tab-pane active show" id="tabs-unlimited">
-                          <h2 class="h3 lh-base fw-bolder mb-3">Переадресация</h2>
-                          <div class="row">
-                            <div class="col-12 col-xxl-6 mb-2 d-flex gap-2 flex-wrap flex-lg-nowrap">
-                              <label for="inputIP" class="col-sm-2 col-form-label">IP-адрес:</label>
-                              <input
-                                type="text"
-                                class="form-control p-2 shadow-none fw-normal lh-base fs-4"
-                                id="inputIP" />
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-12 col-xxl-6 d-flex gap-2 flex-wrap flex-lg-nowrap">
-                              <label for="inputHost" class="col-sm-2 col-form-label">Хост:</label>
-                              <input
-                                type="text"
-                                class="form-control p-2 shadow-none fw-normal lh-base fs-4"
-                                id="inputHost" />
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tab-pane" id="tabs-customizable">
-                          <div class="row">
-                            <div class="d-flex gap-0 gap-lg-2 mb-2 flex-wrap flex-lg-nowrap">
-                              <div class="col-12 col-xxl-6 d-flex align-items-center gap-2 flex-wrap flex-lg-nowrap">
-                                <label for="inputTest" class="col-sm-2 col-form-label">На тест:</label>
+              <div class="col-12 col-lg-6 mx-lg-3 my-3 my-lg-4">
+                <fieldset>
+                  <!-- nedd add fieldset disabled -->
+                  <h2 class="h3 lh-base fw-bolder mb-3">Лимиты на запросы</h2>
+                  <div class="mb-4">
+                    <!-- tabs -->
+                    <div class="card border-0">
+                      <div class="card-header">
+                        <ul class="nav nav-tabs card-header-tabs p-0 justify-content-between" data-bs-toggle="tabs">
+                          <!-- need add ul class disabled -->
+                          <li class="nav-item flex-grow-1">
+                            <a
+                              href="#tabs-unlimited"
+                              class="nav-link active fw-normal lh-base fs-4 justify-content-center"
+                              data-bs-toggle="tab">
+                              Без ограничений
+                            </a>
+                          </li>
+                          <li class="nav-item flex-grow-1">
+                            <a
+                              href="#tabs-customizable"
+                              class="nav-link fw-normal lh-base fs-4 justify-content-center"
+                              data-bs-toggle="tab">
+                              Настраиваемые
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="card-body p-0 mt-4">
+                        <div class="tab-content">
+                          <div class="tab-pane active show" id="tabs-unlimited">
+                            <h2 class="h3 lh-base fw-bolder mb-3">Переадресация</h2>
+                            <div class="row">
+                              <div class="col-12 col-xxl-6 mb-2 d-flex gap-2 flex-wrap flex-lg-nowrap">
+                                <label for="inputIP" class="col-sm-2 col-form-label w-auto">IP-адрес:</label>
                                 <input
                                   type="text"
                                   class="form-control p-2 shadow-none fw-normal lh-base fs-4"
-                                  id="inputTest" />
+                                  id="inputIP" />
                               </div>
-                              <span class="col-form-label">RPS</span>
                             </div>
-                          </div>
-                          <div class="row">
-                            <div class="d-flex gap-0 gap-lg-2 mb-4 flex-wrap flex-lg-nowrap">
-                              <div class="col-12 col-xxl-6 d-flex align-items-center gap-2 flex-wrap flex-lg-nowrap">
-                                <label for="inputRoute" class="col-sm-2 col-form-label">На роут:</label>
+                            <div class="row">
+                              <div class="col-12 col-xxl-6 d-flex gap-4 flex-wrap flex-lg-nowrap">
+                                <label for="inputHost" class="col-sm-2 col-form-label w-auto">Хост:</label>
                                 <input
                                   type="text"
                                   class="form-control p-2 shadow-none fw-normal lh-base fs-4"
-                                  id="inputRoute" />
+                                  id="inputHost" />
                               </div>
-                              <span class="col-form-label">RPS</span>
                             </div>
                           </div>
+                          <div class="tab-pane" id="tabs-customizable">
+                            <div class="row">
+                              <div class="d-flex gap-0 gap-lg-2 mb-2 flex-wrap flex-lg-nowrap">
+                                <div class="col-12 col-xxl-6 d-flex align-items-center gap-2 flex-wrap flex-lg-nowrap">
+                                  <label for="inputTest" class="col-sm-2 col-form-label w-auto">На тест:</label>
+                                  <input
+                                    type="text"
+                                    class="form-control p-2 shadow-none fw-normal lh-base fs-4"
+                                    id="inputTest" />
+                                </div>
+                                <span class="col-form-label p-0 align-content-end">RPS</span>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="d-flex gap-0 gap-lg-2 mb-4 flex-wrap flex-lg-nowrap">
+                                <div class="col-12 col-xxl-6 d-flex align-items-center gap-2 flex-wrap flex-lg-nowrap">
+                                  <label for="inputRoute" class="col-sm-2 col-form-label w-auto">На роут:</label>
+                                  <input
+                                    type="text"
+                                    class="form-control p-2 shadow-none fw-normal lh-base fs-4"
+                                    id="inputRoute" />
+                                </div>
+                                <span class="col-form-label p-0 align-content-end">RPS</span>
+                              </div>
+                            </div>
 
-                          <h2 class="h3 lh-base fw-bolder mb-3">Переадресация</h2>
-                          <div class="row">
-                            <div class="col-12 col-xxl-6 mb-2 d-flex gap-2 flex-wrap flex-lg-nowrap">
-                              <label for="inputIP" class="col-sm-2 col-form-label">IP-адрес:</label>
-                              <input
-                                type="text"
-                                class="form-control p-2 shadow-none fw-normal lh-base fs-4"
-                                id="inputIP" />
+                            <h2 class="h3 lh-base fw-bolder mb-3">Переадресация</h2>
+                            <div class="row">
+                              <div class="col-12 col-xxl-6 mb-2 d-flex gap-2 flex-wrap flex-lg-nowrap">
+                                <label for="inputIP" class="col-sm-2 col-form-label w-auto">IP-адрес:</label>
+                                <input
+                                  type="text"
+                                  class="form-control p-2 shadow-none fw-normal lh-base fs-4"
+                                  id="inputIP" />
+                              </div>
                             </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-12 col-xxl-6 d-flex gap-2 flex-wrap flex-lg-nowrap">
-                              <label for="inputHost" class="col-sm-2 col-form-label">Хост:</label>
-                              <input
-                                type="text"
-                                class="form-control p-2 shadow-none fw-normal lh-base fs-4"
-                                id="inputHost" />
+                            <div class="row">
+                              <div class="col-12 col-xxl-6 d-flex gap-4 flex-wrap flex-lg-nowrap">
+                                <label for="inputHost" class="col-sm-2 col-form-label w-auto">Хост:</label>
+                                <input
+                                  type="text"
+                                  class="form-control p-2 shadow-none fw-normal lh-base fs-4"
+                                  id="inputHost" />
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </fieldset>
               </div>
             </div>
           </div>

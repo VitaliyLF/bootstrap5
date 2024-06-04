@@ -150,166 +150,169 @@
 
         <div class="page-body my-0">
           <div class="container-fluid">
-            <div class="col-12 col-lg-6 mx-lg-4 my-3 my-lg-4">
-              <h2 class="h3 lh-base fw-bolder mb-3">OWASP API / TOP 10</h2>
-              <div class="row mb-1">
-                <div class="col-8 col-xl-6">
-                  <label
-                    class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4 disabled">
-                    SQL injection
-                    <div class="form-colorinput">
-                      <input class="form-colorinput-input" name="color-get" type="checkbox" />
-                      <span class="form-colorinput-color shadow-none"></span>
-                    </div>
-                  </label>
+            <div class="col-12 col-lg-6 mx-lg-3 my-3 my-lg-4">
+              <fieldset>
+                <!-- nedd add fieldset attribute disabled -->
+                <h2 class="h3 lh-base fw-bolder mb-3">OWASP API / TOP 10</h2>
+                <div class="row mb-1">
+                  <div class="col-8 col-xl-6">
+                    <label
+                      class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
+                      SQL injection
+                      <div class="form-colorinput">
+                        <input class="form-colorinput-input" name="color-get" type="checkbox" />
+                        <span class="form-colorinput-color shadow-none"></span>
+                      </div>
+                    </label>
+                  </div>
                 </div>
-              </div>
-              <div class="row mb-1">
-                <div class="col-8 col-xl-6">
-                  <label
-                    class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
-                    LDAP Injection
-                    <div class="form-colorinput">
-                      <input class="form-colorinput-input" name="color-get" type="checkbox" checked />
-                      <span class="form-colorinput-color shadow-none"></span>
-                    </div>
-                  </label>
+                <div class="row mb-1">
+                  <div class="col-8 col-xl-6">
+                    <label
+                      class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
+                      LDAP Injection
+                      <div class="form-colorinput">
+                        <input class="form-colorinput-input" name="color-get" type="checkbox" checked />
+                        <span class="form-colorinput-color shadow-none"></span>
+                      </div>
+                    </label>
+                  </div>
                 </div>
-              </div>
-              <div class="row mb-1">
-                <div class="col-8 col-xl-6">
-                  <label
-                    class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
-                    Email Injection
-                    <div class="form-colorinput">
-                      <input class="form-colorinput-input" name="color-get" type="checkbox" checked />
-                      <span class="form-colorinput-color shadow-none"></span>
-                    </div>
-                  </label>
+                <div class="row mb-1">
+                  <div class="col-8 col-xl-6">
+                    <label
+                      class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
+                      Email Injection
+                      <div class="form-colorinput">
+                        <input class="form-colorinput-input" name="color-get" type="checkbox" checked />
+                        <span class="form-colorinput-color shadow-none"></span>
+                      </div>
+                    </label>
+                  </div>
                 </div>
-              </div>
-              <div class="row mb-1">
-                <div class="col-8 col-xl-6">
-                  <label
-                    class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4 disabled">
-                    SSI Injection
-                    <div class="form-colorinput">
-                      <input class="form-colorinput-input" name="color-get" type="checkbox" />
-                      <span class="form-colorinput-color shadow-none"></span>
-                    </div>
-                  </label>
+                <div class="row mb-1">
+                  <div class="col-8 col-xl-6">
+                    <label
+                      class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
+                      SSI Injection
+                      <div class="form-colorinput">
+                        <input class="form-colorinput-input" name="color-get" type="checkbox" />
+                        <span class="form-colorinput-color shadow-none"></span>
+                      </div>
+                    </label>
+                  </div>
                 </div>
-              </div>
-              <div class="row mb-1">
-                <div class="col-8 col-xl-6">
-                  <label
-                    class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4 disabled">
-                    Authentication Bypass
-                    <div class="form-colorinput">
-                      <input class="form-colorinput-input" name="color-get" type="checkbox" />
-                      <span class="form-colorinput-color shadow-none"></span>
-                    </div>
-                  </label>
+                <div class="row mb-1">
+                  <div class="col-8 col-xl-6">
+                    <label
+                      class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
+                      Authentication Bypass
+                      <div class="form-colorinput">
+                        <input class="form-colorinput-input" name="color-get" type="checkbox" />
+                        <span class="form-colorinput-color shadow-none"></span>
+                      </div>
+                    </label>
+                  </div>
                 </div>
-              </div>
-              <div class="row mb-1">
-                <div class="col-8 col-xl-6">
-                  <label
-                    class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
-                    Server-Side Request Forgery, SSRF
-                    <div class="form-colorinput">
-                      <input class="form-colorinput-input" name="color-get" type="checkbox" checked />
-                      <span class="form-colorinput-color shadow-none"></span>
-                    </div>
-                  </label>
+                <div class="row mb-1">
+                  <div class="col-8 col-xl-6">
+                    <label
+                      class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
+                      Server-Side Request Forgery, SSRF
+                      <div class="form-colorinput">
+                        <input class="form-colorinput-input" name="color-get" type="checkbox" checked />
+                        <span class="form-colorinput-color shadow-none"></span>
+                      </div>
+                    </label>
+                  </div>
                 </div>
-              </div>
-              <div class="row mb-1">
-                <div class="col-8 col-xl-6">
-                  <label
-                    class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
-                    Cross-site Scripting, XSS
-                    <div class="form-colorinput">
-                      <input class="form-colorinput-input" name="color-get" type="checkbox" />
-                      <span class="form-colorinput-color shadow-none"></span>
-                    </div>
-                  </label>
+                <div class="row mb-1">
+                  <div class="col-8 col-xl-6">
+                    <label
+                      class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
+                      Cross-site Scripting, XSS
+                      <div class="form-colorinput">
+                        <input class="form-colorinput-input" name="color-get" type="checkbox" />
+                        <span class="form-colorinput-color shadow-none"></span>
+                      </div>
+                    </label>
+                  </div>
                 </div>
-              </div>
-              <div class="row mb-1">
-                <div class="col-8 col-xl-6">
-                  <label
-                    class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
-                    XML External Entity, XXE
-                    <div class="form-colorinput">
-                      <input class="form-colorinput-input" name="color-get" type="checkbox" />
-                      <span class="form-colorinput-color shadow-none"></span>
-                    </div>
-                  </label>
+                <div class="row mb-1">
+                  <div class="col-8 col-xl-6">
+                    <label
+                      class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
+                      XML External Entity, XXE
+                      <div class="form-colorinput">
+                        <input class="form-colorinput-input" name="color-get" type="checkbox" />
+                        <span class="form-colorinput-color shadow-none"></span>
+                      </div>
+                    </label>
+                  </div>
                 </div>
-              </div>
-              <div class="row mb-4">
-                <div class="col-8 col-xl-6">
-                  <label
-                    class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
-                    BOLA
-                    <div class="form-colorinput">
-                      <input class="form-colorinput-input" name="color-get" type="checkbox" />
-                      <span class="form-colorinput-color shadow-none"></span>
-                    </div>
-                  </label>
+                <div class="row mb-4">
+                  <div class="col-8 col-xl-6">
+                    <label
+                      class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
+                      BOLA
+                      <div class="form-colorinput">
+                        <input class="form-colorinput-input" name="color-get" type="checkbox" />
+                        <span class="form-colorinput-color shadow-none"></span>
+                      </div>
+                    </label>
+                  </div>
                 </div>
-              </div>
-              <h2 class="h3 lh-base fw-bolder mb-3">Дополнительные модули</h2>
-              <div class="row mb-1">
-                <div class="col-8 col-xl-6">
-                  <label
-                    class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
-                    Http method tempering
-                    <div class="form-colorinput">
-                      <input class="form-colorinput-input" name="color-get" type="checkbox" />
-                      <span class="form-colorinput-color shadow-none"></span>
-                    </div>
-                  </label>
+                <h2 class="h3 lh-base fw-bolder mb-3">Дополнительные модули</h2>
+                <div class="row mb-1">
+                  <div class="col-8 col-xl-6">
+                    <label
+                      class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
+                      Http method tempering
+                      <div class="form-colorinput">
+                        <input class="form-colorinput-input" name="color-get" type="checkbox" />
+                        <span class="form-colorinput-color shadow-none"></span>
+                      </div>
+                    </label>
+                  </div>
                 </div>
-              </div>
-              <div class="row mb-1">
-                <div class="col-8 col-xl-6">
-                  <label
-                    class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
-                    Анализ JWT
-                    <div class="form-colorinput">
-                      <input class="form-colorinput-input" name="color-get" type="checkbox" />
-                      <span class="form-colorinput-color shadow-none"></span>
-                    </div>
-                  </label>
+                <div class="row mb-1">
+                  <div class="col-8 col-xl-6">
+                    <label
+                      class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
+                      Анализ JWT
+                      <div class="form-colorinput">
+                        <input class="form-colorinput-input" name="color-get" type="checkbox" />
+                        <span class="form-colorinput-color shadow-none"></span>
+                      </div>
+                    </label>
+                  </div>
                 </div>
-              </div>
-              <div class="row mb-4">
-                <div class="col-8 col-xl-6">
-                  <label
-                    class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
-                    DOS request detection
-                    <div class="form-colorinput">
-                      <input class="form-colorinput-input" name="color-get" type="checkbox" />
-                      <span class="form-colorinput-color shadow-none"></span>
-                    </div>
-                  </label>
+                <div class="row mb-4">
+                  <div class="col-8 col-xl-6">
+                    <label
+                      class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
+                      DOS request detection
+                      <div class="form-colorinput">
+                        <input class="form-colorinput-input" name="color-get" type="checkbox" />
+                        <span class="form-colorinput-color shadow-none"></span>
+                      </div>
+                    </label>
+                  </div>
                 </div>
-              </div>
-              <h2 class="h3 lh-base fw-bolder mb-3">Кастомные детекты</h2>
-              <div class="row mb-1">
-                <div class="col-8 col-xl-6">
-                  <label
-                    class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
-                    Пользовательские детекты
-                    <div class="form-colorinput">
-                      <input class="form-colorinput-input" name="color-get" type="checkbox" />
-                      <span class="form-colorinput-color shadow-none"></span>
-                    </div>
-                  </label>
+                <h2 class="h3 lh-base fw-bolder mb-3">Кастомные детекты</h2>
+                <div class="row mb-1">
+                  <div class="col-8 col-xl-6">
+                    <label
+                      class="form-colorinput d-flex align-items-center justify-content-between gap-4 py-2 fw-normal lh-base fs-4">
+                      Пользовательские детекты
+                      <div class="form-colorinput">
+                        <input class="form-colorinput-input" name="color-get" type="checkbox" />
+                        <span class="form-colorinput-color shadow-none"></span>
+                      </div>
+                    </label>
+                  </div>
                 </div>
-              </div>
+              </fieldset>
             </div>
           </div>
         </div>
