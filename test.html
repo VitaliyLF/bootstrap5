@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="p-2 p-sm-2 p-xl-3 grid-table-row align-items-center fw-bolder fs-3 lh-lg">
+      <div>Тесты:</div>
+      <div class="text-center">Статус</div>
+      <div class="text-center">Спецификация</div>
+      <div class="text-center">Количество тестируемых&nbsp;эндпоинтов</div>
+    </div>
+
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header">
+          <div
+            class="p-2 p-sm-2 p-xl-3 accordion-button grid-table-row border lh-sm fs-4 rounded-3 cursor-pointer"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne">
+            <div class="ms-0 ms-sm-0 ms-xl-4 p-0 p-sm-0 ps-xl-3">
+              <strong class="fw-bolder">Быстрая проверка целостности API</strong>
+              <br />
+              Проверка конечных точек API на целостность данных и согласованность ответов.
+            </div>
+            <div class="text-center text-success fw-bolder">В работе</div>
+            <div class="text-center">APP-1</div>
+            <div class="text-center">132/150</div>
+            <div
+              class="gap-4 gap-lg-5 justify-content-start justify-content-xl-end text-center d-flex align-items-center">
+              <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.74607 1.20938H22.8839C24.0686 1.20938 25.03 2.17076 25.03 3.35545V23.4933C25.03 24.678 24.0686 25.6394 22.8839 25.6394H2.74607C1.56138 25.6394 0.6 24.678 0.6 23.4933V3.35545C0.6 2.17076 1.56138 1.20938 2.74607 1.20938Z"
+                  stroke="black"
+                  stroke-width="1.2" />
+              </svg>
+
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.29886 1.28233C7.56446 0.905888 8.12273 0.905889 8.38832 1.28234L9.5146 2.87866C9.66297 3.08895 9.91914 3.19506 10.1728 3.15127L12.0979 2.8189C12.5519 2.74052 12.9467 3.13527 12.8683 3.58927L12.5359 5.51443C12.4921 5.76805 12.5982 6.02421 12.8085 6.17259L14.4049 7.29886C14.7813 7.56446 14.7813 8.12273 14.4049 8.38832L12.8085 9.5146C12.5982 9.66297 12.4921 9.91914 12.5359 10.1728L12.8683 12.0979C12.9467 12.5519 12.5519 12.9467 12.0979 12.8683L10.1728 12.5359C9.91914 12.4921 9.66297 12.5982 9.5146 12.8085L8.38832 14.4048C8.12273 14.7813 7.56446 14.7813 7.29886 14.4048L6.17259 12.8085C6.02421 12.5982 5.76805 12.4921 5.51443 12.5359L3.58927 12.8683C3.13527 12.9467 2.74052 12.5519 2.8189 12.0979L3.15127 10.1727C3.19506 9.91914 3.08895 9.66297 2.87866 9.5146L1.28233 8.38832C0.905888 8.12272 0.905889 7.56446 1.28234 7.29886L2.87866 6.17259C3.08895 6.02421 3.19506 5.76805 3.15127 5.51443L2.8189 3.58927C2.74052 3.13527 3.13527 2.74052 3.58927 2.8189L5.51443 3.15127C5.76805 3.19506 6.02421 3.08895 6.17259 2.87866L7.29886 1.28233Z"
+                  stroke="black"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M9.84359 7.84359C9.84359 8.94816 8.94816 9.84359 7.84359 9.84359C6.73902 9.84359 5.84359 8.94816 5.84359 7.84359C5.84359 6.73902 6.73902 5.84359 7.84359 5.84359C8.94816 5.84359 9.84359 6.73902 9.84359 7.84359Z"
+                  stroke="black"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+          <div class="accordion-body p-0">
+            <div class="p-2 p-sm-2 p-xl-3 grid-table-row fw-bolder fs-3 lh-sm">
+              <div class="ms-xl-4 ps-xl-4">Дата теста</div>
+              <div class="text-center">Состояние</div>
+              <div class="text-center">Уязвимости</div>
+              <div class="text-center">Отчёт</div>
+            </div>
+            <div class="p-2 p-sm-2 p-xl-3 fs-4 grid-table-row bg-blue-lt align-items-center rounded-3">
+              <div class="ms-0 ms-sm-0 ms-xl-4 ps-0 ps-sm-0 ps-xl-3">
+                <strong class="fw-bolder">25.03.24</strong>
+                <br />
+                <span>16:03:43</span>
+              </div>
+              <div class="text-center">Выполняется</div>
+              <div class="text-center fw-bolder">n/a</div>
+              <div class="text-center">
+                <svg width="19" height="25" viewBox="0 0 19 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                    fill="black" />
+                </svg>
+              </div>
+              <a class="text-start text-decoration-underline fst-italic" href="">Подробнее</a>
+            </div>
+            <a class="d-block text-primary text-center pb-1 mt-2 mb-3 border-bottom border-primary" href="">
+              Показать больше
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<div class="table-responsive table-responsive-lg">
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="text-nowrap">Тесты:</th>
+        <th class="text-nowrap">Статус</th>
+        <th class="text-nowrap">Спецификация</th>
+        <th class="text-nowrap">Количество тестируемых эндпоинтов</th>
+        <th class="text-nowrap"></th>
+        <th class="text-nowrap"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>1</th>
+        <th>1</th>
+        <th>1</th>
+        <th>1</th>
+        <th>1</th>
+        <th>1</th>
+      </tr>
+    </tbody>
+  </table>
+</div>
