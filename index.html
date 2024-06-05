@@ -359,8 +359,7 @@
                                   </div>
                                   <div class="tab-pane" id="tabs-file">
                                     <form
-                                      class="dropzone p-2 border-secondary"
-                                      id="dropzone-custom"
+                                      class="dropzone p-2 border-secondary dropzone"
                                       action="."
                                       autocomplete="off"
                                       novalidate>
@@ -516,7 +515,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-4">
+                <div class="col-12 col-xl-4">
                   <!-- radio check  -->
                   <fieldset class="d-flex border rounded-2">
                     <input
@@ -526,19 +525,21 @@
                       id="check-all"
                       autocomplete="off"
                       checked />
-                    <label class="btn border-0 rounded-0 flex-grow-1" for="check-all">
+                    <label class="label-check text-center rounded-0 py-2 flex-grow-1 cursor-pointer" for="check-all">
                       Все:
                       <span>6</span>
                     </label>
 
                     <input type="radio" class="btn-check" name="options-base" id="check-active" autocomplete="off" />
-                    <label class="btn border-0 rounded-0 flex-grow-1" for="check-active">
+                    <label class="label-check rounded-0 text-center py-2 flex-grow-1 cursor-pointer" for="check-active">
                       Активные:
                       <span>4</span>
                     </label>
 
                     <input type="radio" class="btn-check" name="options-base" id="check-disabled" autocomplete="off" />
-                    <label class="btn border-0 rounded-0 flex-grow-1" for="check-disabled">
+                    <label
+                      class="label-check rounded-0 text-center py-2 flex-grow-1 cursor-pointer"
+                      for="check-disabled">
                       Отключенные:
                       <span>2</span>
                     </label>
@@ -574,9 +575,10 @@
                 <!-- end table-header -->
                 <tbody>
                   <!-- start status-in-work component -->
+                  <!-- tr-card--disabled -->
                   <tr
-                    class="accordion border rounded-3 cursor-pointer status-in-work tr-card"
-                    id="accordionExample"
+                    class="tr-card status-in-work border rounded-3 cursor-pointer"
+                    id="accordion-status-in-work"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseOne"
                     aria-expanded="true"
@@ -597,12 +599,18 @@
                       </svg>
                       <!-- start offcanvas first component button -->
                       <button
-                        class="btn-link ms-4"
+                        class="btn-link border-0 ms-4"
                         type="button"
                         data-bs-toggle="offcanvas"
                         data-bs-target="#firstComponentOffcanvas"
                         aria-controls="offcanvasRight">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          style="pointer-events: none">
                           <path
                             d="M7.45885 1.369C7.72445 0.992558 8.28271 0.992559 8.54831 1.369L9.67459 2.96533C9.82296 3.17562 10.0791 3.28173 10.3327 3.23794L12.2579 2.90557C12.7119 2.82719 13.1067 3.22194 13.0283 3.67594L12.6959 5.6011C12.6521 5.85472 12.7582 6.11088 12.9685 6.25926L14.5648 7.38553C14.9413 7.65113 14.9413 8.2094 14.5648 8.47499L12.9685 9.60127C12.7582 9.74964 12.6521 10.0058 12.6959 10.2594L13.0283 12.1846C13.1067 12.6386 12.7119 13.0333 12.2579 12.955L10.3327 12.6226C10.0791 12.5788 9.82296 12.6849 9.67459 12.8952L8.54831 14.4915C8.28271 14.868 7.72445 14.868 7.45885 14.4915L6.33257 12.8952C6.1842 12.6849 5.92804 12.5788 5.67442 12.6226L3.74925 12.955C3.29526 13.0333 2.90051 12.6386 2.97889 12.1846L3.31126 10.2594C3.35505 10.0058 3.24894 9.74964 3.03865 9.60127L1.44232 8.47499C1.06588 8.20939 1.06588 7.65113 1.44232 7.38553L3.03865 6.25926C3.24894 6.11088 3.35505 5.85472 3.31126 5.6011L2.97889 3.67594C2.90051 3.22194 3.29526 2.82719 3.74926 2.90557L5.67442 3.23794C5.92804 3.28173 6.1842 3.17562 6.33257 2.96533L7.45885 1.369Z"
                             stroke="black"
@@ -620,7 +628,10 @@
                       <!-- start offcanvas first component button -->
                     </td>
                   </tr>
-                  <tr id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                  <tr
+                    id="collapseOne"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#accordion-status-in-work">
                     <td class="border-0 p-0 ps-4" colspan="5">
                       <table class="table table-responsive">
                         <thead>
@@ -644,7 +655,7 @@
                         </thead>
                         <tbody>
                           <!-- start Status Running -->
-                          <tr class="tr-card tr-card--pattern" style="--table-row-color: rgba(84, 125, 204, 0.1)">
+                          <tr class="tr-card status-running" style="--table-row-color: rgba(84, 125, 204, 0.1)">
                             <td>
                               <strong>25.03.24</strong>
                               <br />
@@ -655,11 +666,12 @@
                             <td class="text-center">
                               <button
                                 type="button"
-                                class="btn-link"
+                                class="btn-link border-0"
                                 data-bs-trigger="hover"
                                 data-bs-toggle="popover"
                                 title="Выгрузить отчёт"
-                                data-bs-placement="top">
+                                data-bs-placement="top"
+                                disabled>
                                 <svg
                                   width="19"
                                   height="25"
@@ -673,7 +685,9 @@
                               </button>
                             </td>
                             <td class="text-center">
-                              <a class="d-block btn-link text-decoration-underline fst-italic" href="">Подробнее</a>
+                              <a class="d-inline-block btn-link border-bottom border-dark fst-italic" href="">
+                                Подробнее
+                              </a>
                             </td>
                           </tr>
                           <!-- end Status Running -->
@@ -683,18 +697,32 @@
                           </tr>
                           <!-- Distance between  -->
                           <!-- start Status passed -->
-                          <tr class="tr-card" style="--table-row-color: rgba(84, 222, 204, 0.1)">
+                          <tr class="tr-card status-passed" style="--table-row-color: rgba(86, 204, 84, 0.1)">
                             <td>
                               <strong>01.04.24</strong>
                               <br />
                               <span>23:23:40</span>
                             </td>
-                            <td class="text-center">Пройден</td>
+                            <td class="text-center">
+                              <div class="d-flex align-items-center gap-2">
+                                <svg
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 20 20"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M8.6 11.8L6.45 9.65C6.26667 9.46667 6.03333 9.375 5.75 9.375C5.46667 9.375 5.23334 9.46667 5.05 9.65C4.86667 9.83333 4.775 10.0667 4.775 10.35C4.775 10.6333 4.86667 10.8667 5.05 11.05L7.9 13.9C8.1 14.1 8.33333 14.2 8.6 14.2C8.86667 14.2 9.1 14.1 9.3 13.9L14.95 8.25C15.1333 8.06667 15.225 7.83333 15.225 7.55C15.225 7.26667 15.1333 7.03333 14.95 6.85C14.7667 6.66667 14.5333 6.575 14.25 6.575C13.9667 6.575 13.7333 6.66667 13.55 6.85L8.6 11.8ZM10 20C8.61667 20 7.31667 19.7373 6.1 19.212C4.88334 18.6867 3.825 17.9743 2.925 17.075C2.025 16.1757 1.31267 15.1173 0.788001 13.9C0.263335 12.6827 0.000667933 11.3827 1.26582e-06 10C-0.000665401 8.61733 0.262001 7.31733 0.788001 6.1C1.314 4.88267 2.02633 3.82433 2.925 2.925C3.82367 2.02567 4.882 1.31333 6.1 0.788C7.318 0.262667 8.618 0 10 0C11.382 0 12.682 0.262667 13.9 0.788C15.118 1.31333 16.1763 2.02567 17.075 2.925C17.9737 3.82433 18.6863 4.88267 19.213 6.1C19.7397 7.31733 20.002 8.61733 20 10C19.998 11.3827 19.7353 12.6827 19.212 13.9C18.6887 15.1173 17.9763 16.1757 17.075 17.075C16.1737 17.9743 15.1153 18.687 13.9 19.213C12.6847 19.739 11.3847 20.0013 10 20Z"
+                                    fill="#56CC54" />
+                                </svg>
+                                <span>Пройден</span>
+                              </div>
+                            </td>
                             <td class="text-center fw-bold">0/ 0/ 0</td>
                             <td class="text-center">
                               <button
                                 type="button"
-                                class="btn-link"
+                                class="btn-link border-0"
                                 data-bs-trigger="hover"
                                 data-bs-toggle="popover"
                                 title="Выгрузить отчёт"
@@ -712,7 +740,9 @@
                               </button>
                             </td>
                             <td class="text-center">
-                              <a class="d-block btn-link text-decoration-underline fst-italic" href="">Подробнее</a>
+                              <a class="d-inline-block btn-link border-bottom border-dark fst-italic" href="">
+                                Подробнее
+                              </a>
                             </td>
                           </tr>
                           <!-- start Status passed -->
@@ -722,18 +752,39 @@
                           </tr>
                           <!-- Distance between  -->
                           <!-- start Status unpassed -->
-                          <tr class="bg-red-lt">
+                          <tr class="tr-card status-unpassed" style="--table-row-color: rgba(242, 68, 68, 0.1)">
                             <td>
                               <strong>15.03.24</strong>
                               <br />
                               <span>12:03:19</span>
                             </td>
-                            <td class="text-center">Не пройден</td>
+                            <td class="text-center">
+                              <div class="d-flex align-items-center gap-2">
+                                <svg
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 20 20"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <g clip-path="url(#clip0_256_12106)">
+                                    <path
+                                      d="M10 0C10.918 0 11.8034 0.117188 12.6562 0.351562C13.5091 0.585938 14.3034 0.924479 15.0391 1.36719C15.7747 1.8099 16.4486 2.33073 17.0605 2.92969C17.6725 3.52865 18.1966 4.20247 18.6328 4.95117C19.069 5.69987 19.4043 6.4974 19.6387 7.34375C19.873 8.1901 19.9935 9.07552 20 10C20 10.918 19.8828 11.8034 19.6484 12.6562C19.4141 13.5091 19.0755 14.3034 18.6328 15.0391C18.1901 15.7747 17.6693 16.4486 17.0703 17.0605C16.4714 17.6725 15.7975 18.1966 15.0488 18.6328C14.3001 19.069 13.5026 19.4043 12.6562 19.6387C11.8099 19.873 10.9245 19.9935 10 20C9.08203 20 8.19661 19.8828 7.34375 19.6484C6.49089 19.4141 5.69661 19.0755 4.96094 18.6328C4.22526 18.1901 3.55143 17.6693 2.93945 17.0703C2.32747 16.4714 1.80339 15.7975 1.36719 15.0488C0.93099 14.3001 0.595703 13.5026 0.361328 12.6562C0.126953 11.8099 0.00651042 10.9245 0 10C0 9.08203 0.117188 8.19661 0.351562 7.34375C0.585938 6.49089 0.924479 5.69661 1.36719 4.96094C1.8099 4.22526 2.33073 3.55143 2.92969 2.93945C3.52865 2.32747 4.20247 1.80339 4.95117 1.36719C5.69987 0.93099 6.4974 0.595703 7.34375 0.361328C8.1901 0.126953 9.07552 0.00651042 10 0ZM11.1035 10L14.4434 6.66016L13.3398 5.55664L10 8.89648L6.66016 5.55664L5.55664 6.66016L8.89648 10L5.55664 13.3398L6.66016 14.4434L10 11.1035L13.3398 14.4434L14.4434 13.3398L11.1035 10Z"
+                                      fill="#F24444" />
+                                  </g>
+                                  <defs>
+                                    <clipPath id="clip0_256_12106">
+                                      <rect width="20" height="20" fill="white" />
+                                    </clipPath>
+                                  </defs>
+                                </svg>
+                                <span>Не пройден</span>
+                              </div>
+                            </td>
                             <td class="text-center fw-bold">20/ 10/ 10</td>
                             <td class="text-center">
                               <button
                                 type="button"
-                                class="btn-link"
+                                class="btn-link border-0"
                                 data-bs-trigger="hover"
                                 data-bs-toggle="popover"
                                 title="Выгрузить отчёт"
@@ -751,7 +802,9 @@
                               </button>
                             </td>
                             <td class="text-center">
-                              <a class="d-block btn-link text-decoration-underline fst-italic" href="">Подробнее</a>
+                              <a class="d-inline-block btn-link border-bottom border-dark fst-italic" href="">
+                                Подробнее
+                              </a>
                             </td>
                           </tr>
                           <!-- end Status unpassed -->
@@ -761,18 +814,32 @@
                           </tr>
                           <!-- Distance between  -->
                           <!-- start Status error -->
-                          <tr class="bg-orange-lt">
+                          <tr class="tr-card status-error" style="--table-row-color: rgba(252, 115, 3, 0.1)">
                             <td>
                               <strong>11.03.24</strong>
                               <br />
                               <span>10:03:10</span>
                             </td>
-                            <td class="text-center">Ошибка</td>
+                            <td class="text-center">
+                              <div class="d-flex align-items-center gap-2">
+                                <svg
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 20 20"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM10 11C9.45 11 9 10.55 9 10V6C9 5.45 9.45 5 10 5C10.55 5 11 5.45 11 6V10C11 10.55 10.55 11 10 11ZM11 15H9V13H11V15Z"
+                                    fill="#FC7303" />
+                                </svg>
+                                <span>Ошибка</span>
+                              </div>
+                            </td>
                             <td class="text-center fw-bold">n/a</td>
                             <td class="text-center">
                               <button
                                 type="button"
-                                class="btn-link"
+                                class="btn-link border-0"
                                 data-bs-trigger="hover"
                                 data-bs-toggle="popover"
                                 title="Выгрузить отчёт"
@@ -790,22 +857,637 @@
                               </button>
                             </td>
                             <td class="text-center">
-                              <a class="d-block btn-link text-decoration-underline fst-italic" href="">Подробнее</a>
+                              <a class="d-inline-block btn-link border-bottom border-dark fst-italic" href="">
+                                Подробнее
+                              </a>
                             </td>
                           </tr>
                           <!-- start Status error -->
                         </tbody>
+                        <tfoot>
+                          <tr>
+                            <td class="text-center py-2" colspan="5">
+                              <a class="d-block btn-link text-primary pb-1 border-primary" href="retrospective.html">
+                                Показать больше
+                              </a>
+                            </td>
+                          </tr>
+                        </tfoot>
                       </table>
                     </td>
                   </tr>
-                  <!-- END Single Element component -->
+                  <!-- end status-in-work component -->
+                  <!-- Distance between  -->
+                  <tr>
+                    <td class="border-0 py-1" colspan="5"></td>
+                  </tr>
+                  <!-- Distance between  -->
+                  <!-- start status-planned component -->
+                  <!-- tr-card--disabled -->
+                  <tr
+                    class="tr-card status-planned border rounded-3 cursor-pointer"
+                    id="accordion-status-planned"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="true"
+                    aria-controls="collapseTwo">
+                    <td class="">
+                      <strong>Оценка эффективности конечной точки</strong>
+                      <br />
+                      Оценка производительности конечной точки API и эффективности при различных нагрузках.
+                    </td>
+                    <td class="text-center text-info fw-bold">
+                      Запланирован
+                      <br />
+                      <span>02.04.24</span>
+                    </td>
+                    <td class="text-center">APP-1</td>
+                    <td class="text-center">102/100</td>
+                    <td class="text-end">
+                      <svg width="22" height="29" viewBox="0 0 22 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M20.4512 12.6656L20.4524 12.6664C21.6829 13.4569 21.6807 15.4449 20.4518 16.2368L20.4513 16.2371L3.26375 27.3455L3.26306 27.346C2.66371 27.7348 1.98878 27.6978 1.44997 27.3648C0.908238 27.0301 0.5 26.3892 0.5 25.5598V3.33767C0.5 1.50285 2.19873 0.863711 3.26366 1.55189C3.26369 1.55191 3.26372 1.55193 3.26375 1.55195L20.4512 12.6656Z"
+                          stroke="black" />
+                      </svg>
+                      <!-- start offcanvas first component button -->
+                      <button
+                        class="btn-link ms-4 border-0"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#firstComponentOffcanvas"
+                        aria-controls="offcanvasRight">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M7.45885 1.369C7.72445 0.992558 8.28271 0.992559 8.54831 1.369L9.67459 2.96533C9.82296 3.17562 10.0791 3.28173 10.3327 3.23794L12.2579 2.90557C12.7119 2.82719 13.1067 3.22194 13.0283 3.67594L12.6959 5.6011C12.6521 5.85472 12.7582 6.11088 12.9685 6.25926L14.5648 7.38553C14.9413 7.65113 14.9413 8.2094 14.5648 8.47499L12.9685 9.60127C12.7582 9.74964 12.6521 10.0058 12.6959 10.2594L13.0283 12.1846C13.1067 12.6386 12.7119 13.0333 12.2579 12.955L10.3327 12.6226C10.0791 12.5788 9.82296 12.6849 9.67459 12.8952L8.54831 14.4915C8.28271 14.868 7.72445 14.868 7.45885 14.4915L6.33257 12.8952C6.1842 12.6849 5.92804 12.5788 5.67442 12.6226L3.74925 12.955C3.29526 13.0333 2.90051 12.6386 2.97889 12.1846L3.31126 10.2594C3.35505 10.0058 3.24894 9.74964 3.03865 9.60127L1.44232 8.47499C1.06588 8.20939 1.06588 7.65113 1.44232 7.38553L3.03865 6.25926C3.24894 6.11088 3.35505 5.85472 3.31126 5.6011L2.97889 3.67594C2.90051 3.22194 3.29526 2.82719 3.74926 2.90557L5.67442 3.23794C5.92804 3.28173 6.1842 3.17562 6.33257 2.96533L7.45885 1.369Z"
+                            stroke="black"
+                            stroke-width="1.2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M10.0036 7.93026C10.0036 9.03483 9.10815 9.93026 8.00358 9.93026C6.89901 9.93026 6.00358 9.03483 6.00358 7.93026C6.00358 6.82569 6.89901 5.93026 8.00358 5.93026C9.10815 5.93026 10.0036 6.82569 10.0036 7.93026Z"
+                            stroke="black"
+                            stroke-width="1.2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                      <!-- start offcanvas first component button -->
+                    </td>
+                  </tr>
+                  <tr id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordion-status-planned">
+                    <td class="border-0 p-0 ps-4" colspan="5">
+                      <table class="table table-responsive">
+                        <thead>
+                          <tr>
+                            <th class="ps-4">
+                              <span class="d-inline-block" style="min-width: 400px">Дата теста</span>
+                            </th>
+                            <th class="text-center" style="width: 1%">
+                              <span class="d-inline-block" style="width: 130px">Состояние</span>
+                            </th>
+                            <th class="text-center" style="width: 1%">
+                              <span class="d-inline-block" style="width: 130px">Уязвимости</span>
+                            </th>
+                            <th class="text-center" style="width: 1%">
+                              <span class="d-inline-block" style="width: 215px">Отчёт</span>
+                            </th>
+                            <th class="text-center" style="width: 1%">
+                              <span class="d-inline-block" style="width: 215px"></span>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- start Status Running -->
+                          <tr class="tr-card status-running" style="--table-row-color: rgba(84, 125, 204, 0.1)">
+                            <td>
+                              <strong>25.03.24</strong>
+                              <br />
+                              <span>16:03:43</span>
+                            </td>
+                            <td class="text-center">Выполняется</td>
+                            <td class="text-center fw-bold">n/a</td>
+                            <td class="text-center">
+                              <button
+                                type="button"
+                                class="btn-link border-0"
+                                data-bs-trigger="hover"
+                                data-bs-toggle="popover"
+                                title="Выгрузить отчёт"
+                                data-bs-placement="top"
+                                disabled>
+                                <svg
+                                  width="19"
+                                  height="25"
+                                  viewBox="0 0 19 25"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                                    fill="black" />
+                                </svg>
+                              </button>
+                            </td>
+                            <td class="text-center">
+                              <a class="d-inline-block btn-link border-bottom border-dark fst-italic" href="">
+                                Подробнее
+                              </a>
+                            </td>
+                          </tr>
+                          <!-- end Status Running -->
+                          <!-- Distance between  -->
+                          <tr>
+                            <td class="border-0 py-1" colspan="5"></td>
+                          </tr>
+                          <!-- Distance between  -->
+                          <!-- start Status passed -->
+                          <tr class="tr-card status-passed" style="--table-row-color: rgba(86, 204, 84, 0.1)">
+                            <td>
+                              <strong>01.04.24</strong>
+                              <br />
+                              <span>23:23:40</span>
+                            </td>
+                            <td class="text-center">
+                              <div class="d-flex align-items-center gap-2">
+                                <svg
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 20 20"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M8.6 11.8L6.45 9.65C6.26667 9.46667 6.03333 9.375 5.75 9.375C5.46667 9.375 5.23334 9.46667 5.05 9.65C4.86667 9.83333 4.775 10.0667 4.775 10.35C4.775 10.6333 4.86667 10.8667 5.05 11.05L7.9 13.9C8.1 14.1 8.33333 14.2 8.6 14.2C8.86667 14.2 9.1 14.1 9.3 13.9L14.95 8.25C15.1333 8.06667 15.225 7.83333 15.225 7.55C15.225 7.26667 15.1333 7.03333 14.95 6.85C14.7667 6.66667 14.5333 6.575 14.25 6.575C13.9667 6.575 13.7333 6.66667 13.55 6.85L8.6 11.8ZM10 20C8.61667 20 7.31667 19.7373 6.1 19.212C4.88334 18.6867 3.825 17.9743 2.925 17.075C2.025 16.1757 1.31267 15.1173 0.788001 13.9C0.263335 12.6827 0.000667933 11.3827 1.26582e-06 10C-0.000665401 8.61733 0.262001 7.31733 0.788001 6.1C1.314 4.88267 2.02633 3.82433 2.925 2.925C3.82367 2.02567 4.882 1.31333 6.1 0.788C7.318 0.262667 8.618 0 10 0C11.382 0 12.682 0.262667 13.9 0.788C15.118 1.31333 16.1763 2.02567 17.075 2.925C17.9737 3.82433 18.6863 4.88267 19.213 6.1C19.7397 7.31733 20.002 8.61733 20 10C19.998 11.3827 19.7353 12.6827 19.212 13.9C18.6887 15.1173 17.9763 16.1757 17.075 17.075C16.1737 17.9743 15.1153 18.687 13.9 19.213C12.6847 19.739 11.3847 20.0013 10 20Z"
+                                    fill="#56CC54" />
+                                </svg>
+                                <span>Пройден</span>
+                              </div>
+                            </td>
+                            <td class="text-center fw-bold">0/ 0/ 0</td>
+                            <td class="text-center">
+                              <button
+                                type="button"
+                                class="btn-link border-0"
+                                data-bs-trigger="hover"
+                                data-bs-toggle="popover"
+                                title="Выгрузить отчёт"
+                                data-bs-placement="top">
+                                <svg
+                                  width="19"
+                                  height="25"
+                                  viewBox="0 0 19 25"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                                    fill="black" />
+                                </svg>
+                              </button>
+                            </td>
+                            <td class="text-center">
+                              <a class="d-inline-block btn-link border-bottom border-dark fst-italic" href="">
+                                Подробнее
+                              </a>
+                            </td>
+                          </tr>
+                          <!-- start Status passed -->
+                          <!-- Distance between  -->
+                          <tr>
+                            <td class="border-0 py-1" colspan="5"></td>
+                          </tr>
+                          <!-- Distance between  -->
+                          <!-- start Status unpassed -->
+                          <tr class="tr-card status-unpassed" style="--table-row-color: rgba(242, 68, 68, 0.1)">
+                            <td>
+                              <strong>15.03.24</strong>
+                              <br />
+                              <span>12:03:19</span>
+                            </td>
+                            <td class="text-center">
+                              <div class="d-flex align-items-center gap-2">
+                                <svg
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 20 20"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <g clip-path="url(#clip0_256_12106)">
+                                    <path
+                                      d="M10 0C10.918 0 11.8034 0.117188 12.6562 0.351562C13.5091 0.585938 14.3034 0.924479 15.0391 1.36719C15.7747 1.8099 16.4486 2.33073 17.0605 2.92969C17.6725 3.52865 18.1966 4.20247 18.6328 4.95117C19.069 5.69987 19.4043 6.4974 19.6387 7.34375C19.873 8.1901 19.9935 9.07552 20 10C20 10.918 19.8828 11.8034 19.6484 12.6562C19.4141 13.5091 19.0755 14.3034 18.6328 15.0391C18.1901 15.7747 17.6693 16.4486 17.0703 17.0605C16.4714 17.6725 15.7975 18.1966 15.0488 18.6328C14.3001 19.069 13.5026 19.4043 12.6562 19.6387C11.8099 19.873 10.9245 19.9935 10 20C9.08203 20 8.19661 19.8828 7.34375 19.6484C6.49089 19.4141 5.69661 19.0755 4.96094 18.6328C4.22526 18.1901 3.55143 17.6693 2.93945 17.0703C2.32747 16.4714 1.80339 15.7975 1.36719 15.0488C0.93099 14.3001 0.595703 13.5026 0.361328 12.6562C0.126953 11.8099 0.00651042 10.9245 0 10C0 9.08203 0.117188 8.19661 0.351562 7.34375C0.585938 6.49089 0.924479 5.69661 1.36719 4.96094C1.8099 4.22526 2.33073 3.55143 2.92969 2.93945C3.52865 2.32747 4.20247 1.80339 4.95117 1.36719C5.69987 0.93099 6.4974 0.595703 7.34375 0.361328C8.1901 0.126953 9.07552 0.00651042 10 0ZM11.1035 10L14.4434 6.66016L13.3398 5.55664L10 8.89648L6.66016 5.55664L5.55664 6.66016L8.89648 10L5.55664 13.3398L6.66016 14.4434L10 11.1035L13.3398 14.4434L14.4434 13.3398L11.1035 10Z"
+                                      fill="#F24444" />
+                                  </g>
+                                  <defs>
+                                    <clipPath id="clip0_256_12106">
+                                      <rect width="20" height="20" fill="white" />
+                                    </clipPath>
+                                  </defs>
+                                </svg>
+                                <span>Не пройден</span>
+                              </div>
+                            </td>
+                            <td class="text-center fw-bold">20/ 10/ 10</td>
+                            <td class="text-center">
+                              <button
+                                type="button"
+                                class="btn-link border-0"
+                                data-bs-trigger="hover"
+                                data-bs-toggle="popover"
+                                title="Выгрузить отчёт"
+                                data-bs-placement="top">
+                                <svg
+                                  width="19"
+                                  height="25"
+                                  viewBox="0 0 19 25"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                                    fill="black" />
+                                </svg>
+                              </button>
+                            </td>
+                            <td class="text-center">
+                              <a class="d-inline-block btn-link border-bottom border-dark fst-italic" href="">
+                                Подробнее
+                              </a>
+                            </td>
+                          </tr>
+                          <!-- end Status unpassed -->
+                          <!-- Distance between  -->
+                          <tr>
+                            <td class="border-0 py-1" colspan="5"></td>
+                          </tr>
+                          <!-- Distance between  -->
+                          <!-- start Status error -->
+                          <tr class="tr-card status-error" style="--table-row-color: rgba(252, 115, 3, 0.1)">
+                            <td>
+                              <strong>11.03.24</strong>
+                              <br />
+                              <span>10:03:10</span>
+                            </td>
+                            <td class="text-center">
+                              <div class="d-flex align-items-center gap-2">
+                                <svg
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 20 20"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM10 11C9.45 11 9 10.55 9 10V6C9 5.45 9.45 5 10 5C10.55 5 11 5.45 11 6V10C11 10.55 10.55 11 10 11ZM11 15H9V13H11V15Z"
+                                    fill="#FC7303" />
+                                </svg>
+                                <span>Ошибка</span>
+                              </div>
+                            </td>
+                            <td class="text-center fw-bold">n/a</td>
+                            <td class="text-center">
+                              <button
+                                type="button"
+                                class="btn-link border-0"
+                                data-bs-trigger="hover"
+                                data-bs-toggle="popover"
+                                title="Выгрузить отчёт"
+                                data-bs-placement="top">
+                                <svg
+                                  width="19"
+                                  height="25"
+                                  viewBox="0 0 19 25"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                                    fill="black" />
+                                </svg>
+                              </button>
+                            </td>
+                            <td class="text-center">
+                              <a class="d-inline-block btn-link border-bottom border-dark fst-italic" href="">
+                                Подробнее
+                              </a>
+                            </td>
+                          </tr>
+                          <!-- start Status error -->
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <td class="text-center py-2" colspan="5">
+                              <a
+                                class="d-block btn-link text-primary pb-1 border-primary border-bottom"
+                                href="retrospective.html">
+                                Показать больше
+                              </a>
+                            </td>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- end status-planned component -->
+                  <!-- Distance between  -->
+                  <tr>
+                    <td class="border-0 py-1" colspan="5"></td>
+                  </tr>
+                  <!-- Distance between  -->
+                  <!-- start status-off component -->
+                  <!-- tr-card--disabled -->
+                  <tr
+                    class="tr-card tr-card--disabled status-off border rounded-3 cursor-pointer"
+                    id="accordion-status-off"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="true"
+                    aria-controls="collapseThree">
+                    <td class="">
+                      <strong>Проверка уровня владения протоколом</strong>
+                      <br />
+                      Оценка соответствия протоколу API и совместимость на разных платформах.
+                    </td>
+                    <td class="text-center text-danger fw-bold">Выключен</td>
+                    <td class="text-center">APP-1</td>
+                    <td class="text-center">99/120</td>
+                    <td class="text-end">
+                      <svg width="22" height="29" viewBox="0 0 22 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M20.4512 12.6656L20.4524 12.6664C21.6829 13.4569 21.6807 15.4449 20.4518 16.2368L20.4513 16.2371L3.26375 27.3455L3.26306 27.346C2.66371 27.7348 1.98878 27.6978 1.44997 27.3648C0.908238 27.0301 0.5 26.3892 0.5 25.5598V3.33767C0.5 1.50285 2.19873 0.863711 3.26366 1.55189C3.26369 1.55191 3.26372 1.55193 3.26375 1.55195L20.4512 12.6656Z"
+                          stroke="black" />
+                      </svg>
+                      <!-- start offcanvas first component button -->
+                      <button
+                        class="btn-link border-0 ms-4"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#firstComponentOffcanvas"
+                        aria-controls="offcanvasRight">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M7.45885 1.369C7.72445 0.992558 8.28271 0.992559 8.54831 1.369L9.67459 2.96533C9.82296 3.17562 10.0791 3.28173 10.3327 3.23794L12.2579 2.90557C12.7119 2.82719 13.1067 3.22194 13.0283 3.67594L12.6959 5.6011C12.6521 5.85472 12.7582 6.11088 12.9685 6.25926L14.5648 7.38553C14.9413 7.65113 14.9413 8.2094 14.5648 8.47499L12.9685 9.60127C12.7582 9.74964 12.6521 10.0058 12.6959 10.2594L13.0283 12.1846C13.1067 12.6386 12.7119 13.0333 12.2579 12.955L10.3327 12.6226C10.0791 12.5788 9.82296 12.6849 9.67459 12.8952L8.54831 14.4915C8.28271 14.868 7.72445 14.868 7.45885 14.4915L6.33257 12.8952C6.1842 12.6849 5.92804 12.5788 5.67442 12.6226L3.74925 12.955C3.29526 13.0333 2.90051 12.6386 2.97889 12.1846L3.31126 10.2594C3.35505 10.0058 3.24894 9.74964 3.03865 9.60127L1.44232 8.47499C1.06588 8.20939 1.06588 7.65113 1.44232 7.38553L3.03865 6.25926C3.24894 6.11088 3.35505 5.85472 3.31126 5.6011L2.97889 3.67594C2.90051 3.22194 3.29526 2.82719 3.74926 2.90557L5.67442 3.23794C5.92804 3.28173 6.1842 3.17562 6.33257 2.96533L7.45885 1.369Z"
+                            stroke="black"
+                            stroke-width="1.2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M10.0036 7.93026C10.0036 9.03483 9.10815 9.93026 8.00358 9.93026C6.89901 9.93026 6.00358 9.03483 6.00358 7.93026C6.00358 6.82569 6.89901 5.93026 8.00358 5.93026C9.10815 5.93026 10.0036 6.82569 10.0036 7.93026Z"
+                            stroke="black"
+                            stroke-width="1.2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                      <!-- start offcanvas first component button -->
+                    </td>
+                  </tr>
+                  <tr id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordion-status-off">
+                    <td class="border-0 p-0 ps-4" colspan="5">
+                      <table class="table table-responsive">
+                        <thead>
+                          <tr>
+                            <th class="ps-4">
+                              <span class="d-inline-block" style="min-width: 400px">Дата теста</span>
+                            </th>
+                            <th class="text-center" style="width: 1%">
+                              <span class="d-inline-block" style="width: 130px">Состояние</span>
+                            </th>
+                            <th class="text-center" style="width: 1%">
+                              <span class="d-inline-block" style="width: 130px">Уязвимости</span>
+                            </th>
+                            <th class="text-center" style="width: 1%">
+                              <span class="d-inline-block" style="width: 215px">Отчёт</span>
+                            </th>
+                            <th class="text-center" style="width: 1%">
+                              <span class="d-inline-block" style="width: 215px"></span>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- start Status Running -->
+                          <tr class="tr-card status-running" style="--table-row-color: rgba(84, 125, 204, 0.1)">
+                            <td>
+                              <strong>25.03.24</strong>
+                              <br />
+                              <span>16:03:43</span>
+                            </td>
+                            <td class="text-center">Выполняется</td>
+                            <td class="text-center fw-bold">n/a</td>
+                            <td class="text-center">
+                              <button
+                                type="button"
+                                class="btn-link border-0"
+                                data-bs-trigger="hover"
+                                data-bs-toggle="popover"
+                                title="Выгрузить отчёт"
+                                data-bs-placement="top"
+                                disabled>
+                                <svg
+                                  width="19"
+                                  height="25"
+                                  viewBox="0 0 19 25"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                                    fill="black" />
+                                </svg>
+                              </button>
+                            </td>
+                            <td class="text-center">
+                              <a class="d-inline-block btn-link border-bottom border-dark fst-italic" href="">
+                                Подробнее
+                              </a>
+                            </td>
+                          </tr>
+                          <!-- end Status Running -->
+                          <!-- Distance between  -->
+                          <tr>
+                            <td class="border-0 py-1" colspan="5"></td>
+                          </tr>
+                          <!-- Distance between  -->
+                          <!-- start Status passed -->
+                          <tr class="tr-card status-passed" style="--table-row-color: rgba(86, 204, 84, 0.1)">
+                            <td>
+                              <strong>01.04.24</strong>
+                              <br />
+                              <span>23:23:40</span>
+                            </td>
+                            <td class="text-center">
+                              <div class="d-flex align-items-center gap-2">
+                                <svg
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 20 20"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M8.6 11.8L6.45 9.65C6.26667 9.46667 6.03333 9.375 5.75 9.375C5.46667 9.375 5.23334 9.46667 5.05 9.65C4.86667 9.83333 4.775 10.0667 4.775 10.35C4.775 10.6333 4.86667 10.8667 5.05 11.05L7.9 13.9C8.1 14.1 8.33333 14.2 8.6 14.2C8.86667 14.2 9.1 14.1 9.3 13.9L14.95 8.25C15.1333 8.06667 15.225 7.83333 15.225 7.55C15.225 7.26667 15.1333 7.03333 14.95 6.85C14.7667 6.66667 14.5333 6.575 14.25 6.575C13.9667 6.575 13.7333 6.66667 13.55 6.85L8.6 11.8ZM10 20C8.61667 20 7.31667 19.7373 6.1 19.212C4.88334 18.6867 3.825 17.9743 2.925 17.075C2.025 16.1757 1.31267 15.1173 0.788001 13.9C0.263335 12.6827 0.000667933 11.3827 1.26582e-06 10C-0.000665401 8.61733 0.262001 7.31733 0.788001 6.1C1.314 4.88267 2.02633 3.82433 2.925 2.925C3.82367 2.02567 4.882 1.31333 6.1 0.788C7.318 0.262667 8.618 0 10 0C11.382 0 12.682 0.262667 13.9 0.788C15.118 1.31333 16.1763 2.02567 17.075 2.925C17.9737 3.82433 18.6863 4.88267 19.213 6.1C19.7397 7.31733 20.002 8.61733 20 10C19.998 11.3827 19.7353 12.6827 19.212 13.9C18.6887 15.1173 17.9763 16.1757 17.075 17.075C16.1737 17.9743 15.1153 18.687 13.9 19.213C12.6847 19.739 11.3847 20.0013 10 20Z"
+                                    fill="#56CC54" />
+                                </svg>
+                                <span>Пройден</span>
+                              </div>
+                            </td>
+                            <td class="text-center fw-bold">0/ 0/ 0</td>
+                            <td class="text-center">
+                              <button
+                                type="button"
+                                class="btn-link border-0"
+                                data-bs-trigger="hover"
+                                data-bs-toggle="popover"
+                                title="Выгрузить отчёт"
+                                data-bs-placement="top">
+                                <svg
+                                  width="19"
+                                  height="25"
+                                  viewBox="0 0 19 25"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                                    fill="black" />
+                                </svg>
+                              </button>
+                            </td>
+                            <td class="text-center">
+                              <a class="d-inline-block btn-link border-bottom border-dark fst-italic" href="">
+                                Подробнее
+                              </a>
+                            </td>
+                          </tr>
+                          <!-- start Status passed -->
+                          <!-- Distance between  -->
+                          <tr>
+                            <td class="border-0 py-1" colspan="5"></td>
+                          </tr>
+                          <!-- Distance between  -->
+                          <!-- start Status unpassed -->
+                          <tr class="tr-card status-unpassed" style="--table-row-color: rgba(242, 68, 68, 0.1)">
+                            <td>
+                              <strong>15.03.24</strong>
+                              <br />
+                              <span>12:03:19</span>
+                            </td>
+                            <td class="text-center">
+                              <div class="d-flex align-items-center gap-2">
+                                <svg
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 20 20"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <g clip-path="url(#clip0_256_12106)">
+                                    <path
+                                      d="M10 0C10.918 0 11.8034 0.117188 12.6562 0.351562C13.5091 0.585938 14.3034 0.924479 15.0391 1.36719C15.7747 1.8099 16.4486 2.33073 17.0605 2.92969C17.6725 3.52865 18.1966 4.20247 18.6328 4.95117C19.069 5.69987 19.4043 6.4974 19.6387 7.34375C19.873 8.1901 19.9935 9.07552 20 10C20 10.918 19.8828 11.8034 19.6484 12.6562C19.4141 13.5091 19.0755 14.3034 18.6328 15.0391C18.1901 15.7747 17.6693 16.4486 17.0703 17.0605C16.4714 17.6725 15.7975 18.1966 15.0488 18.6328C14.3001 19.069 13.5026 19.4043 12.6562 19.6387C11.8099 19.873 10.9245 19.9935 10 20C9.08203 20 8.19661 19.8828 7.34375 19.6484C6.49089 19.4141 5.69661 19.0755 4.96094 18.6328C4.22526 18.1901 3.55143 17.6693 2.93945 17.0703C2.32747 16.4714 1.80339 15.7975 1.36719 15.0488C0.93099 14.3001 0.595703 13.5026 0.361328 12.6562C0.126953 11.8099 0.00651042 10.9245 0 10C0 9.08203 0.117188 8.19661 0.351562 7.34375C0.585938 6.49089 0.924479 5.69661 1.36719 4.96094C1.8099 4.22526 2.33073 3.55143 2.92969 2.93945C3.52865 2.32747 4.20247 1.80339 4.95117 1.36719C5.69987 0.93099 6.4974 0.595703 7.34375 0.361328C8.1901 0.126953 9.07552 0.00651042 10 0ZM11.1035 10L14.4434 6.66016L13.3398 5.55664L10 8.89648L6.66016 5.55664L5.55664 6.66016L8.89648 10L5.55664 13.3398L6.66016 14.4434L10 11.1035L13.3398 14.4434L14.4434 13.3398L11.1035 10Z"
+                                      fill="#F24444" />
+                                  </g>
+                                  <defs>
+                                    <clipPath id="clip0_256_12106">
+                                      <rect width="20" height="20" fill="white" />
+                                    </clipPath>
+                                  </defs>
+                                </svg>
+                                <span>Не пройден</span>
+                              </div>
+                            </td>
+                            <td class="text-center fw-bold">20/ 10/ 10</td>
+                            <td class="text-center">
+                              <button
+                                type="button"
+                                class="btn-link border-0"
+                                data-bs-trigger="hover"
+                                data-bs-toggle="popover"
+                                title="Выгрузить отчёт"
+                                data-bs-placement="top">
+                                <svg
+                                  width="19"
+                                  height="25"
+                                  viewBox="0 0 19 25"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                                    fill="black" />
+                                </svg>
+                              </button>
+                            </td>
+                            <td class="text-center">
+                              <a class="d-inline-block btn-link border-bottom border-dark fst-italic" href="">
+                                Подробнее
+                              </a>
+                            </td>
+                          </tr>
+                          <!-- end Status unpassed -->
+                          <!-- Distance between  -->
+                          <tr>
+                            <td class="border-0 py-1" colspan="5"></td>
+                          </tr>
+                          <!-- Distance between  -->
+                          <!-- start Status error -->
+                          <tr class="tr-card status-error" style="--table-row-color: rgba(252, 115, 3, 0.1)">
+                            <td>
+                              <strong>11.03.24</strong>
+                              <br />
+                              <span>10:03:10</span>
+                            </td>
+                            <td class="text-center">
+                              <div class="d-flex align-items-center gap-2">
+                                <svg
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 20 20"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM10 11C9.45 11 9 10.55 9 10V6C9 5.45 9.45 5 10 5C10.55 5 11 5.45 11 6V10C11 10.55 10.55 11 10 11ZM11 15H9V13H11V15Z"
+                                    fill="#FC7303" />
+                                </svg>
+                                <span>Ошибка</span>
+                              </div>
+                            </td>
+                            <td class="text-center fw-bold">n/a</td>
+                            <td class="text-center">
+                              <button
+                                type="button"
+                                class="btn-link border-0"
+                                data-bs-trigger="hover"
+                                data-bs-toggle="popover"
+                                title="Выгрузить отчёт"
+                                data-bs-placement="top">
+                                <svg
+                                  width="19"
+                                  height="25"
+                                  viewBox="0 0 19 25"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                                    fill="black" />
+                                </svg>
+                              </button>
+                            </td>
+                            <td class="text-center">
+                              <a class="d-inline-block btn-link border-bottom border-dark fst-italic" href="">
+                                Подробнее
+                              </a>
+                            </td>
+                          </tr>
+                          <!-- start Status error -->
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <td class="text-center py-2" colspan="5">
+                              <a
+                                class="d-block btn-link text-primary border-primary pb-1 border-bottom"
+                                href="retrospective.html">
+                                Показать больше
+                              </a>
+                            </td>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- end status-off component -->
                 </tbody>
-
-                <tfoot></tfoot>
               </table>
               <!-- start offcanvas content first component  -->
               <div
-                class="offcanvas offcanvas-end"
+                class="offcanvas offcanvas-end offcanvas-edit"
                 tabindex="-1"
                 id="firstComponentOffcanvas"
                 aria-labelledby="firstComponentOffcanvas">
@@ -832,9 +1514,9 @@
                     type="button"
                     title="Режим загрузки"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseInfo"
+                    data-bs-target="#collapseEdit"
                     aria-expanded="false"
-                    aria-controls="collapseInfo">
+                    aria-controls="collapseEdit">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
@@ -859,7 +1541,7 @@
                 </div>
                 <!-- offcanvas-body -->
                 <div class="offcanvas-body p-0 d-flex flex-column flex-lg-row-reverse position-relative">
-                  <div class="collapse border-bottom position-sticky top-0 bg-white z-3" id="collapseInfo">
+                  <div class="collapse border-bottom position-sticky top-0 bg-white z-3" id="collapseEdit">
                     <div class="px-3 py-3 px-lg-3 py-lg-4">
                       <div class="mb-2 d-flex justify-content-between align-items-center">
                         <h3 class="fw-bolder lh-base fs-4 m-0">Режим загрузки</h3>
@@ -868,9 +1550,9 @@
                           class="btn p-0 bg-transparent shadow-none text-primary border-0"
                           type="button"
                           data-bs-toggle="collapse"
-                          data-bs-target="#collapseInfo"
+                          data-bs-target="#collapseEdit"
                           aria-expanded="false"
-                          aria-controls="collapseInfo">
+                          aria-controls="collapseEdit">
                           Скрыть
                         </button>
                       </div>
@@ -890,9 +1572,25 @@
                   </div>
                   <div class="container-lg p-0">
                     <fieldset class="pt-3 pb-3 px-3 pt-lg-3 pb-lg-4 px-lg-4 border-end">
-                      <!-- nedd add fieldset attribute disabled -->
+                      <!-- need add fieldset attribute disabled -->
                       <div class="mb-4">
-                        <h2 class="form-label h2 lh-base fw-bolder mb-4 ms-2">Базовые данные теста</h2>
+                        <div
+                          class="mb-4 d-flex flex-wrap flex-sm-nowrap gap-3 align-items-center justify-content-between">
+                          <h2 class="form-label h2 lh-base fw-bolder ms-2 mb-0">Базовые данные теста</h2>
+                          <div class="form-check form-switch m-0">
+                            <input
+                              class="form-check-input border-0 shadow-none cursor-pointer"
+                              type="checkbox"
+                              role="switch"
+                              id="SwitchEditChecked" />
+                            <label
+                              class="form-check-label fw-normal lh-base fs-4 cursor-pointer"
+                              for="SwitchEditChecked">
+                              Отключить тест
+                            </label>
+                          </div>
+                        </div>
+
                         <!-- input-text -->
                         <input
                           type="text"
@@ -917,7 +1615,7 @@
                               <!-- need add ul class disabled -->
                               <li class="nav-item flex-grow-1">
                                 <a
-                                  href="#tabs-api"
+                                  href="#tabs-api-edit"
                                   class="nav-link active fw-normal lh-base fs-4 justify-content-center"
                                   data-bs-toggle="tab">
                                   API Discovery
@@ -925,7 +1623,7 @@
                               </li>
                               <li class="nav-item flex-grow-1">
                                 <a
-                                  href="#tabs-url"
+                                  href="#tabs-url-edit"
                                   class="nav-link fw-normal lh-base fs-4 justify-content-center"
                                   data-bs-toggle="tab">
                                   Загрузить с URL-адреса
@@ -933,7 +1631,7 @@
                               </li>
                               <li class="nav-item flex-grow-1">
                                 <a
-                                  href="#tabs-file"
+                                  href="#tabs-file-edit"
                                   class="nav-link fw-normal lh-base fs-4 justify-content-center"
                                   data-bs-toggle="tab">
                                   Файл
@@ -943,7 +1641,7 @@
                           </div>
                           <div class="card-body p-0 mt-4">
                             <div class="tab-content">
-                              <div class="tab-pane active show" id="tabs-api">
+                              <div class="tab-pane active show" id="tabs-api-edit">
                                 <!-- need add tap-pane class disabled -->
                                 <select
                                   class="mb-4 fw-normal lh-base fs-4 available-search-select"
@@ -962,7 +1660,7 @@
                                   <span>150</span>
                                 </div>
                               </div>
-                              <div class="tab-pane" id="tabs-url">
+                              <div class="tab-pane" id="tabs-url-edit">
                                 <input
                                   type="text"
                                   class="form-control p-2 mb-4 shadow-none fw-normal lh-base fs-4 mb-4"
@@ -974,18 +1672,17 @@
                                     class="form-check-input border-0 shadow-none cursor-pointer"
                                     type="checkbox"
                                     role="switch"
-                                    id="flexSwitchCheckChecked" />
+                                    id="switchChecked" />
                                   <label
                                     class="form-check-label fw-normal lh-base fs-4 cursor-pointer"
-                                    for="flexSwitchCheckChecked">
+                                    for="switchChecked">
                                     Регулярно подгружать спецификацию OAS перед тестом
                                   </label>
                                 </div>
                               </div>
-                              <div class="tab-pane" id="tabs-file">
+                              <div class="tab-pane" id="tabs-file-edit">
                                 <form
-                                  class="dropzone p-2 border-secondary"
-                                  id="dropzone-custom"
+                                  class="dropzone p-2 border-secondary dropzone"
                                   action="."
                                   autocomplete="off"
                                   novalidate>
@@ -1124,14 +1821,30 @@
                 </div>
                 <!-- offcanvas-footer -->
                 <div class="offcanvas-footer border-top p-3">
-                  <div class="d-flex justify-content-between">
-                    <button
-                      class="btn btn-secondary fw-normal lh-base fs-4 d-flex"
-                      type="button"
-                      data-bs-dismiss="offcanvas"
-                      aria-label="Close">
-                      Отмена
-                    </button>
+                  <div class="d-flex justify-content-between align-items-center gap-4">
+                    <div class="d-flex gap-3 flex-column flex-lg-row">
+                      <button
+                        class="btn btn-secondary fw-normal lh-base fs-4 d-flex"
+                        type="button"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close">
+                        Отмена
+                      </button>
+
+                      <button
+                        type="button"
+                        class="btn btn-danger fw-normal lh-base fs-4 d-flex gap-2"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modal-edit-delete">
+                        <!-- nedd add class disabled -->
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M2.66675 12C2.30008 12 1.98631 11.8696 1.72542 11.6087C1.46453 11.3478 1.33386 11.0338 1.33342 10.6667V2C1.14453 2 0.986306 1.936 0.85875 1.808C0.731195 1.68 0.667195 1.52178 0.66675 1.33333C0.666306 1.14489 0.730306 0.986667 0.85875 0.858667C0.987195 0.730667 1.14542 0.666667 1.33342 0.666667H4.00008C4.00008 0.477778 4.06408 0.319556 4.19208 0.192C4.32008 0.0644445 4.47831 0.000444444 4.66675 0H7.33342C7.52231 0 7.68075 0.0640001 7.80875 0.192C7.93675 0.32 8.00053 0.478222 8.00008 0.666667H10.6668C10.8556 0.666667 11.0141 0.730667 11.1421 0.858667C11.2701 0.986667 11.3339 1.14489 11.3334 1.33333C11.333 1.52178 11.269 1.68022 11.1414 1.80867C11.0139 1.93711 10.8556 2.00089 10.6668 2V10.6667C10.6668 11.0333 10.5363 11.3473 10.2754 11.6087C10.0145 11.87 9.70053 12.0004 9.33342 12H2.66675ZM9.33342 2H2.66675V10.6667H9.33342V2ZM4.66675 9.33333C4.85564 9.33333 5.01408 9.26933 5.14208 9.14133C5.27008 9.01333 5.33386 8.85511 5.33342 8.66667V4C5.33342 3.81111 5.26942 3.65289 5.14142 3.52533C5.01342 3.39778 4.8552 3.33378 4.66675 3.33333C4.47831 3.33289 4.32008 3.39689 4.19208 3.52533C4.06408 3.65378 4.00008 3.812 4.00008 4V8.66667C4.00008 8.85555 4.06408 9.014 4.19208 9.142C4.32008 9.27 4.47831 9.33378 4.66675 9.33333ZM7.33342 9.33333C7.52231 9.33333 7.68075 9.26933 7.80875 9.14133C7.93675 9.01333 8.00053 8.85511 8.00008 8.66667V4C8.00008 3.81111 7.93608 3.65289 7.80808 3.52533C7.68008 3.39778 7.52186 3.33378 7.33342 3.33333C7.14497 3.33289 6.98675 3.39689 6.85875 3.52533C6.73075 3.65378 6.66675 3.812 6.66675 4V8.66667C6.66675 8.85555 6.73075 9.014 6.85875 9.142C6.98675 9.27 7.14497 9.33378 7.33342 9.33333Z"
+                            fill="currentColor" />
+                        </svg>
+                        Удалить тест
+                      </button>
+                    </div>
                     <button class="btn btn-primary fw-normal lh-base fs-4 d-flex" type="button">Создать тест</button>
                   </div>
                 </div>
@@ -1139,6 +1852,42 @@
               <!-- end offcanvas content first component -->
             </div>
             <!-- end page-body-table -->
+
+            <!-- start modal delete edit offcanvas -->
+            <div class="modal" id="modal-edit-delete" tabindex="-1">
+              <div class="modal-dialog modal-sm top-50 translate-middle-y" role="document">
+                <div class="modal-content">
+                  <button
+                    type="button"
+                    class="btn-close shadow-none"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                  <div class="modal-body text-center p-4">
+                    <h3 class="h2 lh-base fw-bolder px-4">Вы уверены, что хотите удалить этот тест?</h3>
+                    <p class="fw-normal lh-base fs-4">Вы не сможете отменить это действие</p>
+                    <div class="d-flex gap-2 justify-content-center">
+                      <button type="button" class="btn btn-danger fw-normal lh-base fs-4 d-flex gap-2">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M2.66675 12C2.30008 12 1.98631 11.8696 1.72542 11.6087C1.46453 11.3478 1.33386 11.0338 1.33342 10.6667V2C1.14453 2 0.986306 1.936 0.85875 1.808C0.731195 1.68 0.667195 1.52178 0.66675 1.33333C0.666306 1.14489 0.730306 0.986667 0.85875 0.858667C0.987195 0.730667 1.14542 0.666667 1.33342 0.666667H4.00008C4.00008 0.477778 4.06408 0.319556 4.19208 0.192C4.32008 0.0644445 4.47831 0.000444444 4.66675 0H7.33342C7.52231 0 7.68075 0.0640001 7.80875 0.192C7.93675 0.32 8.00053 0.478222 8.00008 0.666667H10.6668C10.8556 0.666667 11.0141 0.730667 11.1421 0.858667C11.2701 0.986667 11.3339 1.14489 11.3334 1.33333C11.333 1.52178 11.269 1.68022 11.1414 1.80867C11.0139 1.93711 10.8556 2.00089 10.6668 2V10.6667C10.6668 11.0333 10.5363 11.3473 10.2754 11.6087C10.0145 11.87 9.70053 12.0004 9.33342 12H2.66675ZM9.33342 2H2.66675V10.6667H9.33342V2ZM4.66675 9.33333C4.85564 9.33333 5.01408 9.26933 5.14208 9.14133C5.27008 9.01333 5.33386 8.85511 5.33342 8.66667V4C5.33342 3.81111 5.26942 3.65289 5.14142 3.52533C5.01342 3.39778 4.8552 3.33378 4.66675 3.33333C4.47831 3.33289 4.32008 3.39689 4.19208 3.52533C4.06408 3.65378 4.00008 3.812 4.00008 4V8.66667C4.00008 8.85555 4.06408 9.014 4.19208 9.142C4.32008 9.27 4.47831 9.33378 4.66675 9.33333ZM7.33342 9.33333C7.52231 9.33333 7.68075 9.26933 7.80875 9.14133C7.93675 9.01333 8.00053 8.85511 8.00008 8.66667V4C8.00008 3.81111 7.93608 3.65289 7.80808 3.52533C7.68008 3.39778 7.52186 3.33378 7.33342 3.33333C7.14497 3.33289 6.98675 3.39689 6.85875 3.52533C6.73075 3.65378 6.66675 3.812 6.66675 4V8.66667C6.66675 8.85555 6.73075 9.014 6.85875 9.142C6.98675 9.27 7.14497 9.33378 7.33342 9.33333Z"
+                            fill="currentColor" />
+                        </svg>
+                        Удалить тест
+                      </button>
+
+                      <button
+                        type="button"
+                        class="btn btn-secondary fw-normal lh-base fs-4"
+                        data-bs-dismiss="modal"
+                        aria-label="Close">
+                        Отмена
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end modal delete edit offcanvas -->
           </div>
         </div>
       </div>
@@ -1150,7 +1899,11 @@
         document.addEventListener('DOMContentLoaded', function () {
           const disabledSearchSelects = document.querySelectorAll('.disabled-search-select')
           const availableSearchSelects = document.querySelectorAll('.available-search-select')
-          const dropzoneCustom = document.querySelector('#dropzone-custom')
+          const dropzoneSelects = document.querySelectorAll('.dropzone')
+
+          dropzoneSelects.forEach((dropzone) => {
+            new Dropzone(dropzone)
+          })
 
           disabledSearchSelects.forEach((select) => {
             new TomSelect(select, {
@@ -1173,10 +1926,6 @@
               }
             })
           })
-
-          if (dropzoneCustom) {
-            new Dropzone(dropzoneCustom)
-          }
         })
       </script>
     </div>

@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/css/tabler.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/libs/dropzone/dist/dropzone.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tom-select@latest/dist/css/tom-select.bootstrap4.min.css"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tabler</title>
+  </head>
+  <body>
+    <div class="page">
+      <!-- aside -->
+      <aside class="navbar navbar-vertical navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-brand navbar-brand-autodark justify-content-start ps-3">
+            <a class="d-inline-flex flex-column align-items-center" href="index.html">
+              <svg width="68" height="28" viewBox="0 0 68 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0.400024 5.86097C0.400024 4.30654 1.04761 2.81578 2.20031 1.71664C3.35301 0.617493 4.91642 0 6.54658 0L13.2207 0C13.3371 0 13.4488 0.0441067 13.5311 0.122617C13.6134 0.201127 13.6597 0.30761 13.6597 0.418641V11.5553C13.6597 12.0295 13.9397 12.4631 14.3855 12.6767L14.4235 12.6959C14.6634 12.811 14.9344 12.8534 15.2002 12.8175C15.466 12.7817 15.714 12.6692 15.9109 12.4951L27.4111 2.33136C28.986 0.939599 31.0542 0.166421 33.2015 0.166602H39.0815C39.2092 0.166602 39.3317 0.214984 39.422 0.301105C39.5123 0.387226 39.5631 0.504032 39.5631 0.625825V11.4186C39.563 11.6186 39.623 11.8144 39.7359 11.983C39.8488 12.1515 40.0099 12.2857 40.2003 12.3697C40.3906 12.4537 40.6021 12.484 40.8099 12.457C41.0178 12.43 41.2131 12.3469 41.373 12.2175L53.7243 2.21709C55.3591 0.89342 57.4339 0.166697 59.5786 0.166602H66.8944C67.0519 0.166602 67.2028 0.226236 67.3142 0.332385C67.4255 0.438534 67.488 0.582504 67.488 0.732621V13.0718C67.488 13.4414 67.1744 13.7415 66.7858 13.7415H63.8312C62.265 13.7416 60.7501 14.2739 59.5584 15.243L45.6256 26.5709C45.1174 26.9843 44.4714 27.2115 43.8034 27.2117H39.74C39.181 27.2117 38.6449 26.9999 38.2496 26.623C37.8543 26.246 37.6322 25.7348 37.6322 25.2017V14.8874C37.6322 14.2541 37.0946 13.7415 36.4304 13.7415C34.8624 13.7415 33.3527 14.3128 32.2114 15.3391L19.8275 26.4812C19.306 26.9504 18.616 27.2117 17.8989 27.2117H13.6608C13.1018 27.2117 12.5657 26.9999 12.1704 26.623C11.7751 26.246 11.553 25.7348 11.553 25.2017V17.9183C11.553 17.2241 10.9639 16.6623 10.2359 16.6623H0.971225C0.819733 16.6623 0.674446 16.6049 0.567325 16.5028C0.460205 16.4007 0.400024 16.2621 0.400024 16.1177V5.86204V5.86097Z"
+                  fill="#FC7303" />
+              </svg>
+              Вебмониторэкс
+            </a>
+          </div>
+          <div class="collapse navbar-collapse" id="sidebar-menu">
+            <ul class="navbar-nav pt-lg-3">
+              <li class="nav-item">
+                <a class="nav-link px-3" href="./">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_61_4579)">
+                      <path
+                        d="M14.6667 6.66667H12.8085C12.3369 6.66667 11.9295 6.99607 11.8307 7.45714L10.9029 11.7867C10.6809 12.8225 9.21188 12.8474 8.95496 11.8197L7.04513 4.18034C6.7882 3.15263 5.31914 3.17752 5.09718 4.21335L4.16943 8.54286C4.07063 9.00394 3.66316 9.33333 3.19162 9.33333H1.33337"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_61_4579">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <span class="nav-link-title ms-2">Дашборды</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active px-3" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.4375 7.667V5.229C12.4375 2.782 10.4475 0.791504 8 0.791504C5.5525 0.791504 3.5625 2.7815 3.5625 5.229V7.667H2.521V15.2085H13.479V7.667H12.4375ZM5.3125 5.229C5.3125 3.747 6.5175 2.5415 8 2.5415C9.4825 2.5415 10.6875 3.7465 10.6875 5.229V7.667H5.3125V5.229ZM9.136 13.478H6.8635L7.4745 11.6445C7.27625 11.5471 7.10917 11.3963 6.99211 11.209C6.87505 11.0217 6.81266 10.8054 6.812 10.5845C6.812 10.2696 6.93711 9.96751 7.15981 9.74481C7.38251 9.52212 7.68455 9.39701 7.9995 9.39701C8.31444 9.39701 8.61649 9.52212 8.83919 9.74481C9.06189 9.96751 9.187 10.2696 9.187 10.5845C9.187 11.0505 8.916 11.4495 8.525 11.6445L9.136 13.478Z"
+                      fill="currentColor" />
+                  </svg>
+                  <span class="nav-link-title ms-2">Тестирование API</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+      <div class="page-wrapper">
+        <!-- nav -->
+        <div class="page-header page-header-border py-lg-4">
+          <div class="container-fluid">
+            <!-- title-wrapper -->
+            <div class="page-title-wrapper d-flex ms-lg-3">
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_603_5371)">
+                  <circle opacity="0.16" cx="28" cy="28" r="28" fill="#FC7303" />
+                  <path
+                    d="M38.0107 27.2609V21.8495C38.0107 16.4181 33.5937 12 28.1612 12C22.7287 12 18.3117 16.417 18.3117 21.8495V27.2609H16V44H40.3224V27.2609H38.0107ZM22.196 21.8495C22.196 18.56 24.8706 15.8843 28.1612 15.8843C31.4518 15.8843 34.1264 18.5589 34.1264 21.8495V27.2609H22.196V21.8495ZM30.6827 40.159H25.6386L26.9948 36.0893C26.5548 35.8732 26.1839 35.5383 25.9241 35.1226C25.6643 34.7069 25.5258 34.2268 25.5243 33.7366C25.5243 33.0375 25.802 32.3671 26.2963 31.8728C26.7906 31.3785 27.461 31.1008 28.1601 31.1008C28.8591 31.1008 29.5296 31.3785 30.0239 31.8728C30.5182 32.3671 30.7959 33.0375 30.7959 33.7366C30.7959 34.7709 30.1944 35.6565 29.3265 36.0893L30.6827 40.159Z"
+                    fill="#FC7303" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_603_5371">
+                    <rect width="56" height="56" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <!-- title -->
+              <h2 class="page-title h1 fs-1 lh-sm fw-bolder ms-3">
+                Тестирование API
+                <!-- popover -->
+                <button
+                  type="button"
+                  class="btn btn-secondary ms-1 p-1 btn-pill"
+                  data-bs-trigger="hover"
+                  data-bs-toggle="popover"
+                  title="Popover title">
+                  <svg
+                    class="m-0 w-3 h-3"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1_1514)">
+                      <path
+                        d="M7.99998 14.6666C11.6819 14.6666 14.6666 11.6819 14.6666 7.99998C14.6666 4.31808 11.6819 1.33331 7.99998 1.33331C4.31808 1.33331 1.33331 4.31808 1.33331 7.99998C1.33331 11.6819 4.31808 14.6666 7.99998 14.6666Z"
+                        stroke="#959DAC"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path
+                        d="M6.06 6.00001C6.21673 5.55446 6.5261 5.17875 6.9333 4.93944C7.3405 4.70012 7.81926 4.61264 8.28478 4.69249C8.7503 4.77234 9.17254 5.01436 9.47672 5.3757C9.78089 5.73703 9.94737 6.19436 9.94666 6.66668C9.94666 8.00001 7.94666 8.66668 7.94666 8.66668V9.33335"
+                        stroke="#959DAC"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path
+                        d="M8 11.3333H8.00667"
+                        stroke="#959DAC"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_1_1514">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="page-body my-0">
+          <!-- page-body-nav -->
+          <div class="border-bottom py-3">
+            <div class="container-fluid">
+              <div class="row">
+                <!-- btns -->
+                <div class="d-flex gap-3 flex-md-nowrap flex-wrap align-items-center justify-content-between mb-3">
+                  <h2 class="h2 lh-base fw-bolder mb-0">Ретроспектива</h2>
+                  <div class="btn-link text-primary pb-1 border-primary border-bottom px-md-5">
+                    Последние 30 прогонов
+                  </div>
+                  <a class="btn btn-primary fw-normal lh-base fs-4 d-flex gap-2" href="index.html">
+                    Вернуться к тестам
+                    <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.5 3.30408V0.958333C7.50028 0.777179 7.55174 0.600165 7.64789 0.449599C7.74404 0.299033 7.88059 0.181652 8.04031 0.112248C8.20004 0.0428453 8.3758 0.0245254 8.54545 0.0595979C8.7151 0.0946705 8.87104 0.181566 8.99362 0.309333L14.5 6L8.99362 11.6897C8.91255 11.7752 8.81616 11.843 8.71 11.8892C8.60383 11.9355 8.48998 11.9593 8.375 11.9593C8.26002 11.9593 8.14617 11.9355 8.04 11.8892C7.93384 11.843 7.83745 11.7752 7.75638 11.6897C7.67508 11.6047 7.61059 11.5037 7.5666 11.3924C7.52261 11.2812 7.49998 11.162 7.5 11.0417V8.76008C5.09375 8.82242 2.46437 9.27892 0.5 12.4167V11.5C0.5 7.25308 3.5625 3.76058 7.5 3.30408Z"
+                        fill="#FC7303" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="row">
+                <!-- btns -->
+                <div class="border-top pt-3 d-flex gap-3 flex-wrap align-items-center justify-content-between">
+                  <div class="d-flex gap-2 gap-xl-4 flex-grow-1 flex-column flex-xl-row">
+                    <h3 class="h3 lh-base fw-bolder mb-0">Тест</h3>
+                    <div class="d-flex flex-column fw-normal lh-base fs-4">
+                      <strong>Быстрая проверка целостности API</strong>
+                      <span>Проверка конечных точек API на целостность данных и согласованность ответов.</span>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2 gap-xl-4 flex-grow-1 flex-column flex-xl-row">
+                    <h3 class="h3 lh-base fw-bolder mb-0">Политика</h3>
+                    <div class="d-flex flex-column fw-normal lh-base fs-4">
+                      <strong>Глубокий скан безопасности API</strong>
+                      <span>Политика сканирования основывается на принципах OWASP TOP 10</span>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-column flex-grow-1">
+                    <div class="d-flex gap-2">
+                      <strong>Статус</strong>
+                      <span class="ms-1 text-success fw-bold">В работе</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <strong class="flex-shrink-1">Количество тестируемых эндпоинтов</strong>
+                      <span class="ms-1">132/150</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <strong>Спецификация</strong>
+                      <span class="ms-1">APP-1</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <!-- start table retrospective -->
+            <div class="table-responsive table-responsive-lg">
+              <table class="table table-retrospective">
+                <thead>
+                  <tr>
+                    <th class="py-4">
+                      <span class="d-inline-block" style="min-width: 400px">Дата теста</span>
+                    </th>
+                    <th class="py-4 text-center" style="width: 1%">
+                      <span class="d-inline-block" style="width: 130px">Состояние</span>
+                    </th>
+                    <th class="py-4 text-center" style="width: 1%">
+                      <span class="d-inline-block" style="width: 130px">Уязвимости</span>
+                    </th>
+                    <th class="py-4 text-center" style="width: 1%">
+                      <span class="d-inline-block" style="width: 215px">Отчёт</span>
+                    </th>
+                    <th class="py-4 text-center" style="width: 1%">
+                      <span class="d-inline-block" style="width: 215px"></span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- start Status Running -->
+                  <tr class="tr-card status-running" style="--table-row-color: rgba(84, 125, 204, 0.1)">
+                    <td>
+                      <strong>25.03.24</strong>
+                      <br />
+                      <span>16:03:43</span>
+                    </td>
+                    <td class="text-center">Выполняется</td>
+                    <td class="text-center fw-bold">n/a</td>
+                    <td class="text-center">
+                      <button
+                        type="button"
+                        class="btn-link border-0"
+                        data-bs-trigger="hover"
+                        data-bs-toggle="popover"
+                        title="Выгрузить отчёт"
+                        data-bs-placement="top"
+                        disabled>
+                        <svg width="19" height="25" viewBox="0 0 19 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                            fill="black" />
+                        </svg>
+                      </button>
+                    </td>
+                    <td class="text-center">
+                      <a class="d-inline-block btn-link border-bottom border-dark fst-italic" href="">Подробнее</a>
+                    </td>
+                  </tr>
+                  <!-- end Status Running -->
+                  <!-- Distance between  -->
+                  <tr>
+                    <td class="border-0 py-1" colspan="5"></td>
+                  </tr>
+                  <!-- Distance between  -->
+                  <!-- start Status passed -->
+                  <tr class="tr-card status-passed" style="--table-row-color: rgba(86, 204, 84, 0.1)">
+                    <td>
+                      <strong>01.04.24</strong>
+                      <br />
+                      <span>23:23:40</span>
+                    </td>
+                    <td class="text-center">
+                      <div class="d-flex align-items-center gap-2">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.6 11.8L6.45 9.65C6.26667 9.46667 6.03333 9.375 5.75 9.375C5.46667 9.375 5.23334 9.46667 5.05 9.65C4.86667 9.83333 4.775 10.0667 4.775 10.35C4.775 10.6333 4.86667 10.8667 5.05 11.05L7.9 13.9C8.1 14.1 8.33333 14.2 8.6 14.2C8.86667 14.2 9.1 14.1 9.3 13.9L14.95 8.25C15.1333 8.06667 15.225 7.83333 15.225 7.55C15.225 7.26667 15.1333 7.03333 14.95 6.85C14.7667 6.66667 14.5333 6.575 14.25 6.575C13.9667 6.575 13.7333 6.66667 13.55 6.85L8.6 11.8ZM10 20C8.61667 20 7.31667 19.7373 6.1 19.212C4.88334 18.6867 3.825 17.9743 2.925 17.075C2.025 16.1757 1.31267 15.1173 0.788001 13.9C0.263335 12.6827 0.000667933 11.3827 1.26582e-06 10C-0.000665401 8.61733 0.262001 7.31733 0.788001 6.1C1.314 4.88267 2.02633 3.82433 2.925 2.925C3.82367 2.02567 4.882 1.31333 6.1 0.788C7.318 0.262667 8.618 0 10 0C11.382 0 12.682 0.262667 13.9 0.788C15.118 1.31333 16.1763 2.02567 17.075 2.925C17.9737 3.82433 18.6863 4.88267 19.213 6.1C19.7397 7.31733 20.002 8.61733 20 10C19.998 11.3827 19.7353 12.6827 19.212 13.9C18.6887 15.1173 17.9763 16.1757 17.075 17.075C16.1737 17.9743 15.1153 18.687 13.9 19.213C12.6847 19.739 11.3847 20.0013 10 20Z"
+                            fill="#56CC54" />
+                        </svg>
+                        <span>Пройден</span>
+                      </div>
+                    </td>
+                    <td class="text-center fw-bold">0/ 0/ 0</td>
+                    <td class="text-center">
+                      <button
+                        type="button"
+                        class="btn-link border-0"
+                        data-bs-trigger="hover"
+                        data-bs-toggle="popover"
+                        title="Выгрузить отчёт"
+                        data-bs-placement="top">
+                        <svg width="19" height="25" viewBox="0 0 19 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                            fill="black" />
+                        </svg>
+                      </button>
+                    </td>
+                    <td class="text-center">
+                      <a class="d-inline-block btn-link border-bottom border-dark fst-italic" href="">Подробнее</a>
+                    </td>
+                  </tr>
+                  <!-- start Status passed -->
+                  <!-- Distance between  -->
+                  <tr>
+                    <td class="border-0 py-1" colspan="5"></td>
+                  </tr>
+                  <!-- Distance between  -->
+                  <!-- start Status unpassed -->
+                  <tr class="tr-card status-unpassed" style="--table-row-color: rgba(242, 68, 68, 0.1)">
+                    <td>
+                      <strong>15.03.24</strong>
+                      <br />
+                      <span>12:03:19</span>
+                    </td>
+                    <td class="text-center">
+                      <div class="d-flex align-items-center gap-2">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_256_12106)">
+                            <path
+                              d="M10 0C10.918 0 11.8034 0.117188 12.6562 0.351562C13.5091 0.585938 14.3034 0.924479 15.0391 1.36719C15.7747 1.8099 16.4486 2.33073 17.0605 2.92969C17.6725 3.52865 18.1966 4.20247 18.6328 4.95117C19.069 5.69987 19.4043 6.4974 19.6387 7.34375C19.873 8.1901 19.9935 9.07552 20 10C20 10.918 19.8828 11.8034 19.6484 12.6562C19.4141 13.5091 19.0755 14.3034 18.6328 15.0391C18.1901 15.7747 17.6693 16.4486 17.0703 17.0605C16.4714 17.6725 15.7975 18.1966 15.0488 18.6328C14.3001 19.069 13.5026 19.4043 12.6562 19.6387C11.8099 19.873 10.9245 19.9935 10 20C9.08203 20 8.19661 19.8828 7.34375 19.6484C6.49089 19.4141 5.69661 19.0755 4.96094 18.6328C4.22526 18.1901 3.55143 17.6693 2.93945 17.0703C2.32747 16.4714 1.80339 15.7975 1.36719 15.0488C0.93099 14.3001 0.595703 13.5026 0.361328 12.6562C0.126953 11.8099 0.00651042 10.9245 0 10C0 9.08203 0.117188 8.19661 0.351562 7.34375C0.585938 6.49089 0.924479 5.69661 1.36719 4.96094C1.8099 4.22526 2.33073 3.55143 2.92969 2.93945C3.52865 2.32747 4.20247 1.80339 4.95117 1.36719C5.69987 0.93099 6.4974 0.595703 7.34375 0.361328C8.1901 0.126953 9.07552 0.00651042 10 0ZM11.1035 10L14.4434 6.66016L13.3398 5.55664L10 8.89648L6.66016 5.55664L5.55664 6.66016L8.89648 10L5.55664 13.3398L6.66016 14.4434L10 11.1035L13.3398 14.4434L14.4434 13.3398L11.1035 10Z"
+                              fill="#F24444" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_256_12106">
+                              <rect width="20" height="20" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <span>Не пройден</span>
+                      </div>
+                    </td>
+                    <td class="text-center fw-bold">20/ 10/ 10</td>
+                    <td class="text-center">
+                      <button
+                        type="button"
+                        class="btn-link border-0"
+                        data-bs-trigger="hover"
+                        data-bs-toggle="popover"
+                        title="Выгрузить отчёт"
+                        data-bs-placement="top">
+                        <svg width="19" height="25" viewBox="0 0 19 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                            fill="black" />
+                        </svg>
+                      </button>
+                    </td>
+                    <td class="text-center">
+                      <a class="d-inline-block btn-link border-bottom border-dark fst-italic" href="">Подробнее</a>
+                    </td>
+                  </tr>
+                  <!-- end Status unpassed -->
+                  <!-- Distance between  -->
+                  <tr>
+                    <td class="border-0 py-1" colspan="5"></td>
+                  </tr>
+                  <!-- Distance between  -->
+                  <!-- start Status error -->
+                  <tr class="tr-card status-error" style="--table-row-color: rgba(252, 115, 3, 0.1)">
+                    <td>
+                      <strong>11.03.24</strong>
+                      <br />
+                      <span>10:03:10</span>
+                    </td>
+                    <td class="text-center">
+                      <div class="d-flex align-items-center gap-2">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM10 11C9.45 11 9 10.55 9 10V6C9 5.45 9.45 5 10 5C10.55 5 11 5.45 11 6V10C11 10.55 10.55 11 10 11ZM11 15H9V13H11V15Z"
+                            fill="#FC7303" />
+                        </svg>
+                        <span>Ошибка</span>
+                      </div>
+                    </td>
+                    <td class="text-center fw-bold">n/a</td>
+                    <td class="text-center">
+                      <button
+                        type="button"
+                        class="btn-link border-0"
+                        data-bs-trigger="hover"
+                        data-bs-toggle="popover"
+                        title="Выгрузить отчёт"
+                        data-bs-placement="top">
+                        <svg width="19" height="25" viewBox="0 0 19 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                            fill="black" />
+                        </svg>
+                      </button>
+                    </td>
+                    <td class="text-center">
+                      <a class="d-inline-block btn-link border-bottom border-dark fst-italic" href="">Подробнее</a>
+                    </td>
+                  </tr>
+                  <!-- start Status error -->
+                  <!-- Distance between  -->
+                  <tr>
+                    <td class="border-0 py-1" colspan="5"></td>
+                  </tr>
+                  <!-- Distance between  -->
+                  <!-- start Status Running -->
+                  <tr class="tr-card status-running" style="--table-row-color: rgba(84, 125, 204, 0.1)">
+                    <td>
+                      <strong>25.03.24</strong>
+                      <br />
+                      <span>16:03:43</span>
+                    </td>
+                    <td class="text-center">Выполняется</td>
+                    <td class="text-center fw-bold">n/a</td>
+                    <td class="text-center">
+                      <button
+                        type="button"
+                        class="btn-link border-0"
+                        data-bs-trigger="hover"
+                        data-bs-toggle="popover"
+                        title="Выгрузить отчёт"
+                        data-bs-placement="top"
+                        disabled>
+                        <svg width="19" height="25" viewBox="0 0 19 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                            fill="black" />
+                        </svg>
+                      </button>
+                    </td>
+                    <td class="text-center">
+                      <a class="d-inline-block btn-link border-bottom border-dark fst-italic" href="">Подробнее</a>
+                    </td>
+                  </tr>
+                  <!-- end Status Running -->
+                  <!-- Distance between  -->
+                  <tr>
+                    <td class="border-0 py-1" colspan="5"></td>
+                  </tr>
+                  <!-- Distance between  -->
+
+                  <!-- start Status passed -->
+                  <tr class="tr-card status-passed" style="--table-row-color: rgba(86, 204, 84, 0.1)">
+                    <td>
+                      <strong>01.04.24</strong>
+                      <br />
+                      <span>23:23:40</span>
+                    </td>
+                    <td class="text-center">
+                      <div class="d-flex align-items-center gap-2">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.6 11.8L6.45 9.65C6.26667 9.46667 6.03333 9.375 5.75 9.375C5.46667 9.375 5.23334 9.46667 5.05 9.65C4.86667 9.83333 4.775 10.0667 4.775 10.35C4.775 10.6333 4.86667 10.8667 5.05 11.05L7.9 13.9C8.1 14.1 8.33333 14.2 8.6 14.2C8.86667 14.2 9.1 14.1 9.3 13.9L14.95 8.25C15.1333 8.06667 15.225 7.83333 15.225 7.55C15.225 7.26667 15.1333 7.03333 14.95 6.85C14.7667 6.66667 14.5333 6.575 14.25 6.575C13.9667 6.575 13.7333 6.66667 13.55 6.85L8.6 11.8ZM10 20C8.61667 20 7.31667 19.7373 6.1 19.212C4.88334 18.6867 3.825 17.9743 2.925 17.075C2.025 16.1757 1.31267 15.1173 0.788001 13.9C0.263335 12.6827 0.000667933 11.3827 1.26582e-06 10C-0.000665401 8.61733 0.262001 7.31733 0.788001 6.1C1.314 4.88267 2.02633 3.82433 2.925 2.925C3.82367 2.02567 4.882 1.31333 6.1 0.788C7.318 0.262667 8.618 0 10 0C11.382 0 12.682 0.262667 13.9 0.788C15.118 1.31333 16.1763 2.02567 17.075 2.925C17.9737 3.82433 18.6863 4.88267 19.213 6.1C19.7397 7.31733 20.002 8.61733 20 10C19.998 11.3827 19.7353 12.6827 19.212 13.9C18.6887 15.1173 17.9763 16.1757 17.075 17.075C16.1737 17.9743 15.1153 18.687 13.9 19.213C12.6847 19.739 11.3847 20.0013 10 20Z"
+                            fill="#56CC54" />
+                        </svg>
+                        <span>Пройден</span>
+                      </div>
+                    </td>
+                    <td class="text-center fw-bold">0/ 0/ 0</td>
+                    <td class="text-center">
+                      <button
+                        type="button"
+                        class="btn-link border-0"
+                        data-bs-trigger="hover"
+                        data-bs-toggle="popover"
+                        title="Выгрузить отчёт"
+                        data-bs-placement="top">
+                        <svg width="19" height="25" viewBox="0 0 19 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                            fill="black" />
+                        </svg>
+                      </button>
+                    </td>
+                    <td class="text-center">
+                      <a class="d-inline-block btn-link border-bottom border-dark fst-italic" href="">Подробнее</a>
+                    </td>
+                  </tr>
+                  <!-- start Status passed -->
+                  <!-- Distance between  -->
+                  <tr>
+                    <td class="border-0 py-1" colspan="5"></td>
+                  </tr>
+                  <!-- Distance between  -->
+                  <!-- start Status passed -->
+                  <tr class="tr-card status-passed" style="--table-row-color: rgba(86, 204, 84, 0.1)">
+                    <td>
+                      <strong>01.04.24</strong>
+                      <br />
+                      <span>23:23:40</span>
+                    </td>
+                    <td class="text-center">
+                      <div class="d-flex align-items-center gap-2">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.6 11.8L6.45 9.65C6.26667 9.46667 6.03333 9.375 5.75 9.375C5.46667 9.375 5.23334 9.46667 5.05 9.65C4.86667 9.83333 4.775 10.0667 4.775 10.35C4.775 10.6333 4.86667 10.8667 5.05 11.05L7.9 13.9C8.1 14.1 8.33333 14.2 8.6 14.2C8.86667 14.2 9.1 14.1 9.3 13.9L14.95 8.25C15.1333 8.06667 15.225 7.83333 15.225 7.55C15.225 7.26667 15.1333 7.03333 14.95 6.85C14.7667 6.66667 14.5333 6.575 14.25 6.575C13.9667 6.575 13.7333 6.66667 13.55 6.85L8.6 11.8ZM10 20C8.61667 20 7.31667 19.7373 6.1 19.212C4.88334 18.6867 3.825 17.9743 2.925 17.075C2.025 16.1757 1.31267 15.1173 0.788001 13.9C0.263335 12.6827 0.000667933 11.3827 1.26582e-06 10C-0.000665401 8.61733 0.262001 7.31733 0.788001 6.1C1.314 4.88267 2.02633 3.82433 2.925 2.925C3.82367 2.02567 4.882 1.31333 6.1 0.788C7.318 0.262667 8.618 0 10 0C11.382 0 12.682 0.262667 13.9 0.788C15.118 1.31333 16.1763 2.02567 17.075 2.925C17.9737 3.82433 18.6863 4.88267 19.213 6.1C19.7397 7.31733 20.002 8.61733 20 10C19.998 11.3827 19.7353 12.6827 19.212 13.9C18.6887 15.1173 17.9763 16.1757 17.075 17.075C16.1737 17.9743 15.1153 18.687 13.9 19.213C12.6847 19.739 11.3847 20.0013 10 20Z"
+                            fill="#56CC54" />
+                        </svg>
+                        <span>Пройден</span>
+                      </div>
+                    </td>
+                    <td class="text-center fw-bold">0/ 0/ 0</td>
+                    <td class="text-center">
+                      <button
+                        type="button"
+                        class="btn-link border-0"
+                        data-bs-trigger="hover"
+                        data-bs-toggle="popover"
+                        title="Выгрузить отчёт"
+                        data-bs-placement="top">
+                        <svg width="19" height="25" viewBox="0 0 19 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                            fill="black" />
+                        </svg>
+                      </button>
+                    </td>
+                    <td class="text-center">
+                      <a class="d-inline-block btn-link border-bottom border-dark fst-italic" href="">Подробнее</a>
+                    </td>
+                  </tr>
+                  <!-- start Status passed -->
+                  <!-- Distance between  -->
+                  <tr>
+                    <td class="border-0 py-1" colspan="5"></td>
+                  </tr>
+                  <!-- Distance between  -->
+                  <!-- start Status passed -->
+                  <tr class="tr-card status-passed" style="--table-row-color: rgba(86, 204, 84, 0.1)">
+                    <td>
+                      <strong>01.04.24</strong>
+                      <br />
+                      <span>23:23:40</span>
+                    </td>
+                    <td class="text-center">
+                      <div class="d-flex align-items-center gap-2">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.6 11.8L6.45 9.65C6.26667 9.46667 6.03333 9.375 5.75 9.375C5.46667 9.375 5.23334 9.46667 5.05 9.65C4.86667 9.83333 4.775 10.0667 4.775 10.35C4.775 10.6333 4.86667 10.8667 5.05 11.05L7.9 13.9C8.1 14.1 8.33333 14.2 8.6 14.2C8.86667 14.2 9.1 14.1 9.3 13.9L14.95 8.25C15.1333 8.06667 15.225 7.83333 15.225 7.55C15.225 7.26667 15.1333 7.03333 14.95 6.85C14.7667 6.66667 14.5333 6.575 14.25 6.575C13.9667 6.575 13.7333 6.66667 13.55 6.85L8.6 11.8ZM10 20C8.61667 20 7.31667 19.7373 6.1 19.212C4.88334 18.6867 3.825 17.9743 2.925 17.075C2.025 16.1757 1.31267 15.1173 0.788001 13.9C0.263335 12.6827 0.000667933 11.3827 1.26582e-06 10C-0.000665401 8.61733 0.262001 7.31733 0.788001 6.1C1.314 4.88267 2.02633 3.82433 2.925 2.925C3.82367 2.02567 4.882 1.31333 6.1 0.788C7.318 0.262667 8.618 0 10 0C11.382 0 12.682 0.262667 13.9 0.788C15.118 1.31333 16.1763 2.02567 17.075 2.925C17.9737 3.82433 18.6863 4.88267 19.213 6.1C19.7397 7.31733 20.002 8.61733 20 10C19.998 11.3827 19.7353 12.6827 19.212 13.9C18.6887 15.1173 17.9763 16.1757 17.075 17.075C16.1737 17.9743 15.1153 18.687 13.9 19.213C12.6847 19.739 11.3847 20.0013 10 20Z"
+                            fill="#56CC54" />
+                        </svg>
+                        <span>Пройден</span>
+                      </div>
+                    </td>
+                    <td class="text-center fw-bold">0/ 0/ 0</td>
+                    <td class="text-center">
+                      <button
+                        type="button"
+                        class="btn-link border-0"
+                        data-bs-trigger="hover"
+                        data-bs-toggle="popover"
+                        title="Выгрузить отчёт"
+                        data-bs-placement="top">
+                        <svg width="19" height="25" viewBox="0 0 19 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                            fill="black" />
+                        </svg>
+                      </button>
+                    </td>
+                    <td class="text-center">
+                      <a class="d-inline-block btn-link border-bottom border-dark fst-italic" href="">Подробнее</a>
+                    </td>
+                  </tr>
+                  <!-- start Status passed -->
+                  <!-- Distance between  -->
+                  <tr>
+                    <td class="border-0 py-1" colspan="5"></td>
+                  </tr>
+                  <!-- Distance between  -->
+                  <!-- start Status passed -->
+                  <tr class="tr-card status-passed" style="--table-row-color: rgba(86, 204, 84, 0.1)">
+                    <td>
+                      <strong>01.04.24</strong>
+                      <br />
+                      <span>23:23:40</span>
+                    </td>
+                    <td class="text-center">
+                      <div class="d-flex align-items-center gap-2">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.6 11.8L6.45 9.65C6.26667 9.46667 6.03333 9.375 5.75 9.375C5.46667 9.375 5.23334 9.46667 5.05 9.65C4.86667 9.83333 4.775 10.0667 4.775 10.35C4.775 10.6333 4.86667 10.8667 5.05 11.05L7.9 13.9C8.1 14.1 8.33333 14.2 8.6 14.2C8.86667 14.2 9.1 14.1 9.3 13.9L14.95 8.25C15.1333 8.06667 15.225 7.83333 15.225 7.55C15.225 7.26667 15.1333 7.03333 14.95 6.85C14.7667 6.66667 14.5333 6.575 14.25 6.575C13.9667 6.575 13.7333 6.66667 13.55 6.85L8.6 11.8ZM10 20C8.61667 20 7.31667 19.7373 6.1 19.212C4.88334 18.6867 3.825 17.9743 2.925 17.075C2.025 16.1757 1.31267 15.1173 0.788001 13.9C0.263335 12.6827 0.000667933 11.3827 1.26582e-06 10C-0.000665401 8.61733 0.262001 7.31733 0.788001 6.1C1.314 4.88267 2.02633 3.82433 2.925 2.925C3.82367 2.02567 4.882 1.31333 6.1 0.788C7.318 0.262667 8.618 0 10 0C11.382 0 12.682 0.262667 13.9 0.788C15.118 1.31333 16.1763 2.02567 17.075 2.925C17.9737 3.82433 18.6863 4.88267 19.213 6.1C19.7397 7.31733 20.002 8.61733 20 10C19.998 11.3827 19.7353 12.6827 19.212 13.9C18.6887 15.1173 17.9763 16.1757 17.075 17.075C16.1737 17.9743 15.1153 18.687 13.9 19.213C12.6847 19.739 11.3847 20.0013 10 20Z"
+                            fill="#56CC54" />
+                        </svg>
+                        <span>Пройден</span>
+                      </div>
+                    </td>
+                    <td class="text-center fw-bold">0/ 0/ 0</td>
+                    <td class="text-center">
+                      <button
+                        type="button"
+                        class="btn-link border-0"
+                        data-bs-trigger="hover"
+                        data-bs-toggle="popover"
+                        title="Выгрузить отчёт"
+                        data-bs-placement="top">
+                        <svg width="19" height="25" viewBox="0 0 19 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                            fill="black" />
+                        </svg>
+                      </button>
+                    </td>
+                    <td class="text-center">
+                      <a class="d-inline-block btn-link border-bottom border-dark fst-italic" href="">Подробнее</a>
+                    </td>
+                  </tr>
+                  <!-- start Status passed -->
+                  <!-- Distance between  -->
+                  <tr>
+                    <td class="border-0 py-1" colspan="5"></td>
+                  </tr>
+                  <!-- Distance between  -->
+                  <!-- start Status passed -->
+                  <tr class="tr-card status-passed" style="--table-row-color: rgba(86, 204, 84, 0.1)">
+                    <td>
+                      <strong>01.04.24</strong>
+                      <br />
+                      <span>23:23:40</span>
+                    </td>
+                    <td class="text-center">
+                      <div class="d-flex align-items-center gap-2">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.6 11.8L6.45 9.65C6.26667 9.46667 6.03333 9.375 5.75 9.375C5.46667 9.375 5.23334 9.46667 5.05 9.65C4.86667 9.83333 4.775 10.0667 4.775 10.35C4.775 10.6333 4.86667 10.8667 5.05 11.05L7.9 13.9C8.1 14.1 8.33333 14.2 8.6 14.2C8.86667 14.2 9.1 14.1 9.3 13.9L14.95 8.25C15.1333 8.06667 15.225 7.83333 15.225 7.55C15.225 7.26667 15.1333 7.03333 14.95 6.85C14.7667 6.66667 14.5333 6.575 14.25 6.575C13.9667 6.575 13.7333 6.66667 13.55 6.85L8.6 11.8ZM10 20C8.61667 20 7.31667 19.7373 6.1 19.212C4.88334 18.6867 3.825 17.9743 2.925 17.075C2.025 16.1757 1.31267 15.1173 0.788001 13.9C0.263335 12.6827 0.000667933 11.3827 1.26582e-06 10C-0.000665401 8.61733 0.262001 7.31733 0.788001 6.1C1.314 4.88267 2.02633 3.82433 2.925 2.925C3.82367 2.02567 4.882 1.31333 6.1 0.788C7.318 0.262667 8.618 0 10 0C11.382 0 12.682 0.262667 13.9 0.788C15.118 1.31333 16.1763 2.02567 17.075 2.925C17.9737 3.82433 18.6863 4.88267 19.213 6.1C19.7397 7.31733 20.002 8.61733 20 10C19.998 11.3827 19.7353 12.6827 19.212 13.9C18.6887 15.1173 17.9763 16.1757 17.075 17.075C16.1737 17.9743 15.1153 18.687 13.9 19.213C12.6847 19.739 11.3847 20.0013 10 20Z"
+                            fill="#56CC54" />
+                        </svg>
+                        <span>Пройден</span>
+                      </div>
+                    </td>
+                    <td class="text-center fw-bold">0/ 0/ 0</td>
+                    <td class="text-center">
+                      <button
+                        type="button"
+                        class="btn-link border-0"
+                        data-bs-trigger="hover"
+                        data-bs-toggle="popover"
+                        title="Выгрузить отчёт"
+                        data-bs-placement="top">
+                        <svg width="19" height="25" viewBox="0 0 19 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                            fill="black" />
+                        </svg>
+                      </button>
+                    </td>
+                    <td class="text-center">
+                      <a class="d-inline-block btn-link border-bottom border-dark fst-italic" href="">Подробнее</a>
+                    </td>
+                  </tr>
+                  <!-- start Status passed -->
+                  <!-- Distance between  -->
+                  <tr>
+                    <td class="border-0 py-1" colspan="5"></td>
+                  </tr>
+                  <!-- Distance between  -->
+                  <!-- start Status passed -->
+                  <tr class="tr-card status-passed" style="--table-row-color: rgba(86, 204, 84, 0.1)">
+                    <td>
+                      <strong>01.04.24</strong>
+                      <br />
+                      <span>23:23:40</span>
+                    </td>
+                    <td class="text-center">
+                      <div class="d-flex align-items-center gap-2">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.6 11.8L6.45 9.65C6.26667 9.46667 6.03333 9.375 5.75 9.375C5.46667 9.375 5.23334 9.46667 5.05 9.65C4.86667 9.83333 4.775 10.0667 4.775 10.35C4.775 10.6333 4.86667 10.8667 5.05 11.05L7.9 13.9C8.1 14.1 8.33333 14.2 8.6 14.2C8.86667 14.2 9.1 14.1 9.3 13.9L14.95 8.25C15.1333 8.06667 15.225 7.83333 15.225 7.55C15.225 7.26667 15.1333 7.03333 14.95 6.85C14.7667 6.66667 14.5333 6.575 14.25 6.575C13.9667 6.575 13.7333 6.66667 13.55 6.85L8.6 11.8ZM10 20C8.61667 20 7.31667 19.7373 6.1 19.212C4.88334 18.6867 3.825 17.9743 2.925 17.075C2.025 16.1757 1.31267 15.1173 0.788001 13.9C0.263335 12.6827 0.000667933 11.3827 1.26582e-06 10C-0.000665401 8.61733 0.262001 7.31733 0.788001 6.1C1.314 4.88267 2.02633 3.82433 2.925 2.925C3.82367 2.02567 4.882 1.31333 6.1 0.788C7.318 0.262667 8.618 0 10 0C11.382 0 12.682 0.262667 13.9 0.788C15.118 1.31333 16.1763 2.02567 17.075 2.925C17.9737 3.82433 18.6863 4.88267 19.213 6.1C19.7397 7.31733 20.002 8.61733 20 10C19.998 11.3827 19.7353 12.6827 19.212 13.9C18.6887 15.1173 17.9763 16.1757 17.075 17.075C16.1737 17.9743 15.1153 18.687 13.9 19.213C12.6847 19.739 11.3847 20.0013 10 20Z"
+                            fill="#56CC54" />
+                        </svg>
+                        <span>Пройден</span>
+                      </div>
+                    </td>
+                    <td class="text-center fw-bold">0/ 0/ 0</td>
+                    <td class="text-center">
+                      <button
+                        type="button"
+                        class="btn-link border-0"
+                        data-bs-trigger="hover"
+                        data-bs-toggle="popover"
+                        title="Выгрузить отчёт"
+                        data-bs-placement="top">
+                        <svg width="19" height="25" viewBox="0 0 19 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                            fill="black" />
+                        </svg>
+                      </button>
+                    </td>
+                    <td class="text-center">
+                      <a class="d-inline-block btn-link border-bottom border-dark fst-italic" href="">Подробнее</a>
+                    </td>
+                  </tr>
+                  <!-- start Status passed -->
+                  <!-- Distance between  -->
+                  <tr>
+                    <td class="border-0 py-1" colspan="5"></td>
+                  </tr>
+                  <!-- Distance between  -->
+                  <!-- start Status passed -->
+                  <tr class="tr-card status-passed" style="--table-row-color: rgba(86, 204, 84, 0.1)">
+                    <td>
+                      <strong>01.04.24</strong>
+                      <br />
+                      <span>23:23:40</span>
+                    </td>
+                    <td class="text-center">
+                      <div class="d-flex align-items-center gap-2">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.6 11.8L6.45 9.65C6.26667 9.46667 6.03333 9.375 5.75 9.375C5.46667 9.375 5.23334 9.46667 5.05 9.65C4.86667 9.83333 4.775 10.0667 4.775 10.35C4.775 10.6333 4.86667 10.8667 5.05 11.05L7.9 13.9C8.1 14.1 8.33333 14.2 8.6 14.2C8.86667 14.2 9.1 14.1 9.3 13.9L14.95 8.25C15.1333 8.06667 15.225 7.83333 15.225 7.55C15.225 7.26667 15.1333 7.03333 14.95 6.85C14.7667 6.66667 14.5333 6.575 14.25 6.575C13.9667 6.575 13.7333 6.66667 13.55 6.85L8.6 11.8ZM10 20C8.61667 20 7.31667 19.7373 6.1 19.212C4.88334 18.6867 3.825 17.9743 2.925 17.075C2.025 16.1757 1.31267 15.1173 0.788001 13.9C0.263335 12.6827 0.000667933 11.3827 1.26582e-06 10C-0.000665401 8.61733 0.262001 7.31733 0.788001 6.1C1.314 4.88267 2.02633 3.82433 2.925 2.925C3.82367 2.02567 4.882 1.31333 6.1 0.788C7.318 0.262667 8.618 0 10 0C11.382 0 12.682 0.262667 13.9 0.788C15.118 1.31333 16.1763 2.02567 17.075 2.925C17.9737 3.82433 18.6863 4.88267 19.213 6.1C19.7397 7.31733 20.002 8.61733 20 10C19.998 11.3827 19.7353 12.6827 19.212 13.9C18.6887 15.1173 17.9763 16.1757 17.075 17.075C16.1737 17.9743 15.1153 18.687 13.9 19.213C12.6847 19.739 11.3847 20.0013 10 20Z"
+                            fill="#56CC54" />
+                        </svg>
+                        <span>Пройден</span>
+                      </div>
+                    </td>
+                    <td class="text-center fw-bold">0/ 0/ 0</td>
+                    <td class="text-center">
+                      <button
+                        type="button"
+                        class="btn-link border-0"
+                        data-bs-trigger="hover"
+                        data-bs-toggle="popover"
+                        title="Выгрузить отчёт"
+                        data-bs-placement="top">
+                        <svg width="19" height="25" viewBox="0 0 19 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                            fill="black" />
+                        </svg>
+                      </button>
+                    </td>
+                    <td class="text-center">
+                      <a class="d-inline-block btn-link border-bottom border-dark fst-italic" href="">Подробнее</a>
+                    </td>
+                  </tr>
+                  <!-- start Status passed -->
+                  <!-- Distance between  -->
+                  <tr>
+                    <td class="border-0 py-1" colspan="5"></td>
+                  </tr>
+                  <!-- Distance between  -->
+                  <!-- start Status passed -->
+                  <tr class="tr-card status-passed" style="--table-row-color: rgba(86, 204, 84, 0.1)">
+                    <td>
+                      <strong>01.04.24</strong>
+                      <br />
+                      <span>23:23:40</span>
+                    </td>
+                    <td class="text-center">
+                      <div class="d-flex align-items-center gap-2">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.6 11.8L6.45 9.65C6.26667 9.46667 6.03333 9.375 5.75 9.375C5.46667 9.375 5.23334 9.46667 5.05 9.65C4.86667 9.83333 4.775 10.0667 4.775 10.35C4.775 10.6333 4.86667 10.8667 5.05 11.05L7.9 13.9C8.1 14.1 8.33333 14.2 8.6 14.2C8.86667 14.2 9.1 14.1 9.3 13.9L14.95 8.25C15.1333 8.06667 15.225 7.83333 15.225 7.55C15.225 7.26667 15.1333 7.03333 14.95 6.85C14.7667 6.66667 14.5333 6.575 14.25 6.575C13.9667 6.575 13.7333 6.66667 13.55 6.85L8.6 11.8ZM10 20C8.61667 20 7.31667 19.7373 6.1 19.212C4.88334 18.6867 3.825 17.9743 2.925 17.075C2.025 16.1757 1.31267 15.1173 0.788001 13.9C0.263335 12.6827 0.000667933 11.3827 1.26582e-06 10C-0.000665401 8.61733 0.262001 7.31733 0.788001 6.1C1.314 4.88267 2.02633 3.82433 2.925 2.925C3.82367 2.02567 4.882 1.31333 6.1 0.788C7.318 0.262667 8.618 0 10 0C11.382 0 12.682 0.262667 13.9 0.788C15.118 1.31333 16.1763 2.02567 17.075 2.925C17.9737 3.82433 18.6863 4.88267 19.213 6.1C19.7397 7.31733 20.002 8.61733 20 10C19.998 11.3827 19.7353 12.6827 19.212 13.9C18.6887 15.1173 17.9763 16.1757 17.075 17.075C16.1737 17.9743 15.1153 18.687 13.9 19.213C12.6847 19.739 11.3847 20.0013 10 20Z"
+                            fill="#56CC54" />
+                        </svg>
+                        <span>Пройден</span>
+                      </div>
+                    </td>
+                    <td class="text-center fw-bold">0/ 0/ 0</td>
+                    <td class="text-center">
+                      <button
+                        type="button"
+                        class="btn-link border-0"
+                        data-bs-trigger="hover"
+                        data-bs-toggle="popover"
+                        title="Выгрузить отчёт"
+                        data-bs-placement="top">
+                        <svg width="19" height="25" viewBox="0 0 19 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.9375 6.64062V0H1.17188C0.522461 0 0 0.522461 0 1.17188V23.8281C0 24.4775 0.522461 25 1.17188 25H17.5781C18.2275 25 18.75 24.4775 18.75 23.8281V7.8125H12.1094C11.4648 7.8125 10.9375 7.28516 10.9375 6.64062ZM14.6704 16.9609L9.9624 21.6338C9.6377 21.9565 9.11328 21.9565 8.78857 21.6338L4.08057 16.9609C3.58496 16.4692 3.93262 15.625 4.62988 15.625H7.8125V11.7188C7.8125 11.2871 8.16211 10.9375 8.59375 10.9375H10.1562C10.5879 10.9375 10.9375 11.2871 10.9375 11.7188V15.625H14.1201C14.8174 15.625 15.165 16.4692 14.6704 16.9609ZM18.4082 5.12695L13.6279 0.341797C13.4082 0.12207 13.1104 0 12.7979 0H12.5V6.25H18.75V5.95215C18.75 5.64453 18.6279 5.34668 18.4082 5.12695Z"
+                            fill="black" />
+                        </svg>
+                      </button>
+                    </td>
+                    <td class="text-center">
+                      <a class="d-inline-block btn-link border-bottom border-dark fst-italic" href="">Подробнее</a>
+                    </td>
+                  </tr>
+                  <!-- start Status passed -->
+                </tbody>
+              </table>
+            </div>
+            <!-- end table retrospective -->
+          </div>
+        </div>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/js/tabler.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/libs/dropzone/dist/dropzone-min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const disabledSearchSelects = document.querySelectorAll('.disabled-search-select')
+          const availableSearchSelects = document.querySelectorAll('.available-search-select')
+          const dropzoneSelects = document.querySelectorAll('.dropzone')
+
+          dropzoneSelects.forEach((dropzone) => {
+            new Dropzone(dropzone)
+          })
+
+          disabledSearchSelects.forEach((select) => {
+            new TomSelect(select, {
+              create: false,
+              maxItems: 1,
+              maxOptions: null,
+              controlInput: null
+            })
+          })
+
+          availableSearchSelects.forEach((select) => {
+            new TomSelect(select, {
+              plugins: ['dropdown_input'],
+              placeholder: 'Найти приложение',
+              create: false,
+              render: {
+                no_results: function () {
+                  return '<div class="no-results">Результаты не найдены</div>'
+                }
+              }
+            })
+          })
+        })
+      </script>
+    </div>
+  </body>
+</html>
