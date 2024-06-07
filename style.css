@@ -126,12 +126,32 @@ a:hover {
   --tblr-btn-hover-color: var(--tblr-body-color);
 }
 
+.btn-secondary:disabled {
+  color: #000000;
+  background-color: #eceff4;
+  border-color: transparent;
+}
+
+.fw-bold {
+  font-weight: 700 !important;
+}
+
 .me-n3 {
   margin-right: -16px;
 }
 
+.mx-50 {
+  max-width: 50px;
+  width: 100%;
+}
+
 .mx-80 {
   max-width: 80px;
+  width: 100%;
+}
+
+.mx-120 {
+  max-width: 120px;
   width: 100%;
 }
 
@@ -519,6 +539,60 @@ a:hover {
   padding-left: 1rem;
 }
 
+.table.table-identified-vulnerabilities tbody td {
+  padding: 18px 18px 12px 18px;
+  text-align: center;
+}
+
+.table.table-identified-vulnerabilities tbody td:first-child {
+  padding-left: 8px;
+}
+
+.table.table-identified-vulnerabilities .tr-card td:first-child::after {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 0;
+}
+
+.table.table-identified-vulnerabilities .tr-card th:first-child::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--table-row-color, transparent);
+  z-index: -1;
+  border-bottom: 1px solid var(--table-border-color);
+}
+
+.table.table-vulnerabilities tbody td:first-child {
+  padding-left: 1rem;
+}
+
+.table.table-vulnerabilities tbody td {
+  padding: 26px 16px 18px 16px;
+}
+
+.table.table-vulnerabilities .tr-card td:first-child::after {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 0;
+}
+
+.table.table-vulnerabilities thead th {
+  padding: 1rem 0.5rem;
+}
+
+.table.table-vulnerabilities .tr-card th:first-child::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--table-row-color, transparent);
+  z-index: -1;
+  border-top: 1px solid var(--table-border-color);
+  border-bottom: 1px solid var(--table-border-color);
+}
+
 .popover {
   --tblr-popover-max-width: 130px;
   --tblr-popover-header-padding-x: 0.5rem;
@@ -566,8 +640,11 @@ a:hover {
   display: none;
 }
 
-.table-vulnerabilities {
+.list-group {
+  --tblr-list-group-item-padding-x: 0;
+  --tblr-list-group-item-padding-y: 0;
 }
 
-.table-identified-vulnerabilities {
+.list-group-item:hover {
+  background-color: transparent;
 }
