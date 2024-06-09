@@ -160,7 +160,6 @@
           <!-- page-body-nav -->
           <div class="container-fluid">
             <div class="row">
-              <!-- btns -->
               <div
                 class="border-bottom py-3 flex-column flex-lg-row d-flex gap-lg-4 gap-3 flex-wrap justify-content-between">
                 <div class="d-flex gap-1 flex-grow-1 flex-column">
@@ -201,7 +200,6 @@
                     </div>
                   </div>
                 </div>
-
                 <div class="d-flex gap-1 flex-grow-1 flex-column">
                   <div class="d-flex gap-2">
                     <strong class="h3 lh-base fw-bolder mb-0">Время тестирования</strong>
@@ -236,8 +234,8 @@
               <div class="col-12 col-xxl-8">
                 <div class="row border-bottom py-3">
                   <div class="col-12 col-xxl-4">
-                    <h2 class="mb-3 lh-base fw-bolder">Уязвимости по степени риска</h2>
-                    <div id="risk-level" class="chart-lg"></div>
+                    <h2 class="mb-3 lh-base fw-bolder text-xxl-start text-center">Уязвимости по степени риска</h2>
+                    <div id="risk-level" class="chart-lg mb-5"></div>
                   </div>
                   <div class="col-12 col-xxl-8">
                     <div id="chart-area" class="chart-lg"></div>
@@ -1526,8 +1524,6 @@
               chart: {
                 type: 'donut',
                 fontFamily: 'inherit',
-                // width: 220,
-                // height: 220,
                 animations: {
                   enabled: true
                 }
@@ -1568,19 +1564,6 @@
               grid: {
                 strokeDashArray: 3
               },
-              // responsive: [
-              //   {
-              //     breakpoint: 1400,
-              //     options: {
-              //       chart: {
-              //         width: 200
-              //       },
-              //       legend: {
-              //         position: 'bottom'
-              //       }
-              //     }
-              //   }
-              // ],
               colors: ['#959dac', '#fc7303', '#f24444'],
               legend: {
                 show: false
@@ -1591,6 +1574,7 @@
             new ApexCharts(document.getElementById('chart-area'), {
               chart: {
                 type: 'area',
+                foreColor: '#959dac',
                 locales: [
                   {
                     name: 'ru',
@@ -1639,10 +1623,6 @@
               dataLabels: {
                 enabled: false
               },
-              fill: {
-                opacity: 0.16,
-                type: 'solid'
-              },
               stroke: {
                 width: 2,
                 lineCap: 'round',
@@ -1651,56 +1631,189 @@
               series: [
                 {
                   name: '400',
-                  data: [123456, 145000, 190039, 34047, 22334, 33048, 29044]
+                  data: [200000, 320000, 320000, 400000, 250000, 230000, 220000]
                 },
                 {
                   name: '200',
-                  data: [2445, 145000, 2100, 34047, 2338, 2639, 2554]
+                  data: [100000, 90000, 210000, 250000, 300000, 350000, 320000]
                 },
                 {
                   name: '200',
-                  data: [3324, 3622, 3237, 3748, 200000, 3542, 3657]
+                  data: [80000, 60000, 66000, 100000, 200000, 250000, 150000]
                 }
               ],
               tooltip: {
-                theme: 'dark'
+                theme: 'dark',
+                style: {
+                  fontSize: '14px',
+                  fontFamily: '"Inter", sans-serif'
+                },
+                x: {
+                  formatter: function (val) {
+                    const date = new Date(val)
+                    return (
+                      date.getUTCFullYear() +
+                      '-' +
+                      ('0' + (date.getUTCMonth() + 1)).slice(-2) +
+                      '-' +
+                      ('0' + date.getUTCDate()).slice(-2) +
+                      ' ' +
+                      ('0' + date.getUTCHours()).slice(-2) +
+                      ':' +
+                      ('0' + date.getUTCMinutes()).slice(-2) +
+                      ':' +
+                      ('0' + date.getUTCSeconds()).slice(-2)
+                    )
+                  }
+                },
+                y: {
+                  formatter: function (value) {
+                    return '<span style="color: #fff; font-weight: 400;">' + (value / 1000).toFixed(0) + 'K</span>'
+                  }
+                },
+                marker: {
+                  show: true
+                },
+                shared: false,
+                custom: function ({ series, seriesIndex, dataPointIndex, w }) {
+                  const date = new Date(w.globals.seriesX[seriesIndex][dataPointIndex])
+                  const formattedDate =
+                    date.getUTCFullYear() +
+                    '-' +
+                    ('0' + (date.getUTCMonth() + 1)).slice(-2) +
+                    '-' +
+                    ('0' + date.getUTCDate()).slice(-2) +
+                    ' ' +
+                    ('0' + date.getUTCHours()).slice(-2) +
+                    ':' +
+                    ('0' + date.getUTCMinutes()).slice(-2) +
+                    ':' +
+                    ('0' + date.getUTCSeconds()).slice(-2)
+                  return (
+                    '<div style="padding: 6px 8px;">' +
+                    '<span style="color: #ffffff; font-weight: 400;">' +
+                    formattedDate +
+                    '</span><br>' +
+                    '<div style="color:  #ffffff; font-weight: 400; display: flex; align-items: center; flex-direction: row-reverse; justify-content: flex-end;">' +
+                    '<span style="color: #ffffff;">' +
+                    (w.globals.series[seriesIndex][dataPointIndex] / 1000).toFixed(0) +
+                    'K' +
+                    '</span>' +
+                    '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+                    '<circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" />' +
+                    '<path d="M9 12H3M15 12H21" stroke="currentColor" stroke-width="2" />' +
+                    '</svg>' +
+                    '</div>' +
+                    '</div>'
+                  )
+                }
               },
               grid: {
+                show: true,
+                borderColor: '#90A4AE',
+                strokeDashArray: 3,
+                xaxis: {
+                  lines: {
+                    show: true
+                  }
+                },
+                yaxis: {
+                  lines: {
+                    show: true
+                  }
+                },
                 padding: {
                   top: -20,
                   right: 0,
                   left: -4,
                   bottom: -4
-                },
-                strokeDashArray: 4
+                }
               },
               xaxis: {
+                axisBorder: {
+                  show: false
+                },
+                axisTicks: {
+                  show: false
+                },
                 labels: {
-                  padding: 0
+                  padding: 0,
+                  offsetX: 5,
+                  offsetY: -5,
+                  style: {
+                    fontSize: '10px',
+                    fontWeight: '400',
+                    colors: ['#959dac'],
+                    fontFamily: 'Inter", sans-serif'
+                  },
+                  formatter: function (value, timestamp) {
+                    const date = new Date(timestamp)
+                    const day = date.getUTCDate()
+                    const month = date.toLocaleString('default', { month: 'short' })
+                    return `${day} ${month}`
+                  }
                 },
                 tooltip: {
                   enabled: false
                 },
-                axisBorder: {
-                  show: false
-                },
                 type: 'datetime'
               },
               yaxis: {
+                tickAmount: 4,
+                min: 0,
                 labels: {
-                  padding: 4
+                  formatter: function (value) {
+                    return value === 0 ? value : (value / 1000).toFixed(0) + 'K'
+                  },
+                  padding: 12,
+                  style: {
+                    colors: ['#959dac'],
+                    fontSize: '10px',
+                    fontFamily: 'Inter", sans-serif',
+                    fontWeight: 400,
+                    cssClass: 'apexcharts-yaxis-label'
+                  }
+                }
+              },
+              fill: {
+                type: 'gradient',
+                gradient: {
+                  shade: 'light',
+                  type: 'vertical',
+                  shadeIntensity: 0.8,
+                  inverseColors: false,
+                  opacityFrom: 0.8,
+                  opacityTo: 0.4,
+                  stops: [0, 100]
                 }
               },
               labels: ['2024-04-02', '2024-04-04', '2024-04-06', '2024-04-08', '2024-04-10', '2024-04-12'],
-              colors: [tabler.getColor('primary'), tabler.getColor('purple'), 'red'],
+              colors: [tabler.getColor('primary'), '#6078ea', '#56cc54'],
               legend: {
                 show: true,
                 position: 'bottom',
-                offsetY: 12,
+                horizontalAlign: 'left',
+                fontSize: '14px',
+                fontFamily: '"Inter", sans-serif',
+                fontWeight: 400,
+                offsetY: 0,
+                offsetX: -10,
+                labels: {
+                  colors: '#000',
+                  useSeriesColors: false
+                },
                 markers: {
-                  width: 10,
-                  height: 10,
-                  radius: 100
+                  width: 24,
+                  height: 24,
+                  radius: 100,
+                  fillColors: ['transparent', 'transparent', 'transparent'],
+                  strokeColor: undefined,
+                  customHTML: function (opts) {
+                    return `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" />
+                    <path d="M9 12H3M15 12H21" stroke="currentColor" stroke-width="2" />
+                  </svg>`
+                  }
                 },
                 itemMargin: {
                   horizontal: 8,

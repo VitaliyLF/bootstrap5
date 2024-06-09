@@ -1877,7 +1877,6 @@
                         </svg>
                         Удалить тест
                       </button>
-
                       <button
                         type="button"
                         class="btn btn-secondary fw-normal lh-base fs-4"
@@ -1903,6 +1902,16 @@
           const disabledSearchSelects = document.querySelectorAll('.disabled-search-select')
           const availableSearchSelects = document.querySelectorAll('.available-search-select')
           const dropzoneSelects = document.querySelectorAll('.dropzone')
+          const offcanvasButtons = document.querySelectorAll('[data-bs-toggle="offcanvas"]')
+          const accordionsToShow = document.querySelectorAll('.accordion-collapse.collapse.show')
+
+          offcanvasButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+              accordionsToShow.forEach((accordion) => {
+                accordion.classList.contains('show') || accordion.classList.add('show')
+              })
+            })
+          })
 
           dropzoneSelects.forEach((dropzone) => {
             new Dropzone(dropzone)
