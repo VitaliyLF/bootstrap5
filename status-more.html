@@ -1542,7 +1542,7 @@
               grid: {
                 strokeDashArray: 3
               },
-              colors: ['#959dac', '#fc7303', '#f24444'],
+              colors: [tabler.getColor('dark-fg'), tabler.getColor('primary'), tabler.getColor('danger')],
               legend: {
                 show: false
               }
@@ -1552,7 +1552,7 @@
             new ApexCharts(document.getElementById('chart-area'), {
               chart: {
                 type: 'area',
-                foreColor: '#959dac',
+                foreColor: tabler.getColor('dark-fg'),
                 locales: [
                   {
                     name: 'ru',
@@ -1654,6 +1654,17 @@
                 },
                 shared: false,
                 custom: function ({ series, seriesIndex, dataPointIndex, w }) {
+                  let color
+                  if (seriesIndex === 0) {
+                    color = 'var(--tblr-primary)'
+                  } else if (seriesIndex === 1) {
+                    color = 'var(--tblr-blue)'
+                  } else if (seriesIndex === 2) {
+                    color = 'var(--tblr-green)'
+                  }
+
+                  document.documentElement.style.setProperty('--tooltip-color', color)
+
                   const date = new Date(w.globals.seriesX[seriesIndex][dataPointIndex])
                   const formattedDate =
                     date.getUTCFullYear() +
@@ -1668,18 +1679,21 @@
                     ':' +
                     ('0' + date.getUTCSeconds()).slice(-2)
                   return (
-                    '<div style="padding: 6px 8px;">' +
-                    '<span style="color: #ffffff; font-weight: 400;">' +
+                    '<div style="padding: 16px 8px;">' +
+                    '<div style="color: #fff; font-weight: 400;margin-bottom: 8px;">' +
                     formattedDate +
-                    '</span><br>' +
-                    '<div style="color:  #ffffff; font-weight: 400; display: flex; align-items: center; flex-direction: row-reverse; justify-content: flex-end;">' +
-                    '<span style="color: #ffffff;">' +
-                    (w.globals.series[seriesIndex][dataPointIndex] / 1000).toFixed(0) +
+                    '</div>' +
+                    '<div style="color: var(--tooltip-color); font-weight: 400; display: flex; align-items: center; flex-direction: row-reverse; justify-content: flex-end;">' +
+                    '<div style="color:#fff; display: flex; gap:8px;">' +
+                    '<div>' +
+                    w.config.series[seriesIndex].name +
+                    '</div>' +
+                    +(w.globals.series[seriesIndex][dataPointIndex] / 1000).toFixed(0) +
                     'K' +
-                    '</span>' +
-                    '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">' +
-                    '<circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" />' +
-                    '<path d="M9 12H3M15 12H21" stroke="currentColor" stroke-width="2" />' +
+                    '</div>' +
+                    '<svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+                    '<circle cx="7.99998" cy="7.99992" r="1.66667" stroke="currentColor" stroke-width="2" />' +
+                    '<path d="M6 8H2M10 8H14" stroke="currentColor" stroke-width="2" />' +
                     '</svg>' +
                     '</div>' +
                     '</div>'
@@ -1688,7 +1702,7 @@
               },
               grid: {
                 show: true,
-                borderColor: '#90A4AE',
+                borderColor: tabler.getColor('dark-fg'),
                 strokeDashArray: 3,
                 xaxis: {
                   lines: {
@@ -1721,7 +1735,7 @@
                   style: {
                     fontSize: '10px',
                     fontWeight: '400',
-                    colors: ['#959dac'],
+                    colors: tabler.getColor('dark-fg'),
                     fontFamily: 'Inter", sans-serif'
                   },
                   formatter: function (value, timestamp) {
@@ -1745,7 +1759,7 @@
                   },
                   padding: 12,
                   style: {
-                    colors: ['#959dac'],
+                    colors: tabler.getColor('dark-fg'),
                     fontSize: '10px',
                     fontFamily: 'Inter", sans-serif',
                     fontWeight: 400,
@@ -1766,7 +1780,7 @@
                 }
               },
               labels: ['2024-04-02', '2024-04-04', '2024-04-06', '2024-04-08', '2024-04-10', '2024-04-12'],
-              colors: [tabler.getColor('primary'), '#6078ea', '#56cc54'],
+              colors: [tabler.getColor('primary'), tabler.getColor('blue'), tabler.getColor('green')],
               legend: {
                 show: true,
                 position: 'bottom',
@@ -1777,7 +1791,7 @@
                 offsetY: 0,
                 offsetX: -10,
                 labels: {
-                  colors: '#000',
+                  colors: tabler.getColor('muted'),
                   useSeriesColors: false
                 },
                 markers: {

@@ -8,10 +8,8 @@
   --tblr-font-sans-serif: 'Inter', sans-serif;
   --tblr-body-font-weight: 400;
   --tblr-font-size-h1: 2rem;
-  --tblr-primary: #fc7303;
   --tblr-lime-rgb: 86, 204, 84;
   --tblr-blue-rgb: 57, 66, 234;
-  --tblr-muted: #000000;
   --tblr-link-hover-color: none;
   --tblr-border-color: #d9d9d9;
   --tblr-secondary-rgb: 243, 244, 246;
@@ -23,7 +21,13 @@
   --tblr-info-rgb: 57, 66, 234;
   --tblr-danger-rgb: 242, 68, 68;
   --tblr-red-rgb: 254, 238, 237;
+  /*used in ApexCharts*/
+  --tblr-primary: #fc7303;
+  --tblr-muted: #000000;
   --tblr-dark-fg: #959dac;
+  --tblr-danger: #f24444;
+  --tblr-blue: #6078ea;
+  --tblr-green: #56cc54;
 }
 
 a:hover {
