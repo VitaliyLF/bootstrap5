@@ -517,7 +517,10 @@ a:hover {
 .table .tr-card td:first-child::after {
   content: '';
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--tr-height);
   background: var(--table-row-color, transparent);
   z-index: -1;
   border: 1px solid var(--table-border-color);

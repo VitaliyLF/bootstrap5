@@ -779,6 +779,31 @@
           const offcanvasButtons = document.querySelectorAll('[data-bs-toggle="offcanvas"]')
           const accordionsToShow = document.querySelectorAll('.accordion-collapse.collapse.show')
 
+          const calcCardTrHeight = (trCardList) => {
+            trCardList.forEach((trCard) => {
+              trCard.style.setProperty('--tr-height', `${trCard.clientHeight}px`)
+            })
+          }
+
+          window.addEventListener('resize', () => {
+            calcCardTrHeight(document.querySelectorAll('.tr-card'))
+          })
+
+          calcCardTrHeight(document.querySelectorAll('.tr-card'))
+
+          document.querySelectorAll('[data-bs-toggle="collapse"]').forEach((accordion) => {
+            const accordionId = accordion.id
+            if (!accordionId) return
+            const accordionContent = document.querySelector(`[data-bs-parent^="#${accordionId}"]`)
+            if (accordionContent) {
+              accordionContent.addEventListener('show.bs.collapse', () => {
+                setTimeout(() => {
+                  calcCardTrHeight(accordionContent.querySelectorAll('.tr-card'))
+                }, 1)
+              })
+            }
+          })
+
           offcanvasButtons.forEach((button) => {
             button.addEventListener('click', () => {
               accordionsToShow.forEach((accordion) => {

@@ -584,7 +584,9 @@
                     <td>
                       <strong>Быстрая проверка целостности API</strong>
                       <br />
-                      <p class="mx-320">Проверка конечных точек API на целостность данных и согласованность ответов.</p>
+                      <p class="mx-320 m-0">
+                        Проверка конечных точек API на целостность данных и согласованность ответов.
+                      </p>
                     </td>
                     <td class="text-center text-success fw-bold">В работе</td>
                     <td class="text-center">APP-1</td>
@@ -595,7 +597,7 @@
                           d="M2.74607 1.10938H22.8839C24.1238 1.10938 25.13 2.11567 25.13 3.35596V23.4976C25.13 24.7378 24.1238 25.7441 22.8839 25.7441H2.74607C1.50624 25.7441 0.5 24.7378 0.5 23.4976V3.35596C0.5 2.11567 1.50624 1.10938 2.74607 1.10938Z"
                           stroke="black" />
                       </svg>
-                      <!-- start offcanvas first  component button -->
+                      <!-- start offcanvas first component buttons -->
                       <button
                         class="btn-link border-0 ms-4"
                         type="button"
@@ -895,7 +897,7 @@
                     <td class="">
                       <strong>Оценка эффективности конечной точки</strong>
                       <br />
-                      <p class="mx-320">
+                      <p class="mx-320 m-0">
                         Оценка производительности конечной точки API и эффективности при различных нагрузках.
                       </p>
                     </td>
@@ -1204,7 +1206,7 @@
                     <td class="">
                       <strong>Проверка уровня владения протоколом</strong>
                       <br />
-                      <p class="mx-320">Оценка соответствия протоколу API и совместимость на разных платформах.</p>
+                      <p class="mx-320 m-0">Оценка соответствия протоколу API и совместимость на разных платформах.</p>
                     </td>
                     <td class="text-center text-danger fw-bold">Выключен</td>
                     <td class="text-center">APP-1</td>
@@ -1899,12 +1901,37 @@
       <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/libs/dropzone/dist/dropzone-min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
       <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        window.addEventListener('load', function () {
           const disabledSearchSelects = document.querySelectorAll('.disabled-search-select')
           const availableSearchSelects = document.querySelectorAll('.available-search-select')
           const dropzoneSelects = document.querySelectorAll('.dropzone')
           const offcanvasButtons = document.querySelectorAll('[data-bs-toggle="offcanvas"]')
           const accordionsToShow = document.querySelectorAll('.accordion-collapse.collapse.show')
+
+          const calcCardTrHeight = (trCardList) => {
+            trCardList.forEach((trCard) => {
+              trCard.style.setProperty('--tr-height', `${trCard.clientHeight}px`)
+            })
+          }
+
+          window.addEventListener('resize', () => {
+            calcCardTrHeight(document.querySelectorAll('.tr-card'))
+          })
+
+          calcCardTrHeight(document.querySelectorAll('.tr-card'))
+
+          document.querySelectorAll('[data-bs-toggle="collapse"]').forEach((accordion) => {
+            const accordionId = accordion.id
+            if (!accordionId) return
+            const accordionContent = document.querySelector(`[data-bs-parent^="#${accordionId}"]`)
+            if (accordionContent) {
+              accordionContent.addEventListener('show.bs.collapse', () => {
+                setTimeout(() => {
+                  calcCardTrHeight(accordionContent.querySelectorAll('.tr-card'))
+                }, 1)
+              })
+            }
+          })
 
           offcanvasButtons.forEach((button) => {
             button.addEventListener('click', () => {
