@@ -502,13 +502,9 @@ a:hover {
   vertical-align: middle;
 }
 
-.table tbody {
+.table tbody tr {
   position: relative;
 }
-
-/* .table tbody tr {
-  position: relative;
-} */
 
 .table tbody td:first-child {
   padding-left: 56px;
