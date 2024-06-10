@@ -503,7 +503,7 @@ a:hover {
 }
 
 .table tbody tr {
-  position: relative;
+  transform: scale(1);
 }
 
 .table tbody td:first-child {
