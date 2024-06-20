@@ -550,20 +550,20 @@
             <!-- start page-body-table -->
             <div class="table-responsive table-responsive-lg pb-4">
               <!-- start table-header -->
-              <table class="table">
-                <thead class="fs-3 fw-bold">
+              <table class="table" id="test-api-main-table">
+                <thead class="fs-3 fw-bold" id="test-api-main-thead">
                   <tr>
                     <th style="min-width: 400px">
-                      <span class="d-inline-block ms-2">Тесты</span>
+                      <span class="d-inline-block ms-2"></span>
                     </th>
                     <th class="text-center" style="width: 1%">
-                      <span class="d-inline-block" style="width: 130px">Статус</span>
+                      <span class="d-inline-block" style="width: 130px"></span>
                     </th>
                     <th class="text-center" style="width: 1%">
-                      <span class="d-inline-block" style="width: 130px">Спецификация</span>
+                      <span class="d-inline-block" style="width: 130px"></span>
                     </th>
                     <th class="text-center" style="width: 1%">
-                      <span class="d-inline-block" style="width: 215px">Количество тестируемых&nbsp;эндпоинтов</span>
+                      <span class="d-inline-block" style="width: 215px"></span>
                     </th>
                     <th style="width: 1%">
                       <span class="d-inline-block" style="width: 215px"></span>
@@ -1584,7 +1584,7 @@
                         <div
                           class="mb-4 d-flex flex-wrap flex-sm-nowrap gap-3 align-items-center justify-content-between">
                           <h2 class="form-label h2 lh-base fw-bolder ms-2 mb-0">Базовые данные теста</h2>
-                          <div class="form-check form-switch m-0">
+                          <div class="form-check form-switch m-0 edit-switcher">
                             <input
                               class="form-check-input border-0 shadow-none cursor-pointer"
                               type="checkbox"
@@ -1729,24 +1729,24 @@
                         <!-- radio -->
                         <label
                           class="form-check-label d-inline-flex flex-row-reverse align-items-center gap-2 me-2 fw-normal lh-base fs-4 cursor-pointer"
-                          for="flexRadioDefault1">
+                          for="flexRadioDefaultEdit1">
                           Разовая проверка
                           <input
                             class="form-check-input shadow-none cursor-pointer"
                             type="radio"
                             name="flexRadioDefault"
-                            id="flexRadioDefault1" />
+                            id="flexRadioDefaultEdit1" />
                         </label>
                         <!-- radio -->
                         <label
                           class="form-check-label d-inline-flex flex-row-reverse align-items-center gap-2 me-2 fw-normal lh-base fs-4 cursor-pointer"
-                          for="flexRadioDefault2">
+                          for="flexRadioDefaultEdit2">
                           Периодическая проверка
                           <input
                             class="form-check-input shadow-none cursor-pointer"
                             type="radio"
                             name="flexRadioDefault"
-                            id="flexRadioDefault2"
+                            id="flexRadioDefaultEdit2"
                             checked />
                         </label>
                       </div>
@@ -1901,6 +1901,93 @@
       <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/libs/dropzone/dist/dropzone-min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
       <script>
+        const testData = {
+          tests: [
+            {
+              id: 1,
+              title: 'Быстрая проверка целостности API',
+              status: 'В работе',
+              tests: [
+                {
+                  id: 123,
+                  date: 1718279398912
+                }
+              ]
+            },
+            {
+              id: 2,
+              title: 'Быстрая проверка целостности АПИ',
+              description: 'Descr',
+              status: 'В работе',
+              tests: [
+                {
+                  id: 123,
+                  date: 1718279398912
+                }
+              ]
+            }
+          ]
+        }
+
+        // testData.items.forEach((value, index, array) => {
+        //   console.log(value)
+        // })
+
+        const data = [
+          {
+            tests: 'Тесты:',
+            status: 'Статус',
+            specification: 'Спецификация',
+            endpointCount: 'Количество тестируемых эндпоинтов'
+          }
+        ]
+
+        function generateTableHeader(item) {
+          return `
+            <tr>
+              <th style="min-width: 400px">
+                <span class="d-inline-block ms-2">${item.tests}</span>
+              </th>
+              <th class="text-center" style="width: 1%">
+                <span class="d-inline-block" style="width: 130px">${item.status}</span>
+              </th>
+              <th class="text-center" style="width: 1%">
+                <span class="d-inline-block" style="width: 130px">${item.specification}</span>
+              </th>
+              <th class="text-center" style="width: 1%">
+                <span class="d-inline-block" style="width: 215px">${item.endpointCount}</span>
+              </th>
+              <th style="width: 1%">
+                <span class="d-inline-block" style="width: 215px"></span>
+              </th>
+            </tr>
+          `
+        }
+
+        const testApiMainThead = document.getElementById('test-api-main-thead')
+        testApiMainThead.innerHTML = data.map(generateTableHeader).join('')
+
+        function fetchData() {
+          const apiUrl = 'https://jsonplaceholder.typicode.com/posts'
+
+          fetch(apiUrl)
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`)
+              }
+
+              return response.json()
+            })
+            .then((data) => {
+              console.log('Данные с API:', data)
+            })
+            .catch((error) => {
+              console.error('Ошибка при запросе:', error)
+            })
+        }
+
+        fetchData()
+
         window.addEventListener('load', function () {
           const disabledSearchSelects = document.querySelectorAll('.disabled-search-select')
           const availableSearchSelects = document.querySelectorAll('.available-search-select')
